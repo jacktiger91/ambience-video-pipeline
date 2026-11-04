@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "bundle_id": "2026-11-05-forest-dawn",
+  "status": "frozen_ready_for_private_queue_and_filebin_delivery",
+  "verified_at": "2026-11-04T22:03:43.879573+00:00",
+  "bundle_path": "outputs/forest-dawn/review/bundle.json",
+  "motion_report": "outputs/forest-dawn/review/motion-review.json",
+  "backdrop_path": "outputs/forest-dawn/backdrop-1920x1080.jpg",
+  "backdrop_sha256": "b9c4761b55d124eb71de2d5558ffe5e1405f51d8db6ccb778a85dfbca535924e",
+  "delivery_identity": "ca8baac7e381a02ee278aefc4de00b707112f4261888b72f53a445e92dd8d1e9",
+  "media": {
+    "long": {
+      "sha256": "30329888f3fdf61157eb335f3a75f68e36a43cec02b6afb8bc8eb9a1e84db8cc",
+      "bytes": 1832140603,
+      "audio": {
+        "integrated_lufs": -22.1,
+        "loudness_range_lu": 10.3,
+        "true_peak_dbtp": -4.4
+      },
+      "full_decode": {
+        "full_decode": true,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "duration": 3600,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "channels": 2,
+        "verified_at": "2026-11-04T22:00:15.629276+00:00",
+        "decoded_seconds": 3600.0,
+        "reused_source_full_decode": true
+      },
+      "container_duration": 3600.066667,
+      "stream_durations": {
+        "video": 3600.066667,
+        "audio": 3600.0
+      },
+      "evidence_log": "outputs/forest-dawn/encode-qa/long-audio-ebur128.log"
+    },
+    "short1": {
+      "sha256": "1a03f42e8ca8c21bba48315033e397c5f2d78c13708461fcc38942e2603e618b",
+      "bytes": 25085292,
+      "audio": {
+        "integrated_lufs": -25.0,
+        "loudness_range_lu": 4.2,
+        "true_peak_dbtp": -11.1
+      },
+      "full_decode": {
+        "full_decode": true,
+        "resolution": [
+          1080,
+          1920
+        ],
+        "duration": 25.0,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "channels": 2,
+        "verified_at": "2026-11-04T22:01:03.689916+00:00",
+        "decoded_seconds": 25.0
+      },
+      "container_duration": 25.0,
+      "stream_durations": {
+        "video": 25.0,
+        "audio": 25.0
+      },
+      "evidence_log": "outputs/forest-dawn/final-qa/short1-audio-ebur128.log"
+    },
+    "short2": {
+      "sha256": "e9677383ba09ac9c5191e8c5f7c2dbe32ae915bb0877293d58c7deffb595bc67",
+      "bytes": 20331008,
+      "audio": {
+        "integrated_lufs": -20.8,
+        "loudness_range_lu": 12.0,
+        "true_peak_dbtp": -6.5
+      },
+      "full_decode": {
+        "full_decode": true,
+        "resolution": [
+          1080,
+          1920
+        ],
+        "duration": 25.0,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "channels": 2,
+        "verified_at": "2026-11-04T22:01:45.095253+00:00",
+        "decoded_seconds": 25.0
+      },
+      "container_duration": 25.0,
+      "stream_durations": {
+        "video": 25.0,
+        "audio": 25.0
+      },
+      "evidence_log": "outputs/forest-dawn/final-qa/short2-audio-ebur128.log"
+    }
+  },
+  "thumbnail": {
+    "path": "outputs/forest-dawn/review/thumbnail.jpg",
+    "sha256": "8435af54016424bc8a381f591235fcbbafef6c45ed2c6dff3a4e3002620fe20a",
+    "bytes": 259487,
+    "resolution": [
+      1280,
+      720
+    ],
+    "phone_legibility_review_passed": true,
+    "style": "Cream condensed FOREST DAWN title and gold 1 HOUR badge, derived from the actual scene with AI-assisted design."
+  },
+  "source_provenance": {
+    "audio_sha256": "684ee116f647c6d73fa8458284d8db0ede1dc5f4bbdeb1140a381f3d39f7939f",
+    "audio_licence": "CC BY 3.0; three real stereo field recordings, five nonoverlapping source passages, four 16-second crossfades.",
+    "video_sha256": "2e67c1f95c4788c14b6548d96071e4cd9a5f668ec17838de55a75b4ba6db89a5",
+    "video_licence": "CC BY 4.0; Matthew Paul Argall, View from our back veranda, 2021.",
+    "source_inputs_immutable_hashes_rechecked": true,
+    "audio_qa": "docs/provenance/forest-dawn/AUDIO-QA.json",
+    "visual_qa": "outputs/forest-dawn/visual-research/motion-qa.json",
+    "compression_qa": "outputs/forest-dawn/encode-qa/compression-qa.json"
+  },
+  "metadata": {
+    "episode_path": "config/forest-dawn.json",
+    "titles_and_descriptions_complete": true,
+    "actual_recordists_credited_per_short": true,
+    "actual_video_source_location_and_changes_credited": true,
+    "short_source_starts_seconds": [
+      2490,
+      3298
+    ],
+    "short_cover_offsets_seconds": [
+      22,
+      22
+    ],
+    "shorts_avoid_visual_dissolve": true,
+    "invitation": "Watch the full hour / on Quiet Hours",
+    "video_contains_synthetic_media": false,
+    "thumbnail_ai_assistance_disclosed": true,
+    "requested_privacy": "unlisted",
+    "upload_and_publication": "manual",
+    "youtube_uploads_performed": false,
+    "remaining_studio_steps": [
+      "Choose the intended playlist.",
+      "Set each Short Related video to the uploaded full hour.",
+      "Select the suggested Short cover at 22 seconds where supported.",
+      "Review audience/disclosure settings, actual visibility and all three videos before publishing."
+    ]
+  },
+  "delivery": {
+    "allowlisted_files": 8,
+    "allowlisted_bytes": 1878441148,
+    "estimated_tar_upper_bound_bytes": 1879489724,
+    "under_2_gib_with_archive_headroom": true,
+    "check_motion_review_passed": true,
+    "build_manifest_passed": true,
+    "private_queue_strict_motion_schema_passed": true
+  },
+  "limitations": [
+    "The long video repeats 35 seconds of real moving footage with a brief visible dissolve; the final Shorts avoid that transition.",
+    "The source image is moderately soft with a bright misty sky; portrait enlargement retains that source softness.",
+    "Visual assessment used temporal frame sequences and automated full decode, not a claim of human real-time playback.",
+    "Exported audio passed objective loudness/headroom and source transition checks; subjective listening was not performed.",
+    "The backdrop depicts Australia while the separate licensed field recordings come from the UK, Slovakia and Belgium; descriptions disclose this."
+  ],
+  "backdrop_resolution": [
+    1920,
+    1080
+  ],
+  "motion_review_evidence": "outputs/forest-dawn/final-qa/motion-review-evidence.json",
+  "backdrop_processing": "Technical JPEG normalization of outputs/forest-dawn/visual-research/final-scene-frame.jpg to 1920x1080 with aspect-preserving fit and padding; source already 1920x1080, no artistic or scene changes. This is the exact backdrop selected when Filebin upload began."
+}

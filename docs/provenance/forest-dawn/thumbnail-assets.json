@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "concept_id": "forest-dawn",
+  "status": "verified_thumbnail",
+  "source_frame": "outputs/forest-dawn/visual-research/stabilized-scene-frame.jpg",
+  "generated_source": "media/forest-dawn/thumbnail-source.png",
+  "output": "outputs/forest-dawn/thumbnail-1280x720.jpg",
+  "generated_original": "/workspace/generated_images/exec-b71659ec-217b-49ff-8550-fc2c0732388f.png",
+  "generation": {
+    "tool": "image_gen",
+    "kind": "AI-assisted thumbnail design based on a frame of licensed real footage",
+    "prompt": "Edit the attached photographic woodland frame into a polished YouTube ambience thumbnail for Quiet Hours. Preserve the exact source photograph's woodland composition, tall warm-brown eucalyptus trunk at the far left, misty tree depth, dense green foliage, natural soft overcast light and all existing visual subjects. The photograph must remain recognizably the same real scene. Do not replace or redesign the forest, do not add birds, people, buildings, sunrays, lanterns or any new subject, and do not turn it into illustration. Keep the full landscape 16:9 composition. Only add the channel's graphic branding: huge, very tall condensed bold CREAM capital lettering in two stacked lines reading exactly 'FOREST' above 'DAWN', placed center-right with generous edge margins and a subtle dark shadow for excellent legibility on a phone. The cream title should be dominant and confidently sized, in the style of a premium condensed cinema poster, while the prominent left tree trunk remains unobscured. Above the title add a rounded warm metallic GOLD capsule badge with bold BLACK text reading exactly '1 HOUR'. Use a clean soft gold highlight and restrained dimensional shading for the capsule. No other text, logo, border or watermark. Match the established Night Rain/Quiet Shore channel identity through the cream condensed title and gold duration badge, not by changing this woodland to a porch or coastal scene. Output a landscape 16:9 thumbnail, ideally 1280x720."
+  },
+  "source_credit": {
+    "title": "View from our back veranda",
+    "creator": "Matthew Paul Argall",
+    "source_url": "https://archive.org/details/view-from-our-back-veranda_202110",
+    "license_name": "Creative Commons Attribution 4.0 International",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "location_as_described_by_creator": "Mount Dandenong, Australia",
+    "required_credit": "Thumbnail derived from a frame of View from our back veranda by Matthew Paul Argall, CC BY 4.0; source: https://archive.org/details/view-from-our-back-veranda_202110; licence: https://creativecommons.org/licenses/by/4.0/. Changes: frame selection/stabilization, AI-assisted title and badge design, and thumbnail resizing/encoding."
+  },
+  "disclosure": "The backdrop footage is real licensed footage. Only the thumbnail design is AI-assisted; do not label the video backdrop AI-generated or imply separately recorded birdsong was recorded at this pictured place.",
+  "changes": [
+    "Selected stabilized source frame",
+    "Added cream FOREST / DAWN title and gold 1 HOUR badge with image generation",
+    "Normalized the generated artwork to a 1280x720 JPEG using FFmpeg"
+  ],
+  "visual_review": {
+    "text": "FOREST DAWN and 1 HOUR are legible with no additional text",
+    "composition": "Prominent warm-brown left trunk and recognizable misty woodland remain; title sits center-right",
+    "phone_legibility": "Oversized condensed cream text, strong dark shadow, gold badge with black letters",
+    "limits": "Image generation can alter photographic detail; the thumbnail is a derivative design, not an unaltered frame."
+  },
+  "source_frame_file": {
+    "path": "outputs/forest-dawn/visual-research/stabilized-scene-frame.jpg",
+    "bytes": 406174,
+    "sha256": "57dfbf2265523c3b89b9dfea359e41c67a9ab404b110a5fa922dd5683fa0d2d1"
+  },
+  "generated_file": {
+    "path": "media/forest-dawn/thumbnail-source.png",
+    "bytes": 2819286,
+    "sha256": "8b26091f8cdb3725c25d28e9f69db7e76482fc7da4253c33cd204dbc284a3f70"
+  },
+  "delivery_file": {
+    "path": "outputs/forest-dawn/thumbnail-1280x720.jpg",
+    "bytes": 385733,
+    "sha256": "7a26c53c1ad30de95cfee2e19dc247ab64fc28d19a3aa67287fd9136225b1099"
+  },
+  "technical_checks": {
+    "width": 1280,
+    "height": 720,
+    "format": "JPEG",
+    "under_two_mib": true,
+    "viewed_after_normalization": true
+  }
+}

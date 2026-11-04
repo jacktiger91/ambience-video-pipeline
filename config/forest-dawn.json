@@ -1,0 +1,43 @@
+{
+  "bundle_id": "2026-11-05-forest-dawn",
+  "metadata_status": "sources_and_moving_scene_verified",
+  "ready_for_render": true,
+  "manual_upload_only": true,
+  "schedule_enabled": false,
+  "publishing_enabled": false,
+  "intended_channel_id": null,
+  "intended_channel_handle": "@QuietHoursRelaxingSounds",
+  "theme": "Forest Dawn — Moving Woodland and Gentle Birdsong",
+  "long_video": "../outputs/forest-dawn/long-source.mp4",
+  "thumbnail_path": "../outputs/forest-dawn/thumbnail-1280x720.jpg",
+  "title": "Forest Dawn | 1 Hour of Gentle Woodland Birdsong",
+  "description": "Gentle bird calls, soft woodland textures and naturally moving leaves. Forest Dawn pairs an hour of real stereo field recordings from the UK, Slovakia and Belgium with real filmed woodland in Mount Dandenong, Australia. These recordings and pictures come from different places; the soundtrack is not presented as the original sound of the pictured scene.\n\nLong, unrepeated audio passages are joined with smooth transitions. The stabilized woodland footage repeats with a gentle visual crossfade. Enjoy a quiet hour for reading, writing or easing into your day.\n\n#Birdsong #ForestAmbience #NatureSounds #QuietHours",
+  "recording_credits": "Ock river walk, Abingdon, UK - May 2022 Dawn Chorus\nRecordist: alun\nhttps://archive.org/details/aporee_56785_64952\nLicence: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\nUnnamed Road, Šumiac, Slovakia - Dawn Chorus in National Park Muránska Planina, Slovakia\nRecordist: Rastislav Gulasa\nhttps://archive.org/details/aporee_48022_54624\nLicence: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\n4830 Limbourg, Belgium - Forest waking up\nRecordist: Vincent Duseigne\nhttps://archive.org/details/aporee_40553_46296\nLicence: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\nAudio changes: five distinct passages selected without repeating an interval, level matched and joined with 16-second crossfades, with measured loudness adjustment and true-peak headroom.\n\nVisual recording: View from our back veranda — Matthew Paul Argall (2021).\nhttps://archive.org/details/view-from-our-back-veranda_202110\nLicence: Creative Commons Attribution 4.0 International — https://creativecommons.org/licenses/by/4.0/\nVisual changes: original audio removed; footage trimmed, stabilized with a constant crop, joined into a repeating visual loop with a brief crossfade and re-encoded. The woodland was filmed in Mount Dandenong, Victoria, Australia, according to its creator. The separate soundtrack is not synchronous location sound.\n\nThumbnail: derived from the same Matthew Paul Argall footage under CC BY 4.0, with AI-assisted cream title and gold badge design. The video backdrop itself is real filmed footage.",
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "playlist_id": null,
+  "shorts": [
+    {
+      "title": "Before the Forest Wakes | Gentle Morning Birdsong",
+      "description": "A brief pause among moving green leaves and misty trees, accompanied by real dawn birdsong from alun’s Ock woodland recording. The real filmed woodland is in Australia; the separately recorded audio is not the scene’s original location sound.\n\n#Shorts #Birdsong #ForestDawn",
+      "recording_credits": "Ock river walk, Abingdon, UK - May 2022 Dawn Chorus\nRecordist: alun\nhttps://archive.org/details/aporee_56785_64952\nLicence: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\nAudio changes: a selected excerpt from the full-hour arrangement, level adjusted and encoded to stereo AAC.\n\nVisual recording: View from our back veranda — Matthew Paul Argall (2021).\nhttps://archive.org/details/view-from-our-back-veranda_202110\nLicence: Creative Commons Attribution 4.0 International — https://creativecommons.org/licenses/by/4.0/\nVisual changes: original audio removed; footage trimmed, stabilized with a constant crop, joined into a repeating visual loop with a brief crossfade and re-encoded. The woodland was filmed in Mount Dandenong, Victoria, Australia, according to its creator. The separate soundtrack is not synchronous location sound.",
+      "start": 2490,
+      "duration": 25,
+      "framing": "center",
+      "crop_position": 0.8380952380952381,
+      "cover_offset": 22,
+      "cta": "quiet-hours"
+    },
+    {
+      "title": "Leaves Moving in the Mist | A Woodland Pause",
+      "description": "Pause beside a warm-brown tree trunk as leaves move naturally through the misty woodland. Real dawn birdsong recorded by Vincent Duseigne in Limbourg accompanies separate real footage filmed in Australia.\n\n#Shorts #WoodlandSounds #QuietHours",
+      "recording_credits": "4830 Limbourg, Belgium - Forest waking up\nRecordist: Vincent Duseigne\nhttps://archive.org/details/aporee_40553_46296\nLicence: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\nAudio changes: a selected excerpt from the full-hour arrangement, level adjusted and encoded to stereo AAC.\n\nVisual recording: View from our back veranda — Matthew Paul Argall (2021).\nhttps://archive.org/details/view-from-our-back-veranda_202110\nLicence: Creative Commons Attribution 4.0 International — https://creativecommons.org/licenses/by/4.0/\nVisual changes: original audio removed; footage trimmed, stabilized with a constant crop, joined into a repeating visual loop with a brief crossfade and re-encoded. The woodland was filmed in Mount Dandenong, Victoria, Australia, according to its creator. The separate soundtrack is not synchronous location sound.",
+      "start": 3298,
+      "duration": 25,
+      "framing": "center",
+      "crop_position": 0.3504761904761905,
+      "cover_offset": 22,
+      "cta": "quiet-hours"
+    }
+  ]
+}
