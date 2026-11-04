@@ -193,8 +193,10 @@ class DraftStore:
             body = re.sub(re.escape(start) + r".*?" + re.escape(end), lambda _: section, body, flags=re.S)
         else:
             body += "\n\n" + section
-        status, updated = self.api.request("PATCH", f"/releases/{self.release_id}", {"body": body, "draft": True})
-        if status != 200 or not isinstance(updated, dict) or updated.get("draft") is not True:
+        status, updated = self.api.request("PATCH", f"/releases/{self.release_id}",
+                                           {"body": body, "draft": True, "tag_name": self.tag})
+        if (status != 200 or not isinstance(updated, dict) or updated.get("draft") is not True
+                or updated.get("id") != self.release_id or updated.get("tag_name") != self.tag):
             raise RunnerError("Could not confirm that the review page remains a private draft.")
         return updated["html_url"]
 
