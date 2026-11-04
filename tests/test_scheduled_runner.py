@@ -1,0 +1,112 @@
+"""Private queue access and daily delivery decisions with no network writes."""
+from datetime import datetime
+import json
+import os
+from pathlib import Path
+import tempfile
+import unittest
+from unittest import mock
+import urllib.request
+
+import scheduled_runner as runner
+
+
+class RunnerTests(unittest.TestCase):
+    def setUp(self):
+        temporary = tempfile.TemporaryDirectory(prefix="runner-tests-")
+        self.addCleanup(temporary.cleanup)
+        self.root = Path(temporary.name)
+        self.path = self.root / "config.json"
+        self.config = {"schema_version": 1, "enabled": False, "timezone": "Asia/Nicosia",
+                       "attempt_from": "16:00", "ready_by": "18:00", "first_delivery_date": "2026-11-05",
+                       "concept_catalog": "concepts.json", "repository": "owner/project",
+                       "private_release_id": 77, "private_release_tag": "private-review",
+                       "draft_privacy_verified": False, "prepared_episodes": {}}
+        (self.root / "concepts.json").write_text(json.dumps({"rotation_start_date": "2026-11-04", "concepts": [
+            {"id": "shore"}, {"id": "forest"}]}))
+        self.write()
+
+    def write(self):
+        self.path.write_text(json.dumps(self.config))
+
+    def slot(self):
+        return {"episode_date": "2026-11-05", "ready_by": "2026-11-05T18:00:00+02:00",
+                "ready_by_utc": "2026-11-05T16:00:00+00:00", "deadline_passed": False,
+                "enabled": True, "window_open": True, "blockers": [], "bundle_id": "2026-11-05-forest"}
+
+    def test_disabled_schedule_performs_no_network_or_store_access(self):
+        with mock.patch.object(runner, "DraftStore") as store:
+            result = runner.run(self.path, self.root / "work", "scheduled")
+        self.assertEqual(result["status"], "not_due_or_disabled")
+        store.assert_not_called()
+
+    def test_release_must_be_exact_private_draft(self):
+        store = runner.DraftStore(self.config, "unit-fixture-token")
+        release = {"id": 77, "tag_name": "private-review", "draft": False}
+        with mock.patch.object(store.api, "request", return_value=(200, release)):
+            with self.assertRaisesRegex(runner.RunnerError, "expected private draft"):
+                store.guard()
+            release["draft"] = True
+            self.assertIs(store.guard(), release)
+            release["tag_name"] = "another-draft"
+            with self.assertRaises(runner.RunnerError):
+                store.guard()
+
+    def test_redirect_never_sends_github_authorization_to_asset_storage(self):
+        request = urllib.request.Request("https://api.github.com/repos/owner/project/releases/assets/5",
+                                         headers={"Authorization": "Bearer unit-fixture-token"})
+        redirect = runner.SafeRedirect().redirect_request(request, None, 302, "Found", {},
+                                                          "https://release-assets.githubusercontent.com/private-object")
+        self.assertIsNone(redirect.get_header("Authorization"))
+        with self.assertRaisesRegex(runner.RunnerError, "HTTPS"):
+            runner.SafeRedirect().redirect_request(request, None, 302, "Found", {}, "http://example.invalid/file")
+
+    def test_completed_receipt_skips_media_download_and_has_no_public_filebin_url(self):
+        self.config.update({"enabled": True, "draft_privacy_verified": True})
+        self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}
+        self.write()
+        store = mock.Mock()
+        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered"}, 8)
+        store.publish_private_review.return_value = "https://github.com/owner/project/releases/tag/private-review"
+        with mock.patch.object(runner.daily_schedule, "select_slot", return_value=self.slot()), \
+                mock.patch.object(runner, "DraftStore", return_value=store), \
+                mock.patch.dict(os.environ, {"GITHUB_TOKEN": "unit-fixture-token"}):
+            result = runner.run(self.path, self.root / "work", "scheduled")
+        self.assertEqual(result["status"], "already_delivered")
+        store.find_asset.assert_not_called()
+        store.download.assert_not_called()
+        self.assertNotIn("filebin.net", json.dumps(result))
+
+    def test_preflight_restores_future_package_without_filebin_upload(self):
+        self.config["prepared_episodes"]["2026-11-05"] = {
+            "bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64,
+            "asset_id": 9, "asset_size": 42, "asset_sha256": "b"*64}
+        self.write()
+        store = mock.Mock()
+        store.latest_receipt.return_value = (None, 0)
+        restored = {"delivery_identity": "a"*64, "bundle_path": self.root / "bundle.json",
+                    "backdrop_path": self.root / "backdrop.jpg", "motion_report_path": self.root / "motion.json"}
+        with mock.patch.object(runner, "DraftStore", return_value=store), \
+                mock.patch.dict(os.environ, {"GITHUB_TOKEN": "unit-fixture-token"}), \
+                mock.patch.object(runner, "restore_private_bundle", return_value=restored), \
+                mock.patch.object(runner.filebin_delivery, "build_manifest", return_value=({}, {}, "a"*64)), \
+                mock.patch.object(runner.daily_schedule, "check_motion_review"), \
+                mock.patch.object(runner.filebin_delivery, "deliver") as deliver:
+            result = runner.run(self.path, self.root / "work", "preflight", "2026-11-05")
+        self.assertEqual(result["status"], "preflight_passed")
+        self.assertFalse(result["media_delivered"])
+        store.anonymous_probe.assert_called_once()
+        deliver.assert_not_called()
+
+    def test_scheduled_mode_cannot_override_date_or_skip_privacy_preflight(self):
+        with self.assertRaisesRegex(runner.RunnerError, "different date"):
+            runner.run(self.path, self.root / "work", "scheduled", "2026-11-05")
+        with mock.patch.object(runner.daily_schedule, "select_slot", return_value=self.slot()), \
+                mock.patch.object(runner, "DraftStore"), \
+                mock.patch.dict(os.environ, {"GITHUB_TOKEN": "unit-fixture-token"}):
+            with self.assertRaisesRegex(runner.RunnerError, "private-draft preflight"):
+                runner.run(self.path, self.root / "work", "scheduled")
+
+
+if __name__ == "__main__":
+    unittest.main()

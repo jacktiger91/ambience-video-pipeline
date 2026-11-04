@@ -1,0 +1,86 @@
+name: Daily private Filebin delivery
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Preflight verifies media; bootstrap-probe privately imports approved copy; connection-test checks Filebin
+        type: choice
+        default: preflight
+        options: [preflight, connection-test, bootstrap-probe]
+      episode_date:
+        description: Optional YYYY-MM-DD for private preflight (not scheduled delivery)
+        type: string
+        required: false
+  schedule:
+    # Both Cyprus offsets are covered; the runner applies Asia/Nicosia local
+    # dates and its16:00 start/18:00 deadline. Config stays disabled until tests.
+    - cron: '7,27,47 13-16 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quiet-hours-private-daily-delivery
+  cancel-in-progress: false
+
+jobs:
+  deliver:
+    # Standard public-repository Ubuntu runners only; no paid larger runners,
+    # Actions artifact storage, private-repository minutes or external paid API.
+    if: github.repository == 'jacktiger91/ambience-video-pipeline' && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      DELIVERY_MODE: ${{ github.event_name == 'schedule' && 'scheduled' || inputs.mode }}
+      PREFLIGHT_DATE: ${{ inputs.episode_date }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Check Python and HTTPS transfer tools
+        run: |
+          python3 --version
+          curl --version | head -1
+      - name: Restore, verify and deliver only when due
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p "$RUNNER_TEMP/quiet-hours-private"
+          args=()
+          if [ -n "$PREFLIGHT_DATE" ]; then args+=(--date "$PREFLIGHT_DATE"); fi
+          python3 scheduled_runner.py run --mode "$DELIVERY_MODE" \
+            --config config/scheduled-delivery.json \
+            --work-dir "$RUNNER_TEMP/quiet-hours-private" "${args[@]}" \
+            > "$RUNNER_TEMP/quiet-hours-result.json"
+      - name: Show status without publishing Filebin links
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          result = pathlib.Path(os.environ['RUNNER_TEMP']) / 'quiet-hours-result.json'
+          lines = ['## Quiet Hours delivery', '', 'Target: ready by18:00 Asia/Nicosia. YouTube publication remains manual.', '']
+          try:
+              data = json.loads(result.read_text())
+          except (OSError, ValueError):
+              data = {'status': 'stopped; inspect the failed step'}
+          lines += ['Status: ' + str(data.get('status')), '']
+          if data.get('bundle_id'):
+              lines += ['Concept: ' + data['bundle_id'], '']
+          if data.get('review_page'):
+              lines += ['[Open the private review draft while signed into GitHub](' + data['review_page'] + ')', '']
+          if data.get('completed_by_deadline') is False:
+              lines += ['This delivery completed after its18:00 target.', '']
+          if data.get('private_draft_anonymous_http') == 404:
+              lines += ['Private draft access check: anonymous API returned404.', '']
+          if data.get('status') == 'bootstrap_probe_passed':
+              lines += ['Private approved-copy asset ID: ' + str(data['asset_id']),
+                        'SHA-256: ' + data['sha256'], 'Bytes: ' + str(data['size']), '']
+          lines += ['Source files, private download URLs and credentials are not attached to this public run.']
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as stream:
+              stream.write('\n'.join(lines) + '\n')
+          PY
+      - name: Remove private temporary files
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/quiet-hours-private" "$RUNNER_TEMP/quiet-hours-result.json"
