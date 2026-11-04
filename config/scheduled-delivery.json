@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "enabled": false,
+  "enabled": true,
   "timezone": "Asia/Nicosia",
   "attempt_from": "16:00",
   "ready_by": "18:00",
@@ -31,5 +31,12 @@
     "Verify anonymous draft API access returns404 in the actual GitHub runner before enabling scheduled execution.",
     "Filebin is temporary delivery, not a persistent two-week source-media queue.",
     "A delayed attempt may retry the same local date, but it must report a missed 18:00 deadline truthfully."
-  ]
+  ],
+  "verified_cloud_runs": {
+    "private_access_and_import": 41921108084,
+    "filebin_connection": 41921613212,
+    "full_package_import": 41924004263,
+    "fresh_archive_restore": 41925006465,
+    "live_delivery_reuse": 41925331138
+  }
 }

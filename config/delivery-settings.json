@@ -5,8 +5,8 @@
   "include_titles_and_descriptions": true,
   "target_local_time": "18:00",
   "timezone": "Asia/Nicosia",
-  "schedule_enabled": false,
-  "schedule_status": "deployed_disabled_pending_full_cloud_test",
+  "schedule_enabled": true,
+  "schedule_status": "enabled_for_prepared_queue",
   "budget_eur": 0,
   "youtube_publication": "manual_by_user",
   "daily_contents": [
@@ -17,8 +17,10 @@
     "short_cover_frames",
     "concept_specific_titles_descriptions_and_recording_credits"
   ],
-  "deployment_blockers": [
-    "Full cloud connection test and prepared-media restore/review test must pass before enabling scheduled delivery.",
-    "Only the next Forest Dawn package is in production; later concepts still require verified recordings, moving footage, artwork and completed exports."
+  "deployment_blockers": [],
+  "prepared_through_date": "2026-11-05",
+  "remaining_production_work": [
+    "The assistant must source, prepare and verify the following daily concepts before they can enter the delivery queue.",
+    "Only Forest Dawn for 2026-11-05 currently has a completed package; concept briefs are not completed production."
   ]
 }
