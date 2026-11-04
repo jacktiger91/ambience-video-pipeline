@@ -9,8 +9,12 @@
   "repository": "jacktiger91/ambience-video-pipeline",
   "private_release_id": 434488698,
   "private_release_tag": "quiet-hours-private-delivery",
-  "draft_privacy_verified": false,
-  "connection_probe": null,
+  "draft_privacy_verified": true,
+  "connection_probe": {
+    "asset_id": 711087885,
+    "sha256": "eaf992794cf15952035c28f3b2e5d01f5094482e999e802ad148685bfbb46518",
+    "size": 4747
+  },
   "prepared_episodes": {},
   "notes": [
     "This selector does not deploy a cron job, prepare artwork, or find licensed recordings.",
