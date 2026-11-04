@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: Preflight verifies media; bootstrap-probe privately imports approved copy; connection-test checks Filebin
+        description: Private media checks, bootstrap imports, connection check or explicit-date delivery test
         type: choice
         default: preflight
-        options: [preflight, connection-test, bootstrap-probe]
+        options: [preflight, connection-test, bootstrap-probe, bootstrap-episode, delivery-test]
       episode_date:
-        description: Optional YYYY-MM-DD for private preflight (not scheduled delivery)
+        description: YYYY-MM-DD required for delivery-test; optional for preflight
         type: string
         required: false
   schedule:
@@ -74,9 +74,11 @@ jobs:
               lines += ['This delivery completed after its18:00 target.', '']
           if data.get('private_draft_anonymous_http') == 404:
               lines += ['Private draft access check: anonymous API returned404.', '']
-          if data.get('status') == 'bootstrap_probe_passed':
-              lines += ['Private approved-copy asset ID: ' + str(data['asset_id']),
+          if data.get('status') in ('bootstrap_probe_passed', 'bootstrap_episode_passed'):
+              lines += ['Private asset ID: ' + str(data['asset_id']),
                         'SHA-256: ' + data['sha256'], 'Bytes: ' + str(data['size']), '']
+          if data.get('delivery_identity'):
+              lines += ['Prepared delivery identity: ' + data['delivery_identity'], '']
           lines += ['Source files, private download URLs and credentials are not attached to this public run.']
           with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as stream:
               stream.write('\n'.join(lines) + '\n')

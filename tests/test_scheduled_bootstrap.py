@@ -7,6 +7,11 @@ import unittest
 from unittest import mock
 
 import scheduled_bootstrap as bootstrap
+import filebin_delivery
+try:  # Support both unittest discovery and explicit tests.test_* invocation.
+    from . import test_encrypted_queue as queue_fixtures
+except ImportError:
+    import test_encrypted_queue as queue_fixtures
 
 
 class BootstrapTests(unittest.TestCase):
@@ -69,6 +74,77 @@ class BootstrapTests(unittest.TestCase):
                 self.assertRaisesRegex(bootstrap.BootstrapError, "SHA-256"):
             bootstrap.fetch_source(self.source, self.root / "bad.txt", 128*1024)
         self.assertFalse((self.root / "bad.txt").exists())
+
+    def prepared_fixture(self):
+        # Reuse the queue's intentionally fake media: these tests exercise
+        # manifest, transport and retry boundaries, never claim a real render.
+        fixture = queue_fixtures.EncryptedQueueTests()
+        fixture.setUp()
+        self.addCleanup(fixture.doCleanups)
+        bundle_path, backdrop, motion = fixture.fixture()
+        bundle, files, identity = filebin_delivery.build_manifest(bundle_path, backdrop)
+        expected = {name: {"size": item["size"], "sha256": item["sha256"]} for name, item in files.items()}
+        folder = "https://filebin.net/" + "a"*32
+        receipt = {"schema_version": 1, "provider": "filebin.net", "bin": "a"*32,
+                   "bundle_id": bundle["bundle_id"], "identity": identity,
+                   "expected_files": expected, "status": "delivered", "readonly": True,
+                   "folder_url": folder, "expires_at": "2100-11-12T18:00:00Z",
+                   "files": {name: {**item, "url": folder + "/" + name, "uploaded": True,
+                                    "download_verified": True,
+                                    "download_verification_method": "one complete HTTP GET, SHA-256 and byte count"}
+                             for name, item in expected.items()}}
+        data = {"schema_version": 1, "kind": "prepared-bundle", "bundle_id": bundle["bundle_id"],
+                "files": [{"name": name, "url": folder + "/" + name, **item} for name, item in expected.items()],
+                "bundle": bundle, "motion_review": json.loads(motion.read_text()), "delivery_receipt": receipt}
+        self.store.guard.return_value = {"body": bootstrap.START + json.dumps(data) + bootstrap.END}
+        self.store.latest_receipt.return_value = (None, 0)
+        self.store.publish_private_review.return_value = "https://github.com/owner/repo/releases/tag/private-draft"
+        self.store.save_receipt.side_effect = lambda value: value
+        def fetch(source, destination, maximum):
+            name = source["url"].rsplit("/", 1)[-1]
+            item = files[name]
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            destination.write_bytes(Path(item["path"]).read_bytes() if "path" in item else item["text"].encode())
+        return data, fetch
+
+    def test_episode_import_keeps_identity_and_retry_reuses_archive_without_filebin_gets(self):
+        data, fetch = self.prepared_fixture()
+        captured = {}
+        def upload(store, source, name, sha):
+            captured["archive"] = source.read_bytes()
+            captured["asset"] = {"id": 123, "name": name, "size": source.stat().st_size, "state": "uploaded"}
+            return captured["asset"]
+        with mock.patch.object(bootstrap, "fetch_source", side_effect=fetch) as downloaded, \
+                mock.patch.object(bootstrap, "upload_private_file", side_effect=upload):
+            first = bootstrap.bootstrap_episode(self.store, self.root)
+        self.assertEqual(downloaded.call_count, 8)
+        self.assertEqual(first["delivery_identity"], data["delivery_receipt"]["identity"])
+        self.assertNotIn("filebin.net", json.dumps(first))
+        self.assertFalse(first["media_delivered"])
+        retry = self.root / "retry"; retry.mkdir()
+        self.store.assets.return_value = [captured["asset"]]
+        self.store.latest_receipt.return_value = (data["delivery_receipt"], 1)
+        self.store.download.side_effect = lambda asset, path: path.write_bytes(captured["archive"])
+        with mock.patch.object(bootstrap, "fetch_source") as fetch, \
+                mock.patch.object(bootstrap, "upload_private_file") as upload:
+            second = bootstrap.bootstrap_episode(self.store, retry)
+        self.assertTrue(second["reused_existing_asset"])
+        self.assertEqual(second["sha256"], first["sha256"])
+        fetch.assert_not_called(); upload.assert_not_called()
+
+    def test_changed_copy_or_extra_source_cannot_enter_prepared_queue(self):
+        data, fetch = self.prepared_fixture()
+        data["bundle"]["videos"][0]["title"] = "Changed after completed delivery"
+        self.store.guard.return_value = {"body": bootstrap.START + json.dumps(data) + bootstrap.END}
+        with mock.patch.object(bootstrap, "fetch_source", side_effect=fetch), \
+                mock.patch.object(bootstrap, "upload_private_file") as upload, \
+                self.assertRaisesRegex(bootstrap.BootstrapError, "differs from the original"):
+            bootstrap.bootstrap_episode(self.store, self.root)
+        upload.assert_not_called()
+        self.store.save_receipt.assert_not_called()
+        data["files"].append({"name": "token.json", "url": "https://filebin.net/" + "a"*32 + "/token.json"})
+        with self.assertRaisesRegex(bootstrap.BootstrapError, "eight-file"):
+            bootstrap.episode_specification({"body": bootstrap.START + json.dumps(data) + bootstrap.END})
 
 
 if __name__ == "__main__":

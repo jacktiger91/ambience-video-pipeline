@@ -66,7 +66,7 @@ class RunnerTests(unittest.TestCase):
         self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}
         self.write()
         store = mock.Mock()
-        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered"}, 8)
+        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered", "expires_at": "2100-11-12T18:00:00Z"}, 8)
         store.publish_private_review.return_value = "https://github.com/owner/project/releases/tag/private-review"
         with mock.patch.object(runner.daily_schedule, "select_slot", return_value=self.slot()), \
                 mock.patch.object(runner, "DraftStore", return_value=store), \
@@ -77,13 +77,44 @@ class RunnerTests(unittest.TestCase):
         store.download.assert_not_called()
         self.assertNotIn("filebin.net", json.dumps(result))
 
+    def test_expired_complete_receipt_is_not_reported_as_ready(self):
+        self.config.update({"enabled": True, "draft_privacy_verified": True})
+        self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}
+        self.write()
+        store = mock.Mock()
+        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered", "expires_at": "2000-11-12T18:00:00Z"}, 8)
+        with mock.patch.object(runner.daily_schedule, "select_slot", return_value=self.slot()), \
+                mock.patch.object(runner, "DraftStore", return_value=store), \
+                mock.patch.dict(os.environ, {"GITHUB_TOKEN": "unit-fixture-token"}):
+            with self.assertRaisesRegex(runner.RunnerError, "expires before"):
+                runner.run(self.path, self.root / "work", "scheduled")
+        store.publish_private_review.assert_not_called()
+
+    def test_manual_delivery_requires_date_and_reuses_receipt_with_disabled_schedule(self):
+        with self.assertRaisesRegex(runner.RunnerError, "explicit approved episode date"):
+            runner.run(self.path, self.root / "work", "delivery-test")
+        self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}
+        self.write()
+        store = mock.Mock()
+        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered", "expires_at": "2100-11-12T18:00:00Z"}, 8)
+        store.publish_private_review.return_value = "https://github.com/owner/project/releases/tag/private-review"
+        with mock.patch.object(runner, "DraftStore", return_value=store), \
+                mock.patch.dict(os.environ, {"GITHUB_TOKEN": "unit-fixture-token"}), \
+                mock.patch.object(runner.filebin_delivery, "deliver") as deliver:
+            result = runner.run(self.path, self.root / "work", "delivery-test", "2026-11-05")
+        self.assertEqual(result["status"], "already_delivered")
+        store.anonymous_probe.assert_called_once()
+        store.publish_private_review.assert_called_once()
+        store.download.assert_not_called()
+        deliver.assert_not_called()
+
     def test_preflight_restores_future_package_without_filebin_upload(self):
         self.config["prepared_episodes"]["2026-11-05"] = {
             "bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64,
             "asset_id": 9, "asset_size": 42, "asset_sha256": "b"*64}
         self.write()
         store = mock.Mock()
-        store.latest_receipt.return_value = (None, 0)
+        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered", "expires_at": "2100-11-12T18:00:00Z"}, 8)
         restored = {"delivery_identity": "a"*64, "bundle_path": self.root / "bundle.json",
                     "backdrop_path": self.root / "backdrop.jpg", "motion_report_path": self.root / "motion.json"}
         with mock.patch.object(runner, "DraftStore", return_value=store), \

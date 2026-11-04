@@ -28,7 +28,7 @@ import daily_schedule
 from encrypted_queue import QueueError, restore_private_bundle
 import filebin_delivery
 from filebin_cloud_state import merge, validate
-from scheduled_bootstrap import BootstrapError, bootstrap_probe
+from scheduled_bootstrap import BootstrapError, bootstrap_episode, bootstrap_probe
 
 
 class RunnerError(Exception):
@@ -265,6 +265,8 @@ def run(config_path: Path, work: Path, mode: str, selected_date: str | None = No
     config = daily_schedule.read_json(config_path)
     if mode == "scheduled" and selected_date:
         raise RunnerError("Scheduled delivery cannot select a different date.")
+    if mode == "delivery-test" and not selected_date:
+        raise RunnerError("A manual delivery test requires its explicit approved episode date.")
     day = date.fromisoformat(selected_date) if selected_date else None
     slot = daily_schedule.select_slot(config_path, episode_date=day)
     public = {key: slot[key] for key in ("episode_date", "ready_by", "ready_by_utc", "deadline_passed")}
@@ -273,7 +275,7 @@ def run(config_path: Path, work: Path, mode: str, selected_date: str | None = No
     store = DraftStore(config, token())
     work = work.expanduser().resolve()
     work.mkdir(parents=True, exist_ok=True)
-    if mode in {"preflight", "connection-test", "bootstrap-probe"}:
+    if mode in {"preflight", "connection-test", "bootstrap-probe", "bootstrap-episode", "delivery-test"}:
         store.anonymous_probe()
     elif config.get("draft_privacy_verified") is not True:
         raise RunnerError("Run the private-draft preflight before enabling automatic delivery.")
@@ -281,6 +283,8 @@ def run(config_path: Path, work: Path, mode: str, selected_date: str | None = No
         return probe_connection(config, store, work)
     if mode == "bootstrap-probe":
         return bootstrap_probe(store, work)
+    if mode == "bootstrap-episode":
+        return bootstrap_episode(store, work)
     entry = config["prepared_episodes"].get(slot["episode_date"])
     if not isinstance(entry, dict) or entry.get("bundle_id") != slot.get("bundle_id"):
         raise RunnerError("Today's concept has no prepared private archive. No old concept was substituted.")
@@ -292,8 +296,13 @@ def run(config_path: Path, work: Path, mode: str, selected_date: str | None = No
     if previous and previous["identity"] != expected_identity:
         raise RunnerError("Today's existing delivery contains different bytes; preserve it before review.")
     if previous and previous.get("status") == "delivered":
-        page = store.publish_private_review(previous) if mode == "scheduled" else store.guard()["html_url"]
-        return {**public, "status": "already_delivered", "bundle_id": bundle_id, "review_page": page}
+        required_until = max(datetime.now(timezone.utc), daily_schedule.aware_time(slot["ready_by"]))
+        if daily_schedule.aware_time(previous.get("expires_at", "")) <= required_until:
+            raise RunnerError("The existing Filebin delivery expires before the required review deadline; preserve its receipt and prepare an explicit replacement.")
+        if mode in {"scheduled", "delivery-test"}:
+            page = store.publish_private_review(previous)
+            return {**public, "status": "already_delivered", "bundle_id": bundle_id, "review_page": page,
+                    "expires_at": previous["expires_at"]}
     size, sha = entry.get("asset_size"), entry.get("asset_sha256", "")
     if type(size) is not int or not 0 < size < 2*1024**3 or not isinstance(sha, str) or not re.fullmatch(r"[a-f0-9]{64}", sha):
         raise RunnerError("Prepared archive needs its exact size and SHA-256.")
@@ -328,8 +337,8 @@ def main() -> int:
     job = commands.add_parser("run")
     job.add_argument("--config", type=Path, default=Path(__file__).resolve().parent / "config/scheduled-delivery.json")
     job.add_argument("--work-dir", type=Path, required=True)
-    job.add_argument("--mode", choices=("scheduled", "preflight", "connection-test", "bootstrap-probe"), default="preflight")
-    job.add_argument("--date", help="explicit preflight date only; scheduled runs always use today's Cyprus date")
+    job.add_argument("--mode", choices=("scheduled", "preflight", "connection-test", "bootstrap-probe", "bootstrap-episode", "delivery-test"), default="preflight")
+    job.add_argument("--date", help="explicit manual preflight/delivery-test date; scheduled runs always use today's Cyprus date")
     sync = commands.add_parser("sync-state")
     sync.add_argument("--config", type=Path, required=True)
     sync.add_argument("path", type=Path)

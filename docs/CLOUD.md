@@ -7,16 +7,23 @@ does not become a different video merely by changing its title or colors.
 The current route is cloud rendering followed by **manual YouTube Studio upload**.
 No Google Cloud project or OAuth connection is needed. The user has authorized
 daily Filebin delivery, including each concept's titles and descriptions, and
-selected **18:00 Asia/Nicosia**. That delivery target is recorded in
-`config/delivery-settings.json`; it is not an active schedule. No daily cloud
-service has been deployed by saving these files. YouTube publication stays manual.
+selected **18:00 Asia/Nicosia**. YouTube publication stays manual. The daily
+workflow uses a prepared-media queue, with attempts beginning at 16:00 to leave
+time for transfer and retries before the 18:00 target.
 
-The readiness check on 4 November 2026 found invalid configured GitHub
-authorization, an empty remote repository, and no deployed scheduler. Restore
-valid repository authorization, deploy and test the workflow, and provide the
-remaining verified assets before enabling unattended delivery. No further time
-selection is needed. A scheduled start at 18:00 would not guarantee files are
-ready at 18:00; production must complete ahead of that delivery target.
+Repository-scoped Git and GitHub API access work, and source code is now on
+`main`. The earlier generic CLI login check did not establish that repository
+access was broken. Test the actual repository operation instead of requesting
+new credentials based on `gh auth status` alone. Codex's GitHub upload-host
+permissions can differ from repository API access; native GitHub Actions jobs
+use their own scoped `GITHUB_TOKEN` for draft-release asset transfers.
+
+`config/scheduled-delivery.json` records the activation flag, private draft and
+exact dates with prepared assets. While `enabled` is false, scheduled workflow
+invocations remain inert. A deployed workflow, an enabled selector and a verified
+full delivery are separate readiness facts. No further time selection is needed.
+GitHub cron timing is best effort; beginning the transfer at 18:00 would not make
+the files ready by 18:00.
 
 ## What changes each day
 
@@ -119,50 +126,88 @@ workflow. Production briefs cannot take that path.
 
 ## What Cloud can do without your laptop
 
-A cloud job can render assets already prepared and verified in its workspace.
-The content queue is not an unattended artist or a recording service. Image
-generation available in this chat does not imply a free image-generation API in
-GitHub Actions. Finding/licensing recordings, creating new scenes and thumbnails,
-and reviewing them remain preparation steps until a separate verified automation
-is approved.
+A cloud job can render assets already prepared and verified in its workspace,
+or deliver an already-produced package while the laptop is off. The content
+queue is not an unattended artist or a recording service. Finding/licensing
+recordings, preparing moving scenes and thumbnails, and reviewing the results
+remain preparation steps. Image generation in this chat does not imply a free
+generation API in GitHub Actions. The queue stops when a date lacks its own
+finished concept; it never substitutes yesterday's video.
 
-The optional `.github/workflows/ambience-review.yml` has **manual dispatch only**.
-It has no cron or automatic publishing. Its standard Ubuntu free-tier job skips
-private repositories rather than assuming free minutes remain; it never changes
-repository visibility. Keep your repository private unless you choose otherwise.
-The current Codex Cloud workspace can still prepare files without making it public.
+The primary `.github/workflows/daily-filebin.yml` runs only in this named public
+repository on standard `ubuntu-24.04` runners. It uses no paid larger runners,
+Actions media artifacts or external paid APIs. It never changes repository
+visibility. UTC trigger windows cover both Cyprus offsets; `daily_schedule.py`
+uses `Asia/Nicosia` for the actual date, 16:00 attempt window and 18:00 deadline.
+Late attempts retain the same date and report a missed deadline truthfully.
 
-Its `deliver_to_filebin` option sends each completed concept's three videos,
-thumbnail, suggested covers and exact publishing copy together. Set
-`filebin_backdrop` to the corresponding scene image; this is required for a
-complete daily Filebin package. The upload list is
-fixed; local audit documents and credentials are not included. A separate
-Filebin receipt branch preserves upload/download progress across runner retries.
-See [Filebin delivery](FILEBIN-DELIVERY.md) for the command, retained-state rules
-and the visibility of receipts in a public repository. The workflow summary
-links to the finished concept folder and reports its actual expiry.
-The option is off by default and explicitly discloses that receipt/download
-URLs are stored publicly in this public repository. Choosing that option is a
-separate visibility decision from approving Filebin delivery alone. The current
-chat's uploads do not create those public GitHub receipts.
+The dedicated `quiet-hours-private-delivery` **draft release** holds prepared
+archives, immutable receipt versions and the private review page. Each archive
+must be smaller than 2 GiB. It contains the six finished media files, backdrop,
+portable bundle metadata and hash-bound final motion reviews. Assets remain out
+of Git. Only the small date/asset-ID/size/hash mapping belongs in the source
+configuration. The runner checks that the release is still the configured draft
+before accessing it. Publishing that draft would expose its assets and links;
+the runner refuses to continue if it has become a published release.
 
-Before using that optional workflow, its trusted branch must contain the code,
-and the runner must have the verified assets, episode and retained history at
-the declared paths. The workflow does not invent or fetch missing production
-assets. Choose `verified-assets` only after that preparation. `reuse-long` remains
-available to reopen an existing verified episode under the same bundle ID.
+The daily workflow first restores the private receipt. A completed matching
+delivery is reused; an incomplete delivery resumes only missing uploads/checks.
+It validates the prepared archive and recorded media/motion evidence, then sends
+the three MP4s, thumbnail, two covers, backdrop and concept-specific publishing
+copy to Filebin. Receipt updates are persisted before subsequent transfers.
+The release's private review notes receive the final Filebin link and expiry.
+Public logs and summaries contain status and a link to the signed-in review
+page, not private Filebin URLs or source assets.
 
-The existing €0 guards remain: the `youtube-review` environment needs
-`ZERO_SPEND_CONFIRMED=true` only after paid Actions/storage use is blocked at the
-account. Review artifacts are optional, off by default, capped at 400 MiB and kept
-one day. Account-wide free storage must still be available; do not purchase more
-when a quota check fails. Artifacts in a public code repository are not a private
-media vault. The workflow has not been run or deployed merely because it exists.
+Before enabling `config/scheduled-delivery.json`, verify the draft is inaccessible
+to an anonymous request from an actual GitHub runner, complete the small approved
+publishing-copy connection test, and preflight the intended full media package.
+The manual modes have distinct purposes:
+
+- `bootstrap-probe` imports a small approved text asset using the native runner
+  credential. `connection-test` checks its Filebin upload/download and private
+  retry receipt. Neither proves that an hour-long video has been queued.
+- `bootstrap-episode` imports exactly eight already-authorized Filebin files.
+  Portable bundle metadata, final motion evidence and the completed delivery
+  receipt come from the private draft body, not a public source file or a
+  Filebin audit-document upload. The worker builds and verifies the prepared
+  archive in the private draft. This step does not create another Filebin
+  media upload.
+- `preflight` restores and checks the prepared archive and motion evidence,
+  including when the same media already has a completed receipt.
+- `delivery-test` is an explicit-date manual check of the real delivery path.
+  It reuses completed matching receipts and updates the private review page.
+  If files already exist, report that reuse instead of claiming a new full
+  transfer. This mode does not enable the schedule.
+
+For example, after the Forest Dawn package is mapped to its date:
+
+```bash
+gh workflow run daily-filebin.yml --repo jacktiger91/ambience-video-pipeline \
+  -f mode=preflight -f episode_date=2026-11-05
+gh workflow run daily-filebin.yml --repo jacktiger91/ambience-video-pipeline \
+  -f mode=delivery-test -f episode_date=2026-11-05
+```
+
+Inspect the actual run results before enabling the queue. Record private access,
+text connectivity, prepared-media restoration and final delivery/reuse as
+separate checks. A successful text transfer alone does not establish readiness
+of the full daily package.
+
+The older `.github/workflows/ambience-review.yml` remains a manual preparation
+and optional YouTube-API route. Its opt-in Filebin branch-ledger mode stores
+download URLs publicly and is not the private daily route. Its existing
+`ZERO_SPEND_CONFIRMED` and optional artifact-storage gates remain; do not enable
+paid usage or assume those gates have been satisfied. See
+[Filebin delivery](FILEBIN-DELIVERY.md) for the distinct receipt backends.
 
 ## Review in the browser
 
-Download the prepared review bundle from the current cloud delivery link or a
-successfully created workflow artifact. In [YouTube Studio](https://studio.youtube.com/),
+Open [the repository Releases page](https://github.com/jacktiger91/ambience-video-pipeline/releases)
+while signed into an account with repository write access, then open the
+`quiet-hours-private-delivery` draft. Its notes link to each successfully
+delivered concept. Download the complete Filebin package before its reported
+expiry. In [YouTube Studio](https://studio.youtube.com/),
 select `@QuietHoursRelaxingSounds`, then **Create → Upload videos**. Use the finished
 metadata and actual credits in `upload-details.md`, the new thumbnail, and the
 reviewed disclosures. Save the tests as **Unlisted** and record each Studio link
@@ -177,6 +222,6 @@ Optional API tools remain in the repository for a future explicit choice; leave
 `stage_uploads` and `apply_playlist` off. [YouTube API setup](YOUTUBE.md) documents
 their secret store and channel checks. No credentials are required for the
 current manual route. The confirmed daily delivery target is 18:00 Asia/Nicosia.
-A fixed UTC cron would not preserve that local time through daylight-saving
-changes. Enable a timezone-aware schedule only after deployment and its first
-complete prepared-media delivery have been verified.
+The local-date selector handles daylight-saving changes. Keep the queue supplied
+with verified packages and inspect delivery status; neither a source-code push
+nor a configured cron proves that the next episode is ready.

@@ -1,13 +1,15 @@
 # Ambience video renderer
 
-Render one visual file and one finished ambience soundtrack into a YouTube-ready
-MP4 using Python, FFmpeg, and FFprobe. Everything runs locally in a Linux Codex
-Cloud environment. No Windows laptop, paid service, account, or Python package is
-required.
+Render a moving visual and a finished ambience soundtrack into a YouTube-ready
+MP4 using Python, FFmpeg, and FFprobe. The project also prepares two Shorts,
+artwork and publishing copy, then delivers approved packages through Filebin.
+Rendering and delivery run in Linux cloud environments; a Windows laptop is not
+needed. The basic `render.py` command uses only Python's standard library and
+FFmpeg/FFprobe. Optional artwork and archive helpers have their own dependencies.
 
-This project covers the rendering stage. Thumbnails, titles, descriptions,
-credits, approval, and uploads are separate steps. Supply your own visual and
-finished soundtrack.
+YouTube upload, review and publication remain manual. Each daily episode must
+have its recordings, rights, moving scene and thumbnail prepared and verified
+before it enters the delivery queue.
 
 ## Three-video review workflow
 
@@ -62,11 +64,26 @@ Animation helpers require Python 3.11+ and the pinned Pillow dependency in
 For future cloud runs, see [cloud setup and the daily planner](docs/CLOUD.md).
 The requested daily Filebin delivery target is **18:00 Asia/Nicosia**, including
 each concept's titles, descriptions and recording credits with its finished
-media. The supplied GitHub workflow remains manual only, with external delivery
-off by default and checks to prevent paid usage. It has not been deployed:
-GitHub authorization needs reconnecting, and future recordings and artwork
-still need preparation. The confirmed time is recorded in
-[delivery settings](config/delivery-settings.json); it is not an active schedule.
+media. Repository-scoped GitHub access works, and source code is now on `main`.
+The [daily workflow](.github/workflows/daily-filebin.yml) uses standard Ubuntu
+runners in this public repository, with no paid runners, Actions media artifacts
+or paid generation APIs. It selects the exact Cyprus date, begins attempts at
+16:00, and reports whether delivery completed by 18:00. GitHub scheduling is best
+effort, so the target is not a service guarantee.
+
+[Scheduled-delivery configuration](config/scheduled-delivery.json) is the
+activation and prepared-queue source of truth. While `enabled` is false, timed
+workflow invocations do not deliver media. Enablement follows the private-draft
+access check, connection test and prepared-media preflight; a successful text
+probe alone does not prove full media delivery. Future concepts still need
+production and QA. This queue does not create an indefinite supply of new
+recordings or artwork.
+
+Prepared packages, retry receipts and the daily review links belong in the
+dedicated **draft** release. Open [the repository's Releases page](https://github.com/jacktiger91/ambience-video-pipeline/releases)
+while signed into an account with repository write access. Keep that release a
+draft; publishing it would expose its assets and review links. Public workflow
+summaries show status and the review-page link, not the Filebin URLs.
 Optional [YouTube API connection instructions](docs/YOUTUBE.md) are
 available if you later choose free API registration; they are not required for
 manual Studio uploads.
@@ -84,8 +101,8 @@ python3 filebin_delivery.py --bundle outputs/NEW_BUNDLE/bundle.json \
 
 Use `--check-local-only` instead of `--approved-filebin` to inspect the exact
 file list without network access. Existing Quiet Shore media is already
-delivered; its new publishing-copy download links back to that set. The cloud
-workflow can retain Filebin receipts between runners; see
+delivered; its new publishing-copy download links back to that set. The daily
+workflow retains private Filebin receipts between runners; see
 [delivery behavior and temporary-link limits](docs/FILEBIN-DELIVERY.md).
 
 Run the extended offline checks as well as the renderer smoke test:

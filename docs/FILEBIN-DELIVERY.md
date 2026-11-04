@@ -35,7 +35,18 @@ The command reuses matching uploads, completes only missing checks, and stops
 if a local file or its final copy changed. Expired or restricted delivery links
 need a reviewed replacement; the command does not silently create new bins.
 
-For ephemeral GitHub runners, the optional workflow first restores a receipt
+The private daily workflow in `.github/workflows/daily-filebin.yml` restores
+receipts from the dedicated `quiet-hours-private-delivery` **draft release**.
+It saves immutable numbered receipt assets before further uploads, and writes
+the completed Filebin link into that draft's review notes. The runner verifies
+`draft: true` on each release access and fails if the release is published.
+Anonymous draft access must be checked from an actual GitHub runner before
+automatic delivery is enabled. The public run summary reports status and links
+to the signed-in review page, without exposing Filebin URLs. An already
+completed matching delivery is reused, so a retry does not consume another
+full-media download or create another bin.
+
+The older optional `ambience-review.yml` route first restores a receipt
 using `filebin_cloud_state.py`, then synchronizes every state change before the
 next transfer. The initial bin identity is persisted before the first Filebin
 request. The dedicated `ambience-filebin-state` branch contains only allowlisted
@@ -43,6 +54,8 @@ filenames, hashes, sizes, Filebin URLs, expiry and verification flags. In a publ
 repository these receipt links are public too. No media, description text,
 source paths, credentials or signed storage URLs enter that branch. A failed
 sync stops the delivery. This is separate from the stricter YouTube ID ledger.
+That public branch-ledger option is off by default and is not used by the
+private scheduled route.
 
 ## Verification without exhausting downloads
 

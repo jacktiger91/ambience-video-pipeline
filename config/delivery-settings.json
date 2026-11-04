@@ -6,7 +6,7 @@
   "target_local_time": "18:00",
   "timezone": "Asia/Nicosia",
   "schedule_enabled": false,
-  "schedule_status": "not_deployed",
+  "schedule_status": "deployed_disabled_pending_full_cloud_test",
   "budget_eur": 0,
   "youtube_publication": "manual_by_user",
   "daily_contents": [
@@ -18,8 +18,7 @@
     "concept_specific_titles_descriptions_and_recording_credits"
   ],
   "deployment_blockers": [
-    "Configured GitHub authorization is invalid; the remote repository currently has no application code.",
-    "No scheduled runner has been deployed or verified.",
-    "The remaining concepts still require verified recordings, artwork and completed exports."
+    "Full cloud connection test and prepared-media restore/review test must pass before enabling scheduled delivery.",
+    "Only the next Forest Dawn package is in production; later concepts still require verified recordings, moving footage, artwork and completed exports."
   ]
 }
