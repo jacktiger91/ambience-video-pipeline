@@ -198,7 +198,9 @@ class DraftStore:
         if (status != 200 or not isinstance(updated, dict) or updated.get("draft") is not True
                 or updated.get("id") != self.release_id or updated.get("tag_name") != self.tag):
             raise RunnerError("Could not confirm that the review page remains a private draft.")
-        return updated["html_url"]
+        # Draft-specific untagged URLs can change after an API update. The
+        # authenticated Releases page remains a stable bookmark for the owner.
+        return f"https://github.com/{self.repository}/releases"
 
 
 def token() -> str:
