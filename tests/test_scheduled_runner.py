@@ -1,5 +1,6 @@
 """Private queue access and daily delivery decisions with no network writes."""
-from datetime import datetime
+from datetime import datetime, timezone
+import copy
 import json
 import os
 from pathlib import Path
@@ -34,6 +35,18 @@ class RunnerTests(unittest.TestCase):
                 "ready_by_utc": "2026-11-05T16:00:00+00:00", "deadline_passed": False,
                 "enabled": True, "window_open": True, "blockers": [], "bundle_id": "2026-11-05-forest"}
 
+    def completed(self):
+        files = {f"2026-11-05-forest-{name}{suffix}": {"size": index + 20, "sha256": "b"*64}
+                 for index, (name, suffix) in enumerate([
+                     ("long", ".mp4"), ("short1", ".mp4"), ("short2", ".mp4"),
+                     ("thumbnail", ".jpg"), ("short1-cover", ".jpg"), ("short2-cover", ".jpg"),
+                     ("backdrop", ".jpg"), ("upload-details", ".txt")])}
+        receipt = {"identity": "a"*64, "status": "delivered", "expires_at": "2100-11-12T18:00:00Z",
+                   "bin": "b"*32, "expected_files": files}
+        listing = {"bin": {"readonly": True, "expired_at": receipt["expires_at"]},
+                   "files": [{"filename": name, "bytes": item["size"], "sha256": item["sha256"]} for name, item in files.items()]}
+        return receipt, listing
+
     def test_disabled_schedule_performs_no_network_or_store_access(self):
         with mock.patch.object(runner, "DraftStore") as store:
             result = runner.run(self.path, self.root / "work", "scheduled")
@@ -66,15 +79,22 @@ class RunnerTests(unittest.TestCase):
         self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}
         self.write()
         store = mock.Mock()
-        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered", "expires_at": "2100-11-12T18:00:00Z"}, 8)
+        receipt, listing = self.completed()
+        store.latest_receipt.return_value = (receipt, 8)
         store.publish_private_review.return_value = "https://github.com/owner/project/releases/tag/private-review"
         with mock.patch.object(runner.daily_schedule, "select_slot", return_value=self.slot()), \
                 mock.patch.object(runner, "DraftStore", return_value=store), \
+                mock.patch.object(runner.filebin_delivery, "FilebinClient") as client, \
                 mock.patch.dict(os.environ, {"GITHUB_TOKEN": "unit-fixture-token"}):
+            client.return_value.listing.return_value = listing
             result = runner.run(self.path, self.root / "work", "scheduled")
         self.assertEqual(result["status"], "already_delivered")
         store.find_asset.assert_not_called()
         store.download.assert_not_called()
+        client.return_value.listing.assert_called_once_with(receipt["bin"])
+        client.return_value.verify_download.assert_not_called()
+        client.return_value.upload.assert_not_called()
+        self.assertTrue(result["filebin_metadata_verified"])
         self.assertNotIn("filebin.net", json.dumps(result))
 
     def test_expired_complete_receipt_is_not_reported_as_ready(self):
@@ -96,17 +116,54 @@ class RunnerTests(unittest.TestCase):
         self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}
         self.write()
         store = mock.Mock()
-        store.latest_receipt.return_value = ({"identity": "a"*64, "status": "delivered", "expires_at": "2100-11-12T18:00:00Z"}, 8)
+        receipt, listing = self.completed()
+        store.latest_receipt.return_value = (receipt, 8)
         store.publish_private_review.return_value = "https://github.com/owner/project/releases/tag/private-review"
         with mock.patch.object(runner, "DraftStore", return_value=store), \
                 mock.patch.dict(os.environ, {"GITHUB_TOKEN": "unit-fixture-token"}), \
+                mock.patch.object(runner.filebin_delivery, "FilebinClient") as client, \
                 mock.patch.object(runner.filebin_delivery, "deliver") as deliver:
+            client.return_value.listing.return_value = listing
             result = runner.run(self.path, self.root / "work", "delivery-test", "2026-11-05")
         self.assertEqual(result["status"], "already_delivered")
         store.anonymous_probe.assert_called_once()
         store.publish_private_review.assert_called_once()
         store.download.assert_not_called()
         deliver.assert_not_called()
+
+    def test_live_listing_rejects_missing_mismatched_extra_or_unlocked_package(self):
+        receipt, listing = self.completed()
+        variants = []
+        missing = copy.deepcopy(listing); missing["files"].pop(); variants.append(missing)
+        changed = copy.deepcopy(listing); changed["files"][0]["sha256"] = "c"*64; variants.append(changed)
+        wrong_size = copy.deepcopy(listing); wrong_size["files"][0]["bytes"] += 1; variants.append(wrong_size)
+        duplicate = copy.deepcopy(listing); duplicate["files"][-1] = duplicate["files"][0]; variants.append(duplicate)
+        extra = copy.deepcopy(listing); extra["files"].append(dict(extra["files"][0])); variants.append(extra)
+        unlocked = copy.deepcopy(listing); unlocked["bin"]["readonly"] = False; variants.append(unlocked)
+        deadline = datetime(2099, 11, 5, 16, tzinfo=timezone.utc)
+        for value in variants:
+            with self.subTest(value=value), \
+                    mock.patch.object(runner.filebin_delivery, "FilebinClient") as client, \
+                    self.assertRaises(runner.RunnerError):
+                client.return_value.listing.return_value = value
+                runner.confirm_completed_delivery(receipt, deadline)
+            client.return_value.listing.assert_called_once()
+            client.return_value.upload.assert_not_called()
+            client.return_value.verify_download.assert_not_called()
+
+    def test_server_expiry_must_outlast_deadline_and_current_expiry_is_retained(self):
+        receipt, listing = self.completed()
+        deadline = datetime(2099, 11, 5, 16, tzinfo=timezone.utc)
+        with mock.patch.object(runner.filebin_delivery, "FilebinClient") as client:
+            client.return_value.listing.return_value = listing
+            for expiry in ("2000-11-05T16:00:00Z", "2099-11-05T16:00:00Z", "invalid", None):
+                listing["bin"]["expired_at"] = expiry
+                with self.subTest(expiry=expiry), self.assertRaises(runner.RunnerError):
+                    runner.confirm_completed_delivery(receipt, deadline)
+            listing["bin"]["expired_at"] = "2099-11-12T18:00:00Z"
+            confirmed = runner.confirm_completed_delivery(receipt, deadline)
+        self.assertEqual(confirmed["expires_at"], "2099-11-12T18:00:00Z")
+        self.assertEqual(receipt["expires_at"], "2100-11-12T18:00:00Z")
 
     def test_preflight_restores_future_package_without_filebin_upload(self):
         self.config["prepared_episodes"]["2026-11-05"] = {

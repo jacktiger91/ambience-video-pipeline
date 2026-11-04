@@ -264,6 +264,29 @@ def probe_connection(config: dict, store: DraftStore, work: Path) -> dict:
             "full_text_download_verified": True, "media_delivered": False}
 
 
+def confirm_completed_delivery(receipt: dict, required_until: datetime) -> dict:
+    """Confirm availability with one listing request; never fetch or resend media."""
+    listing = filebin_delivery.FilebinClient().listing(receipt["bin"])
+    expected, items, info = receipt["expected_files"], listing.get("files"), listing.get("bin", {})
+    if (not isinstance(expected, dict) or len(expected) != 8
+            or not isinstance(items, list) or len(items) != 8
+            or any(not isinstance(item, dict) for item in items)
+            or not isinstance(info, dict) or info.get("readonly") is not True):
+        raise RunnerError("The completed Filebin package is missing files or is no longer locked; no new upload was attempted.")
+    if any(not isinstance(item.get("filename"), str) or type(item.get("bytes")) is not int for item in items):
+        raise RunnerError("Filebin returned malformed current file metadata.")
+    observed = {item.get("filename"): {"size": item.get("bytes"), "sha256": item.get("sha256")} for item in items}
+    if observed != expected:
+        raise RunnerError("The current Filebin file listing differs from the completed package; no new upload was attempted.")
+    expiry = info.get("expired_at")
+    try:
+        if not isinstance(expiry, str) or daily_schedule.aware_time(expiry) <= required_until:
+            raise RunnerError("The current Filebin link expires before the required review deadline; preserve its receipt and prepare an explicit replacement.")
+    except daily_schedule.ScheduleError:
+        raise RunnerError("Filebin did not return a valid current link expiry.") from None
+    return {**receipt, "expires_at": expiry}
+
+
 def run(config_path: Path, work: Path, mode: str, selected_date: str | None = None) -> dict:
     config_path = config_path.expanduser().resolve()
     config = daily_schedule.read_json(config_path)
@@ -304,9 +327,12 @@ def run(config_path: Path, work: Path, mode: str, selected_date: str | None = No
         if daily_schedule.aware_time(previous.get("expires_at", "")) <= required_until:
             raise RunnerError("The existing Filebin delivery expires before the required review deadline; preserve its receipt and prepare an explicit replacement.")
         if mode in {"scheduled", "delivery-test"}:
+            confirmed = confirm_completed_delivery(previous, required_until)
+            if confirmed != previous:
+                previous = store.save_receipt(confirmed)
             page = store.publish_private_review(previous)
             return {**public, "status": "already_delivered", "bundle_id": bundle_id, "review_page": page,
-                    "expires_at": previous["expires_at"]}
+                    "expires_at": previous["expires_at"], "filebin_metadata_verified": True}
     size, sha = entry.get("asset_size"), entry.get("asset_sha256", "")
     if type(size) is not int or not 0 < size < 2*1024**3 or not isinstance(sha, str) or not re.fullmatch(r"[a-f0-9]{64}", sha):
         raise RunnerError("Prepared archive needs its exact size and SHA-256.")
