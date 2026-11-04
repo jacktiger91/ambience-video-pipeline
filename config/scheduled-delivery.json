@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "timezone": "Asia/Nicosia",
+  "attempt_from": "16:00",
+  "ready_by": "18:00",
+  "first_delivery_date": "2026-11-05",
+  "concept_catalog": "daily-concepts.json",
+  "repository": "jacktiger91/ambience-video-pipeline",
+  "private_release_id": null,
+  "private_release_tag": "quiet-hours-private-delivery",
+  "prepared_episodes": {},
+  "notes": [
+    "This selector does not deploy a cron job, prepare artwork, or find licensed recordings.",
+    "Restore a prepared bundle, backdrop, final motion review and retained receipt into private local paths before checking readiness.",
+    "Use confidential persistent receipt storage; do not silently publish Filebin review URLs to a public GitHub branch.",
+    "Filebin is temporary delivery, not a persistent two-week source-media queue.",
+    "A delayed attempt may retry the same local date, but it must report a missed 18:00 deadline truthfully."
+  ]
+}

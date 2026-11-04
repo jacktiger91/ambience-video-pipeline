@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "channel_name": "Quiet Hours Relaxing Sounds",
+  "channel_handle": "@QuietHoursRelaxingSounds",
+  "reference": "User-provided Night_Rain_Thumbnail.jpg, supplied 2026-11-04; a design reference, not a daily scene template.",
+  "thumbnail": {
+    "size": [
+      1280,
+      720
+    ],
+    "title": "One or two short theme words in very large, tall condensed, bold cream capitals; stack two words when useful.",
+    "duration_badge": "Rounded warm metallic-gold capsule above title, bold black 1 HOUR lettering.",
+    "layout": "Place lettering in natural negative space without hiding the scene's distinctive subject; keep readable on a phone.",
+    "color": "Natural cinematic color, clear subject separation, warm gold highlights and cool shadows where appropriate; adapt to the habitat and time of day.",
+    "avoid": [
+      "cartoon illustration",
+      "generic small text",
+      "fake place or recording claims",
+      "copying the Night Rain porch",
+      "reusing one image with different words"
+    ]
+  },
+  "backdrop": {
+    "size": [
+      1920,
+      1080
+    ],
+    "style": "Photographic realism, believable natural textures/light/reflections, fixed camera, text-free long-video backdrop.",
+    "novelty": "New setting, composition and focal subject for every dated episode; change more than color, crop or title.",
+    "motion": "Mandatory, clearly visible movement of the scene subject in the full-hour MP4 and both Shorts, matching the soundtrack and habitat. Keep the camera fixed; no still-image export or static fallback.",
+    "disclosure": "Describe AI-created visuals honestly; do not claim they are camera footage of the recording location.",
+    "motion_requirements": {
+      "required": true,
+      "camera": "fixed",
+      "applies_to": [
+        "long",
+        "short1",
+        "short2"
+      ],
+      "review_required": true,
+      "acceptance": "Review the actual exported full video and each Short at normal viewing size. Shore water must advance and recede, rain must visibly fall with appropriate impacts, and wildlife settings must have natural water or foliage movement. Each Short must retain visible subject motion in its selected framing.",
+      "not_sufficient": [
+        "a still image held for the duration",
+        "camera pan or zoom over a still image",
+        "moving text or overlays alone",
+        "brightness or lighting changes alone"
+      ],
+      "static_fallback_allowed": false
+    }
+  },
+  "audio": {
+    "kind": "real_field_recording",
+    "channels": 2,
+    "permission": "Document creator, source URL and commercial-use licence before production.",
+    "arrangement": "Prefer a long continuous take; otherwise use distinct unrepeated passages and smooth crossfades. No short repeating noise bed.",
+    "matching": "Sound must fit the current habitat and weather, with comfortable levels and natural variation.",
+    "blocker_rule": "If suitable permitted real recordings cannot be obtained and verified, leave the full episode blocked and report the reason."
+  },
+  "daily_delivery": {
+    "long_seconds": 3600,
+    "shorts_count": 2,
+    "short_seconds_range": [
+      15,
+      30
+    ],
+    "publish_automatically": false,
+    "schedule_enabled": false,
+    "timezone": "Asia/Nicosia"
+  }
+}

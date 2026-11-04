@@ -1,0 +1,34 @@
+{
+  "theme": "forest-dawn",
+  "duration_seconds": 3600,
+  "crossfade_seconds": 16,
+  "edits": [
+    {
+      "sound_id": "aporee_56785_64952",
+      "start": 10,
+      "duration": 960
+    },
+    {
+      "sound_id": "aporee_48022_54624",
+      "start": 510,
+      "duration": 166
+    },
+    {
+      "sound_id": "aporee_48022_54624",
+      "start": 750,
+      "duration": 1080
+    },
+    {
+      "sound_id": "aporee_56785_64952",
+      "start": 1160,
+      "duration": 920
+    },
+    {
+      "sound_id": "aporee_40553_46296",
+      "start": 10,
+      "duration": 538
+    }
+  ],
+  "selection_notes": "Five unique source passages with four smooth 16-second crossfades; no repeated intervals. Excluded Ock speech candidates near 995.52, 1025.76 and 1130.44 seconds, music/chime candidates near 2104.64, 2109.44 and 2933.76 seconds, early Muranska wind/microphone candidates and vehicle candidates near 472.56 and 716.64 seconds. Conservative automated selection; no subjective listening claim.",
+  "quality_report": "docs/provenance/forest-dawn/selected-source-audio-event-check.json"
+}

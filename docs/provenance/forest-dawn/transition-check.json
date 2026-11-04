@@ -1,0 +1,43 @@
+{
+  "audio_sha256": "684ee116f647c6d73fa8458284d8db0ede1dc5f4bbdeb1140a381f3d39f7939f",
+  "method": "32-second stereo windows around each16-second crossfade; finite PCM and10ms silence dropout checks. Does not establish subjective transition quality.",
+  "crossfades": [
+    {
+      "crossfade_start_seconds": 944.0,
+      "crossfade_end_seconds": 960.0,
+      "silent_10ms_blocks_below_minus120dbfs": 0,
+      "nonfinite_samples": 0,
+      "peak_dbfs": -4.593664169311523,
+      "largest_adjacent_1_second_rms_change_db": 3.840177536010742,
+      "passed": true
+    },
+    {
+      "crossfade_start_seconds": 1094.0,
+      "crossfade_end_seconds": 1110.0,
+      "silent_10ms_blocks_below_minus120dbfs": 0,
+      "nonfinite_samples": 0,
+      "peak_dbfs": -9.848221778869629,
+      "largest_adjacent_1_second_rms_change_db": 2.9021759033203125,
+      "passed": true
+    },
+    {
+      "crossfade_start_seconds": 2158.0,
+      "crossfade_end_seconds": 2174.0,
+      "silent_10ms_blocks_below_minus120dbfs": 0,
+      "nonfinite_samples": 0,
+      "peak_dbfs": -10.254979133605957,
+      "largest_adjacent_1_second_rms_change_db": 5.819690704345703,
+      "passed": true
+    },
+    {
+      "crossfade_start_seconds": 3062.0,
+      "crossfade_end_seconds": 3078.0,
+      "silent_10ms_blocks_below_minus120dbfs": 0,
+      "nonfinite_samples": 0,
+      "peak_dbfs": -8.56004810333252,
+      "largest_adjacent_1_second_rms_change_db": 6.338163375854492,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

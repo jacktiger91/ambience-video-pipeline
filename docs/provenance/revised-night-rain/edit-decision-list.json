@@ -1,0 +1,83 @@
+{
+  "duration_seconds": 3600,
+  "crossfade_seconds": 16.0,
+  "source_intervals_used_once": true,
+  "edits": [
+    {
+      "sound_id": "543481",
+      "start": 20.0,
+      "duration": 330.0,
+      "timeline_start": 0.0,
+      "timeline_end": 330.0,
+      "source_start": 20.0,
+      "source_end": 350.0,
+      "author": "RossJuterbock",
+      "source_page": "https://freesound.org/people/RossJuterbock/sounds/543481/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_sha256": "4f825a5e78cebd51606d20ce8347e67775f7e063fa2e6ce6c2f6beaccb50a775",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/543481-night_rain_roof_puddles.mp3"
+    },
+    {
+      "sound_id": "430765",
+      "start": 25.0,
+      "duration": 1250.0,
+      "timeline_start": 314.0,
+      "timeline_end": 1564.0,
+      "source_start": 25.0,
+      "source_end": 1275.0,
+      "author": "joedeshon",
+      "source_page": "https://freesound.org/people/joedeshon/sounds/430765/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_sha256": "837f9a1dfa4573d04c1b008e3f474c2415cbfcfc541b9f358c38edae099c2051",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/430765-long_easy_rain_08.mp3"
+    },
+    {
+      "sound_id": "733979",
+      "start": 30.0,
+      "duration": 1150.0,
+      "timeline_start": 1548.0,
+      "timeline_end": 2698.0,
+      "source_start": 30.0,
+      "source_end": 1180.0,
+      "author": "lastraindrop",
+      "source_page": "https://freesound.org/people/lastraindrop/sounds/733979/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_sha256": "fb00798902e505c49c775edb70367194028fffe838f51f06f11f5b718320e1b8",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3"
+    },
+    {
+      "sound_id": "616991",
+      "start": 30.0,
+      "duration": 918.0,
+      "timeline_start": 2682.0,
+      "timeline_end": 3600.0,
+      "source_start": 30.0,
+      "source_end": 948.0,
+      "author": "TRP",
+      "source_page": "https://freesound.org/people/TRP/sounds/616991/",
+      "license": "CC0-1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "source_sha256": "9d1a66be25527975c470c544ece2aaf5c169e21db7b3a23e59e5df60a017914d",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3"
+    }
+  ],
+  "shorts": [
+    {
+      "name": "short-1",
+      "timeline_start": 1818,
+      "duration": 25,
+      "source_id": "733979",
+      "source_start": 300
+    },
+    {
+      "name": "short-2",
+      "timeline_start": 45,
+      "duration": 25,
+      "source_id": "543481",
+      "source_start": 65
+    }
+  ]
+}

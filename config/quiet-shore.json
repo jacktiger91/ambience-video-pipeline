@@ -1,0 +1,43 @@
+{
+  "bundle_id": "2026-11-04-quiet-shore",
+  "metadata_status": "verified_source_master_and_animated_hour_ready",
+  "ready_for_render": true,
+  "manual_upload_only": true,
+  "schedule_enabled": false,
+  "publishing_enabled": false,
+  "intended_channel_id": null,
+  "intended_channel_handle": "@QuietHoursRelaxingSounds",
+  "theme": "Quiet Shore — Pebble Cove at Dusk",
+  "long_video": "../outputs/quiet-shore/long-source.mp4",
+  "thumbnail_path": "../media/quiet-shore/thumbnail-source.png",
+  "title": "Quiet Shore at Dusk | 1 Hour of Real Coastal Sounds",
+  "description": "A warm-windowed shore hut, clear water over pebbles and the last light on an open horizon. Quiet Shore pairs this fictional, AI-created coastal scene and subtle water animation with an hour-long arrangement of real stereo field recordings from Whitby, De Haan and Dunwich.\n\nLong, unrepeated source passages and gentle transitions leave room for the natural movement and texture of the water. Settle in for reading, winding down, or a quiet pause at the coast. Recording attribution and changes are listed below.\n\n#QuietShore #CoastalAmbience #OceanSounds #QuietHours",
+  "recording_credits": "East Pier, Whitby YO22 4DW, UK - Gurgling under the slip way ...\nRecordist: david m\nhttps://archive.org/details/aporee_37802_43261\nLicense: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\n8420 De Haan, Belgique - The sea during low tide\nRecordist: Vincent Duseigne\nhttps://archive.org/details/aporee_41944_47808\nLicense: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\n7JHM+9J Saxmundham, UK - waves ... dunwich beach ...\nRecordist: david m\nhttps://archive.org/details/aporee_59218_67955\nLicense: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\nChanges: four distinct source passages were selected without repeating an excerpt, level-matched and joined with 16-second crossfades, followed by measured loudness adjustment and peak protection. The coastal scene and thumbnail are AI-generated, with added water animation. The pictured cove is fictional; the recordings retain the locations and recordists credited above.",
+  "made_for_kids": false,
+  "contains_synthetic_media": true,
+  "playlist_id": null,
+  "shorts": [
+    {
+      "title": "A Warm Light by the Shore | A 25-Second Pause",
+      "description": "A warm light by the shore, pebbles beneath clear water, and a brief pause at dusk. This 25-second passage uses real recorded water from david m's Whitby field recording, paired with an AI-created coastal scene and subtle water animation.\n\n#Shorts #QuietShore #CoastalAmbience",
+      "recording_credits": "East Pier, Whitby YO22 4DW, UK - Gurgling under the slip way ...\nRecordist: david m\nhttps://archive.org/details/aporee_37802_43261\nLicense: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\nChanges: excerpted from the original field recording, level-matched within the full-hour edit and encoded to AAC. The coastal scene and thumbnail are AI-generated, with added water animation.",
+      "start": 640,
+      "duration": 25,
+      "framing": "center",
+      "crop_position": 0.0,
+      "cover_offset": 22,
+      "cta": "quiet-hours"
+    },
+    {
+      "title": "Open Water at Sunset | 25 Seconds of Coastal Calm",
+      "description": "Look across open water toward the fading sunset. This distinct 25-second passage uses real coastal waves recorded by Vincent Duseigne in De Haan, paired with an AI-created open-water scene and gentle animation.\n\n#Shorts #QuietShore #RelaxingSounds",
+      "recording_credits": "8420 De Haan, Belgique - The sea during low tide\nRecordist: Vincent Duseigne\nhttps://archive.org/details/aporee_41944_47808\nLicense: Creative Commons Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/\n\nChanges: excerpted from the original field recording, level-matched within the full-hour edit and encoded to AAC. The coastal scene and thumbnail are AI-generated, with added water animation.",
+      "start": 1900,
+      "duration": 25,
+      "framing": "center",
+      "crop_position": 0.75,
+      "cover_offset": 22,
+      "cta": "quiet-hours"
+    }
+  ]
+}

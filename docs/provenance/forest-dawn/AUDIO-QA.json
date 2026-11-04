@@ -1,0 +1,27 @@
+{
+  "status": "ready_for_render_and_user_listening_review",
+  "audio_path": "/workspace/ambience-video-pipeline/media/forest-dawn/soundtrack.flac",
+  "audio_sha256": "684ee116f647c6d73fa8458284d8db0ede1dc5f4bbdeb1140a381f3d39f7939f",
+  "duration_seconds": 3600,
+  "sample_rate": 48000,
+  "channels": 2,
+  "full_decode_passed": true,
+  "integrated_lufs": -22.0,
+  "true_peak_dbtp": -4.5,
+  "loudness_range_lu": 10.3,
+  "real_field_recording_sources": 3,
+  "commercial_licence": "CC BY3.0 for each original",
+  "source_passages": 5,
+  "source_interval_repeats": false,
+  "crossfade_dropout_check_passed": true,
+  "selected_speech_music_candidates_at_0_25": 0,
+  "subjective_listening_performed": false,
+  "limitations": "Automated event scores are not probabilities and do not replace listening. Comfortable technical levels cannot guarantee subjective comfort for every listener.",
+  "evidence": [
+    "sources.json",
+    "source-stereo-and-decode-check.json",
+    "selected-source-audio-event-check.json",
+    "transition-check.json",
+    "soundtrack-mix.json"
+  ]
+}

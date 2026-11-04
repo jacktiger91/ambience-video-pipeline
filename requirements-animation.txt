@@ -1,0 +1,3 @@
+# Photographic rain compositing; the original render.py remains stdlib-only.
+# This version requires Python 3.11 or newer.
+Pillow==13.0.0

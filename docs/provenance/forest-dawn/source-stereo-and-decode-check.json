@@ -1,0 +1,89 @@
+[
+  {
+    "source_id": "aporee_40553_46296",
+    "source_sha256": "47b4f226ec60138d68bf3770aa0a95737be560e08a92a9b6d3f3d689152b3f41",
+    "full_audio_decode_passed": true,
+    "distinct_stereo_windows": [
+      {
+        "source_start": 10,
+        "correlation": 0.017428021928850148,
+        "difference_rms": 0.04523320868611336,
+        "left_rms": 0.032057590782642365,
+        "right_rms": 0.03247525170445442
+      },
+      {
+        "source_start": 300.0309875,
+        "correlation": 0.020810377781759357,
+        "difference_rms": 0.06082228571176529,
+        "left_rms": 0.04538561403751373,
+        "right_rms": 0.04144620895385742
+      },
+      {
+        "source_start": 565.061975,
+        "correlation": -0.0074540387401786186,
+        "difference_rms": 0.04883871600031853,
+        "left_rms": 0.03581579402089119,
+        "right_rms": 0.03293725103139877
+      }
+    ],
+    "all_sampled_windows_have_distinct_channels": true
+  },
+  {
+    "source_id": "aporee_48022_54624",
+    "source_sha256": "c4e484d746b1443ea97e385e80bb4a9f392b0cd36231a9df4596c35a6f366a47",
+    "full_audio_decode_passed": true,
+    "distinct_stereo_windows": [
+      {
+        "source_start": 10,
+        "correlation": 0.5458730260604053,
+        "difference_rms": 0.01730821467936039,
+        "left_rms": 0.019214358180761337,
+        "right_rms": 0.016844186931848526
+      },
+      {
+        "source_start": 922.4359185,
+        "correlation": 0.010504086311250556,
+        "difference_rms": 0.050547514110803604,
+        "left_rms": 0.03905687853693962,
+        "right_rms": 0.03250043839216232
+      },
+      {
+        "source_start": 1809.871837,
+        "correlation": 0.12473539577360697,
+        "difference_rms": 0.04300014302134514,
+        "left_rms": 0.03550182655453682,
+        "right_rms": 0.029090913012623787
+      }
+    ],
+    "all_sampled_windows_have_distinct_channels": true
+  },
+  {
+    "source_id": "aporee_56785_64952",
+    "source_sha256": "2cab023ba99025d4e4424adec299d5663bba4c682d2d438c9a61e12bdd3a860b",
+    "full_audio_decode_passed": true,
+    "distinct_stereo_windows": [
+      {
+        "source_start": 10,
+        "correlation": 0.954445657418763,
+        "difference_rms": 0.00259623141027987,
+        "left_rms": 0.0060011036694049835,
+        "right_rms": 0.0076076271943748
+      },
+      {
+        "source_start": 1781.7354375,
+        "correlation": 0.9347937276668697,
+        "difference_rms": 0.016386568546295166,
+        "left_rms": 0.04145227372646332,
+        "right_rms": 0.04594229906797409
+      },
+      {
+        "source_start": 3528.470875,
+        "correlation": 0.9765219270007167,
+        "difference_rms": 0.008046308532357216,
+        "left_rms": 0.02243250049650669,
+        "right_rms": 0.028339432552456856
+      }
+    ],
+    "all_sampled_windows_have_distinct_channels": true
+  }
+]

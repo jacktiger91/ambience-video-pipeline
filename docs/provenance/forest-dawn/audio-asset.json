@@ -1,0 +1,12 @@
+{
+  "kind": "real_field_recording",
+  "status": "verified",
+  "path": "/workspace/ambience-video-pipeline/media/forest-dawn/soundtrack.flac",
+  "sha256": "684ee116f647c6d73fa8458284d8db0ede1dc5f4bbdeb1140a381f3d39f7939f",
+  "credits": "# Forest Dawn recording credits\n\nThree real stereo field recordings from the official Radio Aporee collection. The arrangement uses five distinct source passages; no source interval repeats.\n\n## 4830 Limbourg, Belgium - Forest waking up\n\nRecordist: Vincent Duseigne\nSource: https://archive.org/details/aporee_40553_46296\nOriginal map: https://aporee.org/maps/?loc=40553\nLicence: Creative Commons Attribution 3.0 \u2014 https://creativecommons.org/licenses/by/3.0/\n\n## Unnamed Road, \u0160umiac, Slovakia - Dawn Chorus in National Park Mur\u00e1nska Planina, Slovakia\n\nRecordist: Rastislav Gulasa\nSource: https://archive.org/details/aporee_48022_54624\nOriginal map: https://aporee.org/maps/?loc=48022\nLicence: Creative Commons Attribution 3.0 \u2014 https://creativecommons.org/licenses/by/3.0/\n\n## Ock river walk, Abingdon, UK - May 2022 Dawn Chorus\n\nRecordist: alun\nSource: https://archive.org/details/aporee_56785_64952\nOriginal map: https://aporee.org/maps/?loc=56785\nLicence: Creative Commons Attribution 3.0 \u2014 https://creativecommons.org/licenses/by/3.0/\n\nChanges: passages selected from the original recordings, level matched, joined with 16-second crossfades, adjusted to a comfortable measured loudness with true-peak headroom, and encoded as a stereo soundtrack. The bird and woodland sounds were recorded in the actual locations credited above. A separate backdrop must not be represented as footage of those recording locations unless its provenance establishes that.\n\nOnly credit sources actually present in each Short. Source selection and the final edit decision list determine the relevant recordist and link.\n\nQuality review limitation: event classification and loudness measurements are objective technical checks, not a claim of subjective listening.\n",
+  "rights_verified": true,
+  "rights_evidence_path": "/workspace/ambience-video-pipeline/docs/provenance/forest-dawn/sources.json",
+  "qa_passed": true,
+  "qa_report_path": "/workspace/ambience-video-pipeline/docs/provenance/forest-dawn/AUDIO-QA.json",
+  "qa_scope": "Objective decode, source/permission, stereo, selected-event, loudness and transition checks; subjective listening not performed."
+}

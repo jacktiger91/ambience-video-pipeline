@@ -1,0 +1,50 @@
+{
+  "visual_qa_passed": true,
+  "review_method": "Assistant visual inspection of generated backdrop, generated thumbnail and rendered preview frame, plus FFmpeg/FFprobe technical checks.",
+  "checks": [
+    "Photographic coastal scene is distinct from the Night Rain porch and courtyard.",
+    "No rain, storm glow or thunder imagery included in the new coastal assets.",
+    "Thumbnail uses condensed cream title QUIET SHORE and rounded gold 1 HOUR badge with black lettering.",
+    "Hut remains visible; the headline is clearly legible at phone thumbnail size.",
+    "Backdrop has no text; thumbnail lettering is a separate image.",
+    "Animation confines motion to water and keeps land, hut, rocks, sky and horizon fixed."
+  ],
+  "technical_images": {
+    "thumbnail": {
+      "resolution": [
+        1280,
+        720
+      ],
+      "source_sha256": "282c0f7c32874feeb9832e8a1a6b03cd17a85cb6698f88b45b16ae429bf13c02",
+      "normalization": "contain-lanczos-jpeg-q3-v1",
+      "bytes": 183913,
+      "path": "outputs/quiet-shore/thumbnail-1280x720.jpg",
+      "sha256": "c94a606cbea679bc33d1aa65817c4f40822439c3a69fc52a77ec1afc65764852"
+    },
+    "backdrop": {
+      "resolution": [
+        1920,
+        1080
+      ],
+      "source_sha256": "841916b3f74d00da8551b2936bb3bc2e8160828bd76953ebdd6fcbc15157b59e",
+      "normalization": "contain-lanczos-jpeg-q2-v1",
+      "bytes": 337196,
+      "path": "outputs/quiet-shore/backdrop-1920x1080.jpg",
+      "sha256": "3de8661a4ab7153cb7c7e824334ab7b3b9888efd8717c475d1945f174322be1d"
+    }
+  },
+  "visual_preview": {
+    "preview_duration": 12,
+    "encode_and_decode_seconds": 33.69,
+    "fixed_land_and_sky": true,
+    "motion_bounds": [
+      154,
+      438,
+      1920,
+      1080
+    ],
+    "video_only": true,
+    "note": "Visual review only; no synthetic placeholder audio."
+  },
+  "full_episode_status": "awaiting verified real shore audio and finished video exports"
+}

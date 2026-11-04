@@ -1,0 +1,21 @@
+{
+  "selected_passages": 5,
+  "source_seconds": 3664,
+  "crossfades": 4,
+  "crossfade_seconds": 16,
+  "output_seconds": 3600,
+  "speech_music_candidates_at_0_25": 0,
+  "max_scores": {
+    "Speech": 0.19922,
+    "Music": 0.19922,
+    "Crow": 0.14844,
+    "Caw": 0.14844,
+    "Vehicle": 0.19922,
+    "Aircraft": 0.08203,
+    "Engine": 0.00781,
+    "Wind noise (microphone)": 0.14844
+  },
+  "method": "Official YAMNet TFLite with 0.48 second hop; scores are not probabilities or subjective listening approval.",
+  "source_integrity_and_stereo_report": "source-stereo-and-decode-check.json",
+  "status": "Selected passages passed objective content checks; mix/levels/decode next."
+}

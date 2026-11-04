@@ -1,0 +1,69 @@
+{
+  "theme": "quiet-shore",
+  "duration_seconds": 3600,
+  "crossfade_seconds": 16,
+  "edits": [
+    {
+      "sound_id": "aporee_37802_43261",
+      "start": 10,
+      "duration": 1330,
+      "timeline_start": 0.0,
+      "timeline_end": 1330.0,
+      "source_start": 10.0,
+      "source_end": 1340.0,
+      "author": "david m",
+      "source_page": "https://archive.org/details/aporee_37802_43261",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_sha256": "a0728de24948b0dfd2c5443c945b42329ecd7d6a69ba5f50cb23ccf545a2e9ea",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_37802_43261.mp3"
+    },
+    {
+      "sound_id": "aporee_41944_47808",
+      "start": 14,
+      "duration": 1636,
+      "timeline_start": 1314.0,
+      "timeline_end": 2950.0,
+      "source_start": 14.0,
+      "source_end": 1650.0,
+      "author": "Vincent Duseigne",
+      "source_page": "https://archive.org/details/aporee_41944_47808",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_sha256": "2f0f3d7dc7d227e47fb945754818da5d27405ddfe60a1707d61ed06bac92faec",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_41944_47808.ogg"
+    },
+    {
+      "sound_id": "aporee_59218_67955",
+      "start": 10,
+      "duration": 500,
+      "timeline_start": 2934.0,
+      "timeline_end": 3434.0,
+      "source_start": 10.0,
+      "source_end": 510.0,
+      "author": "david m",
+      "source_page": "https://archive.org/details/aporee_59218_67955",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_sha256": "c125639dd7bc482f0d582731c4ed6192972b07ddfa103d3440965b0658405dda",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_59218_67955.mp3"
+    },
+    {
+      "sound_id": "aporee_37802_43261",
+      "start": 1380,
+      "duration": 182,
+      "timeline_start": 3418.0,
+      "timeline_end": 3600.0,
+      "source_start": 1380.0,
+      "source_end": 1562.0,
+      "author": "david m",
+      "source_page": "https://archive.org/details/aporee_37802_43261",
+      "license": "CC-BY-3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "source_sha256": "a0728de24948b0dfd2c5443c945b42329ecd7d6a69ba5f50cb23ccf545a2e9ea",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_37802_43261.mp3"
+    }
+  ],
+  "selection_notes": "Selected3,648seconds passed full-interval automated classification: noSpeech/Music>=0.25; Engine<=0.01172; noMotorboat>=0.5. Distinct stereo channels verified. Excludes all detected speech/impact events and possible late DeHaanboat.",
+  "quality_report": "docs/provenance/quiet-shore/selected-source-audio-event-check.json"
+}

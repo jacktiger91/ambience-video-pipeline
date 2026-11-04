@@ -1,0 +1,169 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn711002.ca.archive.org",
+        "dir": "/0/items/aporee_38572_44085"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn711002.ca.archive.org",
+        "dir": "/0/items/aporee_38572_44085"
+      }
+    ]
+  },
+  "created": 1793811494,
+  "d1": "dn601704.us.archive.org",
+  "dir": "/0/items/aporee_38572_44085",
+  "files": [
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1549006804",
+      "size": "2828",
+      "md5": "b3a941b00b151ae7e606cf66c3f0cdeb",
+      "crc32": "7bb8db51",
+      "sha1": "0fecc6a2a3d6bdabaaeb458f8a09f5ce7bd7570e",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "aporee_38572_44085_archive.torrent",
+      "source": "metadata",
+      "btih": "2681f731dd6d69a9d40d804ebbdb891bb737eabc",
+      "mtime": "1552022921",
+      "size": "3110",
+      "md5": "912d6448ee456c49f111758adc2902dd",
+      "crc32": "95ca12d7",
+      "sha1": "eda9a30a01209c555564b66e423d196122a6d0c5",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_38572_44085_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "82dbc55a5de9e0c18ebbf49496d67be5",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_38572_44085_meta.sqlite",
+      "source": "original",
+      "mtime": "1510312084",
+      "size": "11264",
+      "md5": "1cb89f6e8a0fb743e7a3a028934cf962",
+      "crc32": "e6a749ae",
+      "sha1": "393d7294cd592fc0d8b8030c56ae85c7069ec999",
+      "format": "Metadata"
+    },
+    {
+      "name": "aporee_38572_44085_meta.xml",
+      "source": "original",
+      "mtime": "1788973964",
+      "size": "1668",
+      "format": "Metadata",
+      "md5": "51574c6d59657296b288aa9ac1c4c5ce",
+      "crc32": "937b309c",
+      "sha1": "f88fed5993c742f89878124063bd345708c2b15b"
+    },
+    {
+      "name": "crielvagues031110h00.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "crielvagues031110h00.mp3",
+      "mtime": "1510313405",
+      "size": "61296",
+      "md5": "12b0bf2d91ff7694e9ecee981f87e6f2",
+      "crc32": "31b35950",
+      "sha1": "0d2eb83ea575e2865a5272c957aaa6c861f5be95"
+    },
+    {
+      "name": "crielvagues031110h00.mp3",
+      "source": "original",
+      "mtime": "1510312072",
+      "size": "14406053",
+      "md5": "a35bf8cf6da01cf4882733931fb4d54c",
+      "crc32": "d3214ffc",
+      "sha1": "80e02079fb3e21b4efb260e0916ef9a7e3915ea0",
+      "format": "VBR MP3",
+      "length": "360.05",
+      "height": "0",
+      "width": "0",
+      "title": "The sea at Criel beach / Criel-sur-Mer, France",
+      "artist": "Vincent Duseigne",
+      "album": "radio aporee",
+      "track": "1/1",
+      "genre": "Other",
+      "external-identifier": "urn:acoustid:870d7e45-207e-4e24-b0d2-d81d4eb40f21",
+      "external-identifier-match-date": "acoustid:2019-03-08T05:28:27Z"
+    },
+    {
+      "name": "crielvagues031110h00.ogg",
+      "source": "derivative",
+      "format": "Ogg Vorbis",
+      "original": "crielvagues031110h00.mp3",
+      "mtime": "1510313370",
+      "size": "4682346",
+      "md5": "647b0e14bd3e947f18dbd156f879aad9",
+      "crc32": "a2578c71",
+      "sha1": "92f12a18d6e0ab97b203a4a3dc3186e8e2fbb834",
+      "length": "360.05",
+      "height": "0",
+      "width": "0"
+    },
+    {
+      "name": "crielvagues031110h00.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "crielvagues031110h00.mp3",
+      "mtime": "1510313388",
+      "size": "10857",
+      "md5": "c93c23d78f4792e9de9f48aa3ba4c733",
+      "crc32": "57b8e783",
+      "sha1": "a43616a4e0006421d24f2b323eefd1e56a6f187d"
+    }
+  ],
+  "files_count": 9,
+  "item_last_updated": 1788973965,
+  "item_size": 19179422,
+  "metadata": {
+    "identifier": "aporee_38572_44085",
+    "altitude": "5",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=50.036228645967; longitude=1.3163182139397; elevation=5; name=9 Rue du Chewington, 76910 Criel-sur-Mer, France; date=2017-11-03 10:00:00 Europe/Paris;",
+    "creator": "Vincent Duseigne",
+    "date": "2017-11-03 10:00:00",
+    "description": "Sound of the sea, with waves lapping on the pebbles, at the quiet Criel beach.",
+    "latitude": "50.036228645967",
+    "licenseurl": "http://creativecommons.org/licenses/by/3.0/",
+    "longitude": "1.3163182139397",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"http://aporee.org/maps/?loc=38572\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"http://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/Paris",
+    "title": "76910 Criel-sur-Mer, France - The sea at Criel beach",
+    "collection": "radio-aporee-maps",
+    "publicdate": "2017-11-10 11:07:53",
+    "uploader": "radio@aporee.org",
+    "addeddate": "2017-11-10 11:07:53",
+    "backup_location": "ia906600_6",
+    "external_metadata_update": "2019-03-08T05:28:27Z"
+  },
+  "server": "dn601704.us.archive.org",
+  "simplelists": {
+    "solo_manifest": {
+      "solo_manifest_dn601704": {
+        "sys_changed_by": {
+          "source": "task",
+          "task_id": "5620317631"
+        },
+        "sys_last_changed": "2026-09-09 17:12:53.652629"
+      }
+    }
+  },
+  "solo": true,
+  "uniq": 1455330086,
+  "workable_servers": [
+    "dn601704.us.archive.org"
+  ]
+}

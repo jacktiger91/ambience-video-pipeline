@@ -1,0 +1,161 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn721605.ca.archive.org",
+        "dir": "/0/items/aporee_59218_67955"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn721605.ca.archive.org",
+        "dir": "/0/items/aporee_59218_67955"
+      }
+    ]
+  },
+  "created": 1793811495,
+  "d1": "dn601301.us.archive.org",
+  "dir": "/0/items/aporee_59218_67955",
+  "files": [
+    {
+      "name": "140223001.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "140223001.mp3",
+      "mtime": "1676977764",
+      "size": "155608",
+      "md5": "076b9c9ab2727f49a03373cd2c98a1fa",
+      "crc32": "3ba310e9",
+      "sha1": "d30bcc2f6e1b3867aa0ccc9b68cc6ce1c3f6e185"
+    },
+    {
+      "name": "140223001.mp3",
+      "source": "original",
+      "mtime": "1676977663",
+      "size": "25286784",
+      "md5": "d822f5531fda3f834ca3b3a6fd25116b",
+      "crc32": "89a60e5c",
+      "sha1": "ff827ac221cb5c30f1a26fa0b106ce19a7a21272",
+      "format": "VBR MP3",
+      "length": "632.04",
+      "title": "waves ... dunwich beach ... / 7JHM+9J Saxmundham, UK",
+      "creator": "david m",
+      "album": "radio aporee",
+      "track": "1/1",
+      "artist": "david m",
+      "genre": "ambient phonography",
+      "comment": "datum=WGS84; latitude=52.278496629979; longitude=1.6340833972606; elevation=0; name=East Suffolk, Suffolk, England, United Kingdom; date=2023-02-14 07:01:00 Europe/London"
+    },
+    {
+      "name": "140223001.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "140223001.mp3",
+      "mtime": "1676977729",
+      "size": "48620",
+      "md5": "68577dee21f82dc5cfaa2add010dd5bc",
+      "crc32": "ad000cb0",
+      "sha1": "c05fd9c2e19934f709d13de20516e963567e8e24"
+    },
+    {
+      "name": "140223001_spectrogram.png",
+      "source": "derivative",
+      "format": "Spectrogram",
+      "original": "140223001.mp3",
+      "mtime": "1676977744",
+      "size": "272607",
+      "md5": "95932a216b6ece56d650a884eafc1a96",
+      "crc32": "58492940",
+      "sha1": "403a35cf13895c85c7b9b444863d2ab3b5fc3d4d"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1676977775",
+      "size": "4239",
+      "md5": "9eabd19ca073c298dddc4ea92023b314",
+      "crc32": "ecbb20e1",
+      "sha1": "c2425d95d222067da8448003fb9376f056090f26",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "aporee_59218_67955_archive.torrent",
+      "source": "metadata",
+      "btih": "a9d4612f1c5cea6b680ef1981432d7ec8c8841b3",
+      "mtime": "1676977782",
+      "size": "3339",
+      "md5": "61a3caa202044084486235bed31d1cfd",
+      "crc32": "38b5c59d",
+      "sha1": "57d959a25c0afc477740fd913fff09eae4070df8",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_59218_67955_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "e4b062b5f0b17dee93b7f70e93529bb8",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_59218_67955_meta.sqlite",
+      "source": "original",
+      "mtime": "1676977679",
+      "size": "20480",
+      "md5": "b0bf6aa08106b0f61fe03620797f32c3",
+      "crc32": "68d5df47",
+      "sha1": "fa2409aba3e39427907211e447b80f7e39d8356d",
+      "format": "Metadata"
+    },
+    {
+      "name": "aporee_59218_67955_meta.xml",
+      "source": "original",
+      "mtime": "1789000034",
+      "size": "1510",
+      "md5": "dd90c0ee9ec3f5b5d5f46f0667a4d469",
+      "crc32": "8c562cc6",
+      "sha1": "a54e4704754ca91b3b43f141fb680b2701e977a3",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 9,
+  "item_last_updated": 1789000034,
+  "item_size": 25793187,
+  "metadata": {
+    "identifier": "aporee_59218_67955",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=52.278496629979; longitude=1.6340833972606; elevation=0; name=East Suffolk, Suffolk, England, United Kingdom; date=2023-02-14 07:01:00 Europe/London;",
+    "creator": "david m",
+    "date": "2023-02-14 07:01:00",
+    "description": "waves ... dunwich beach ... xlr sass on tripod to zoom f6 ...",
+    "latitude": "52.278496629979",
+    "licenseurl": "https://creativecommons.org/licenses/by/3.0/",
+    "longitude": "1.6340833972606",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"https://aporee.org/maps/?loc=59218&snd=67955\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"https://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/London",
+    "title": "7JHM+9J Saxmundham, UK - waves ... dunwich beach ...",
+    "collection": "radio-aporee-maps",
+    "uploader": "radio@aporee.org",
+    "publicdate": "2023-02-21 11:07:53",
+    "addeddate": "2023-02-21 11:07:53"
+  },
+  "server": "dn601301.us.archive.org",
+  "simplelists": {
+    "solo_manifest": {
+      "solo_manifest_dn601301": {
+        "sys_changed_by": {
+          "source": "task",
+          "task_id": "5620932346"
+        },
+        "sys_last_changed": "2026-09-10 00:27:20.946508"
+      }
+    }
+  },
+  "solo": true,
+  "uniq": 1654438105,
+  "workable_servers": [
+    "dn601301.us.archive.org"
+  ]
+}

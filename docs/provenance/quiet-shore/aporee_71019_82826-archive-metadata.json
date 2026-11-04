@@ -1,0 +1,137 @@
+{
+  "created": 1793811252,
+  "d1": "ia903102.us.archive.org",
+  "d2": "ia803102.us.archive.org",
+  "dir": "/12/items/aporee_71019_82826",
+  "files": [
+    {
+      "name": "26012864751onlineaudioconvertercom.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "26012864751onlineaudioconvertercom.mp3",
+      "mtime": "1771846378",
+      "size": "411376",
+      "md5": "470c943dd87cf5f5283434aea6c0cf31",
+      "crc32": "3b3d9f3a",
+      "sha1": "48501a3375c0266f4ac8386f53aeedfe77517963"
+    },
+    {
+      "name": "26012864751onlineaudioconvertercom.mp3",
+      "source": "original",
+      "mtime": "1771846260",
+      "size": "49625382",
+      "md5": "e51d6c27fc453f71086302d52ab29cf0",
+      "crc32": "117571ab",
+      "sha1": "1bb7787ce8a66a99e8efae5cf0723ec216591a91",
+      "format": "VBR MP3",
+      "length": "1240.5",
+      "title": "England, United Kingdom / Waves \u2026",
+      "creator": "spudmel",
+      "album": "radio aporee",
+      "track": "1/1",
+      "artist": "spudmel",
+      "genre": "ambient phonography",
+      "comment": "datum=WGS84; latitude=50.317665014182; longitude=-3.6115944385529; elevation=34; name=Blackpool Hill, Stoke Fleming, South Hams, Devon, Devon and Torbay, England, TQ6 0RG, United Kingdom; date=20.02.2026 11:30 Europe/London"
+    },
+    {
+      "name": "26012864751onlineaudioconvertercom.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "26012864751onlineaudioconvertercom.mp3",
+      "mtime": "1771846335",
+      "size": "34474",
+      "md5": "cd33460a907e2f89ba321e618d4e02a5",
+      "crc32": "40c14b3a",
+      "sha1": "df6ef2a14470178cdb160cc9ca9c1ec0e7dbcc82"
+    },
+    {
+      "name": "26012864751onlineaudioconvertercom_spectrogram.png",
+      "source": "derivative",
+      "format": "Spectrogram",
+      "original": "26012864751onlineaudioconvertercom.mp3",
+      "mtime": "1771846352",
+      "size": "252347",
+      "md5": "1a919acfc3a9abf0fc4f81f3728b9bde",
+      "crc32": "33fe45b5",
+      "sha1": "b93a1db28f834df3d525aeebe715788651ccb31f"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1771846393",
+      "size": "3372",
+      "md5": "f001b04d386b692b88e1cfc6014a4022",
+      "crc32": "dad7854f",
+      "sha1": "a1748df17ad793911dc77baba1d1b67eece81720",
+      "format": "Item Tile"
+    },
+    {
+      "name": "aporee_71019_82826_archive.torrent",
+      "source": "metadata",
+      "btih": "2af7184275425f40e5e930b2eba4a30d17ed8c20",
+      "mtime": "1771846405",
+      "size": "4409",
+      "md5": "1a4ea176a899832eaf8866ea25bc22f8",
+      "crc32": "76e86031",
+      "sha1": "f2db0e26453e284c0c4443a85eb9d4e365c4eadc",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_71019_82826_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "fc18f6e4c80ed034490034280b4ee25f",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_71019_82826_meta.sqlite",
+      "source": "original",
+      "mtime": "1771846284",
+      "size": "20480",
+      "md5": "a2898393d828e6ee7dfcafb16f9e1141",
+      "crc32": "b3f06cd3",
+      "sha1": "7dc5b53c063e42ab59c8469da9d6ffb6ff909ac5",
+      "format": "Metadata"
+    },
+    {
+      "name": "aporee_71019_82826_meta.xml",
+      "source": "original",
+      "mtime": "1771846404",
+      "size": "1594",
+      "md5": "5ef80fcdbb99409cf4a42dca2f7fe3be",
+      "crc32": "20c0c933",
+      "sha1": "8155d463b76cd4ec182932c815c232fc21d8eb8d",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 9,
+  "item_last_updated": 1771846405,
+  "item_size": 50353434,
+  "metadata": {
+    "identifier": "aporee_71019_82826",
+    "altitude": "34",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=50.317665014182; longitude=-3.6115944385529; elevation=34; name=Blackpool Hill, Stoke Fleming, South Hams, Devon, Devon and Torbay, England, TQ6 0RG, United Kingdom; date=2026-02-20 11:30:00 Europe/London;",
+    "creator": "spudmel",
+    "date": "2026-02-20 11:30:00",
+    "description": "Blackpool sands \u2026 between high and low tide \u2026 sass on tripod to zoom h5 \u2026",
+    "latitude": "50.317665014182",
+    "licenseurl": "https://creativecommons.org/licenses/by/3.0/",
+    "longitude": "-3.6115944385529",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"https://aporee.org/maps/?loc=71019&snd=82826\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"https://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/London",
+    "title": "England, United Kingdom - Waves \u2026",
+    "collection": "radio-aporee-maps",
+    "uploader": "radio@aporee.org",
+    "publicdate": "2026-02-23 11:31:12",
+    "addeddate": "2026-02-23 11:31:12"
+  },
+  "server": "ia803102.us.archive.org",
+  "uniq": 1534999954,
+  "workable_servers": [
+    "ia803102.us.archive.org",
+    "ia903102.us.archive.org"
+  ]
+}

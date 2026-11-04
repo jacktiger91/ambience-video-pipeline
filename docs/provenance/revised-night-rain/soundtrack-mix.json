@@ -1,0 +1,145 @@
+{
+  "recipe": {
+    "edits": [
+      {
+        "sound_id": "543481",
+        "start": 20.0,
+        "duration": 330.0,
+        "timeline_start": 0.0,
+        "timeline_end": 330.0,
+        "source_start": 20.0,
+        "source_end": 350.0,
+        "author": "RossJuterbock",
+        "source_page": "https://freesound.org/people/RossJuterbock/sounds/543481/",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_sha256": "4f825a5e78cebd51606d20ce8347e67775f7e063fa2e6ce6c2f6beaccb50a775",
+        "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/543481-night_rain_roof_puddles.mp3"
+      },
+      {
+        "sound_id": "430765",
+        "start": 25.0,
+        "duration": 1250.0,
+        "timeline_start": 314.0,
+        "timeline_end": 1564.0,
+        "source_start": 25.0,
+        "source_end": 1275.0,
+        "author": "joedeshon",
+        "source_page": "https://freesound.org/people/joedeshon/sounds/430765/",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_sha256": "837f9a1dfa4573d04c1b008e3f474c2415cbfcfc541b9f358c38edae099c2051",
+        "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/430765-long_easy_rain_08.mp3"
+      },
+      {
+        "sound_id": "733979",
+        "start": 30.0,
+        "duration": 1150.0,
+        "timeline_start": 1548.0,
+        "timeline_end": 2698.0,
+        "source_start": 30.0,
+        "source_end": 1180.0,
+        "author": "lastraindrop",
+        "source_page": "https://freesound.org/people/lastraindrop/sounds/733979/",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_sha256": "fb00798902e505c49c775edb70367194028fffe838f51f06f11f5b718320e1b8",
+        "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3"
+      },
+      {
+        "sound_id": "616991",
+        "start": 30.0,
+        "duration": 918.0,
+        "timeline_start": 2682.0,
+        "timeline_end": 3600.0,
+        "source_start": 30.0,
+        "source_end": 948.0,
+        "author": "TRP",
+        "source_page": "https://freesound.org/people/TRP/sounds/616991/",
+        "license": "CC0-1.0",
+        "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "source_sha256": "9d1a66be25527975c470c544ece2aaf5c169e21db7b3a23e59e5df60a017914d",
+        "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3"
+      }
+    ],
+    "crossfade_seconds": 16.0,
+    "target_lufs": -22.0,
+    "target_true_peak": -4.0,
+    "floating_point_intermediate": true,
+    "version": 3
+  },
+  "source_loudness": [
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-30.8",
+      "input_tp": "-0.6",
+      "input_lra": "10.6",
+      "input_thresh": "-40.8"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-34.3",
+      "input_tp": "-6.8",
+      "input_lra": "14.7",
+      "input_thresh": "-44.3"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-32.5",
+      "input_tp": "-3.2",
+      "input_lra": "10.2",
+      "input_thresh": "-42.5"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-35.0",
+      "input_tp": "-0.8",
+      "input_lra": "16.4",
+      "input_thresh": "-46.1"
+    }
+  ],
+  "source_gain_db": [
+    6.800000000000001,
+    10.299999999999997,
+    8.5,
+    11.0
+  ],
+  "assembled_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-23.9",
+    "input_tp": "10.2",
+    "input_lra": "14.1",
+    "input_thresh": "-34.3"
+  },
+  "final_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-22.9",
+    "input_tp": "-4.0",
+    "input_lra": "13.2",
+    "input_thresh": "-33.1"
+  },
+  "normalization_method": "Measured constant gain plus oversampled lookahead peak limiter; no automatic gain riding",
+  "normalization_filter": "volume=1.900000dB,aresample=192000,alimiter=limit=0.595662144:level=false:latency=true:attack=5:release=200,aresample=48000",
+  "duration_seconds": 3600,
+  "sample_rate": 48000,
+  "channels": 2,
+  "comfortable_level_acceptance": {
+    "integrated_lufs": [
+      -24,
+      -20
+    ],
+    "maximum_true_peak_db": -3
+  },
+  "full_decode_passed": true,
+  "no_source_interval_repeats": true,
+  "auditory_review": "Automated full decode, loudness, source provenance and interval checks. Human listening remains recommended; these checks do not establish subjective quality.",
+  "sha256": "1691ba735db5cd757da7d1737d0b53d0c1bd2fb770d6fbe25a14a10a39678d20",
+  "pre_trim_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-23.4",
+    "input_tp": "-4.5",
+    "input_lra": "13.2",
+    "input_thresh": "-33.6"
+  },
+  "final_constant_gain_db": 0.5
+}

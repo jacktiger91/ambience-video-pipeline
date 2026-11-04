@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "provider": "filebin.net",
+  "daily_delivery_authorized": true,
+  "include_titles_and_descriptions": true,
+  "target_local_time": "18:00",
+  "timezone": "Asia/Nicosia",
+  "schedule_enabled": false,
+  "schedule_status": "not_deployed",
+  "budget_eur": 0,
+  "youtube_publication": "manual_by_user",
+  "daily_contents": [
+    "verified_one_hour_mp4",
+    "two_verified_vertical_shorts",
+    "matching_thumbnail",
+    "matching_backdrop",
+    "short_cover_frames",
+    "concept_specific_titles_descriptions_and_recording_credits"
+  ],
+  "deployment_blockers": [
+    "Configured GitHub authorization is invalid; the remote repository currently has no application code.",
+    "No scheduled runner has been deployed or verified.",
+    "The remaining concepts still require verified recordings, artwork and completed exports."
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "recipe": {
+    "edits": [
+      {
+        "sound_id": "aporee_56785_64952",
+        "start": 10,
+        "duration": 960,
+        "timeline_start": 0.0,
+        "timeline_end": 960.0,
+        "source_start": 10.0,
+        "source_end": 970.0,
+        "author": "alun",
+        "source_page": "https://archive.org/details/aporee_56785_64952",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "2cab023ba99025d4e4424adec299d5663bba4c682d2d438c9a61e12bdd3a860b",
+        "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_56785_64952.mp3"
+      },
+      {
+        "sound_id": "aporee_48022_54624",
+        "start": 510,
+        "duration": 166,
+        "timeline_start": 944.0,
+        "timeline_end": 1110.0,
+        "source_start": 510.0,
+        "source_end": 676.0,
+        "author": "Rastislav Gulasa",
+        "source_page": "https://archive.org/details/aporee_48022_54624",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "c4e484d746b1443ea97e385e80bb4a9f392b0cd36231a9df4596c35a6f366a47",
+        "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_48022_54624.mp3"
+      },
+      {
+        "sound_id": "aporee_48022_54624",
+        "start": 750,
+        "duration": 1080,
+        "timeline_start": 1094.0,
+        "timeline_end": 2174.0,
+        "source_start": 750.0,
+        "source_end": 1830.0,
+        "author": "Rastislav Gulasa",
+        "source_page": "https://archive.org/details/aporee_48022_54624",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "c4e484d746b1443ea97e385e80bb4a9f392b0cd36231a9df4596c35a6f366a47",
+        "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_48022_54624.mp3"
+      },
+      {
+        "sound_id": "aporee_56785_64952",
+        "start": 1160,
+        "duration": 920,
+        "timeline_start": 2158.0,
+        "timeline_end": 3078.0,
+        "source_start": 1160.0,
+        "source_end": 2080.0,
+        "author": "alun",
+        "source_page": "https://archive.org/details/aporee_56785_64952",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "2cab023ba99025d4e4424adec299d5663bba4c682d2d438c9a61e12bdd3a860b",
+        "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_56785_64952.mp3"
+      },
+      {
+        "sound_id": "aporee_40553_46296",
+        "start": 10,
+        "duration": 538,
+        "timeline_start": 3062.0,
+        "timeline_end": 3600.0,
+        "source_start": 10.0,
+        "source_end": 548.0,
+        "author": "Vincent Duseigne",
+        "source_page": "https://archive.org/details/aporee_40553_46296",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "47b4f226ec60138d68bf3770aa0a95737be560e08a92a9b6d3f3d689152b3f41",
+        "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_40553_46296.mp3"
+      }
+    ],
+    "crossfade_seconds": 16.0,
+    "target_lufs": -22.0,
+    "target_true_peak": -4.0,
+    "floating_point_intermediate": true,
+    "version": 1,
+    "theme": "forest-dawn",
+    "duration_seconds": 3600.0
+  },
+  "source_loudness": [
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-39.0",
+      "input_tp": "-16.8",
+      "input_lra": "12.5",
+      "input_thresh": "-49.0"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-29.5",
+      "input_tp": "-16.3",
+      "input_lra": "3.2",
+      "input_thresh": "-39.5"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-23.8",
+      "input_tp": "-7.3",
+      "input_lra": "5.3",
+      "input_thresh": "-33.7"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-22.0",
+      "input_tp": "-4.0",
+      "input_lra": "12.6",
+      "input_thresh": "-32.5"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-21.6",
+      "input_tp": "-3.9",
+      "input_lra": "9.2",
+      "input_thresh": "-31.8"
+    }
+  ],
+  "source_gain_db": [
+    15.0,
+    5.5,
+    -0.1999999999999993,
+    -2.0,
+    -2.3999999999999986
+  ],
+  "assembled_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-24.0",
+    "input_tp": "-1.8",
+    "input_lra": "10.3",
+    "input_thresh": "-34.1"
+  },
+  "final_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-22.0",
+    "input_tp": "-4.5",
+    "input_lra": "10.3",
+    "input_thresh": "-32.2"
+  },
+  "normalization_method": "Measured constant gain with oversampled lookahead peak limiting and a bounded final constant-gain trim",
+  "normalization_filter": "volume=2.000000dB,aresample=192000,alimiter=limit=0.595662144:level=false:latency=true:attack=5:release=200,aresample=48000",
+  "pre_trim_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-22.0",
+    "input_tp": "-4.5",
+    "input_lra": "10.3",
+    "input_thresh": "-32.2"
+  },
+  "final_constant_gain_db": 0.0,
+  "duration_seconds": 3600.0,
+  "sample_rate": 48000,
+  "channels": 2,
+  "comfortable_level_acceptance": {
+    "integrated_lufs": [
+      -24,
+      -20
+    ],
+    "maximum_true_peak_db": -3
+  },
+  "full_decode_passed": true,
+  "no_source_interval_repeats": true,
+  "auditory_review": "Automated full decode, loudness, source provenance and interval checks. Human listening remains recommended; these checks do not establish subjective quality.",
+  "sha256": "684ee116f647c6d73fa8458284d8db0ede1dc5f4bbdeb1140a381f3d39f7939f"
+}

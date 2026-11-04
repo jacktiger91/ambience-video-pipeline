@@ -1,0 +1,163 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710001.ca.archive.org",
+        "dir": "/0/items/aporee_48022_54624"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710001.ca.archive.org",
+        "dir": "/0/items/aporee_48022_54624"
+      }
+    ]
+  },
+  "created": 1793815004,
+  "d1": "dn601701.us.archive.org",
+  "dir": "/0/items/aporee_48022_54624",
+  "files": [
+    {
+      "name": "201905120255DawnChorusZadnaSuchavDolineTrstenikAporee.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "201905120255DawnChorusZadnaSuchavDolineTrstenikAporee.mp3",
+      "mtime": "1585909040",
+      "size": "373016",
+      "md5": "ee7c5aaca126576e888f7ee97b9b2ba3",
+      "crc32": "51c7276a",
+      "sha1": "41bcfddf66837a0c920c9932441b2989367cb121"
+    },
+    {
+      "name": "201905120255DawnChorusZadnaSuchavDolineTrstenikAporee.mp3",
+      "source": "original",
+      "mtime": "1585908468",
+      "size": "62747104",
+      "md5": "04c13313b30be228cc40463b1634b88f",
+      "crc32": "94b0485c",
+      "sha1": "baa6b1d3fce6b42a7619a14211a83ac45aba8c45",
+      "format": "VBR MP3",
+      "length": "1844.87",
+      "height": "0",
+      "width": "0",
+      "title": "Unnamed Road, \u0160umiac, Slovakia / Dawn Chorus in National Park Mur\u00e1nska Planina, Slovakia",
+      "creator": "Rastislav Gulasa",
+      "album": "radio aporee",
+      "track": "1/1",
+      "artist": "Rastislav Gulasa",
+      "genre": "ambient phonography"
+    },
+    {
+      "name": "201905120255DawnChorusZadnaSuchavDolineTrstenikAporee.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "201905120255DawnChorusZadnaSuchavDolineTrstenikAporee.mp3",
+      "mtime": "1585908994",
+      "size": "32896",
+      "md5": "5cc1ca4212699323bbb6aa25b1794c65",
+      "crc32": "687d0c4b",
+      "sha1": "7534c321bc363e66469b9749639616344b9db3cc"
+    },
+    {
+      "name": "201905120255DawnChorusZadnaSuchavDolineTrstenikAporee_spectrogram.png",
+      "source": "derivative",
+      "format": "Spectrogram",
+      "original": "201905120255DawnChorusZadnaSuchavDolineTrstenikAporee.mp3",
+      "mtime": "1585909008",
+      "size": "186269",
+      "md5": "28e99bc3f35ad0319aa98bca171d64cc",
+      "crc32": "31816bb9",
+      "sha1": "80d20218b020c65ebcd51cf4d5610b5c064c802c"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1585909045",
+      "size": "2561",
+      "md5": "c3fb74d8eec12c9a6ff96fe498bb815b",
+      "crc32": "38717800",
+      "sha1": "6afa479e3fa6d6ad4b54588960a7badd2b88b3fb",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "aporee_48022_54624_archive.torrent",
+      "source": "metadata",
+      "btih": "9345f7899591fd6cb51b4ecc309c864524333e19",
+      "mtime": "1585909046",
+      "size": "4932",
+      "md5": "ba7d4d15dbb8ab4cec5e3833c07fd95b",
+      "crc32": "b708c7da",
+      "sha1": "123f2986ed9873043a09dae54294f49f91f67e8a",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_48022_54624_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "b6c7efe3924095f02dfe7e1b16050ae0",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_48022_54624_meta.sqlite",
+      "source": "original",
+      "mtime": "1585908690",
+      "size": "11264",
+      "format": "Metadata",
+      "md5": "f5be4dead74e2215a8e226c2507de787",
+      "crc32": "4c29cfb3",
+      "sha1": "5e3cfe8afad33187852ff9baa5f08cc609223bf8"
+    },
+    {
+      "name": "aporee_48022_54624_meta.xml",
+      "source": "original",
+      "mtime": "1789029985",
+      "size": "1603",
+      "format": "Metadata",
+      "md5": "0ba4aaa84eb3ecc49654a0cfaec47616",
+      "crc32": "f7a6932b",
+      "sha1": "003b9db81c2e9cbde14be4dd69e63de72530b932"
+    }
+  ],
+  "files_count": 9,
+  "item_last_updated": 1789029985,
+  "item_size": 63359645,
+  "metadata": {
+    "identifier": "aporee_48022_54624",
+    "altitude": "883",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=48.789534425962; longitude=20.093208989136; elevation=883; name=okres Brezno, Banskobystrick\u00fd kraj, Stredn\u00e9 Slovensko, Slovensko; date=2019-05-12 03:00:00 Europe/Bratislava;",
+    "creator": "Rastislav Gulasa",
+    "date": "2019-05-12 03:00:00",
+    "description": "Dawn chorus at Trsten\u00edk valley in National Park Mur\u00e1nska Planina.",
+    "latitude": "48.789534425962",
+    "licenseurl": "http://creativecommons.org/licenses/by/3.0/",
+    "longitude": "20.093208989136",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"http://aporee.org/maps/?loc=48022\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"http://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/Bratislava",
+    "title": "Unnamed Road, \u0160umiac, Slovakia - Dawn Chorus in National Park Mur\u00e1nska Planina, Slovakia",
+    "collection": "radio-aporee-maps",
+    "uploader": "radio@aporee.org",
+    "publicdate": "2020-04-03 10:10:04",
+    "addeddate": "2020-04-03 10:10:04"
+  },
+  "server": "dn601701.us.archive.org",
+  "simplelists": {
+    "solo_manifest": {
+      "solo_manifest_dn601701": {
+        "sys_changed_by": {
+          "source": "task",
+          "task_id": "5621911252"
+        },
+        "sys_last_changed": "2026-09-10 08:46:32.624563"
+      }
+    }
+  },
+  "solo": true,
+  "uniq": 2096552683,
+  "workable_servers": [
+    "dn601701.us.archive.org"
+  ]
+}

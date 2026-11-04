@@ -1,0 +1,4170 @@
+{
+  "method": "Official YAMNet TFLite AudioSet event classification, 16 kHz mono analysis only; original stereo media untouched.",
+  "limitations": "Automated scores are not calibrated probabilities, do not prove natural origin or rights, and do not replace human listening. No subjective listening was possible in this environment.",
+  "model_url": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/audio_classification/android/lite-model_yamnet_classification_tflite_1.tflite",
+  "model_sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+  "class_map_sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2",
+  "model_code_license": "Apache-2.0; https://github.com/tensorflow/models/blob/master/LICENSE",
+  "runtime": "ai-edge-litert 2.3.0 (Apache-2.0), temporary install",
+  "runtime_linux_cp312_wheel_sha256": "dc9f56c23e0dcf182b6c35f23fbb102ed048296588882b806d5eff7654c04c88",
+  "hop_seconds": 0.48,
+  "records": [
+    {
+      "id": "candidate-633.4",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/430765-long_easy_rain_08.mp3",
+      "start": 340.4,
+      "duration": 20,
+      "timeline_onset_seconds": 633.4,
+      "source_onset_seconds": 344.4,
+      "low_band_excess_db": 9.95,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Water",
+          "score": 0.23965
+        },
+        {
+          "label": "Rain",
+          "score": 0.17324
+        },
+        {
+          "label": "Stream",
+          "score": 0.12646
+        },
+        {
+          "label": "Wind",
+          "score": 0.12324
+        },
+        {
+          "label": "Pink noise",
+          "score": 0.11973
+        },
+        {
+          "label": "Thunderstorm",
+          "score": 0.11318
+        },
+        {
+          "label": "Rustle",
+          "score": 0.10947
+        },
+        {
+          "label": "Rustling leaves",
+          "score": 0.1085
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.17324,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 346.64,
+          "frames_at_least_0_25": 9,
+          "frames_at_least_0_5": 3
+        },
+        "Raindrop": {
+          "mean_score": 0.05166,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 346.64,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.0791,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 346.64,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 1
+        },
+        "Water": {
+          "mean_score": 0.23965,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 346.64,
+          "frames_at_least_0_25": 16,
+          "frames_at_least_0_5": 4
+        },
+        "Thunder": {
+          "mean_score": 0.08057,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 344.72,
+          "frames_at_least_0_25": 5,
+          "frames_at_least_0_5": 1
+        },
+        "Thunderstorm": {
+          "mean_score": 0.11318,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 344.72,
+          "frames_at_least_0_25": 7,
+          "frames_at_least_0_5": 2
+        },
+        "Speech": {
+          "mean_score": 0.02129,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 344.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00039,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 344.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.12324,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 356.24,
+          "frames_at_least_0_25": 6,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.04336,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 349.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 344.24,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 344.72,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 345.2,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 352.88,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 354.8,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        }
+      ]
+    },
+    {
+      "id": "candidate-1270.7",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/430765-long_easy_rain_08.mp3",
+      "start": 977.7,
+      "duration": 20,
+      "timeline_onset_seconds": 1270.7,
+      "source_onset_seconds": 981.7,
+      "low_band_excess_db": 24.21,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.48154
+        },
+        {
+          "label": "Thunder",
+          "score": 0.42344
+        },
+        {
+          "label": "Rain",
+          "score": 0.15186
+        },
+        {
+          "label": "Water",
+          "score": 0.09395
+        },
+        {
+          "label": "Rustle",
+          "score": 0.0752
+        },
+        {
+          "label": "Rustling leaves",
+          "score": 0.075
+        },
+        {
+          "label": "Wind",
+          "score": 0.07295
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.06348
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.15186,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 982.5,
+          "frames_at_least_0_25": 9,
+          "frames_at_least_0_5": 2
+        },
+        "Raindrop": {
+          "mean_score": 0.0377,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 985.86,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.04658,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 980.58,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.09395,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 982.02,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.42344,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 982.5,
+          "frames_at_least_0_25": 21,
+          "frames_at_least_0_5": 18
+        },
+        "Thunderstorm": {
+          "mean_score": 0.48154,
+          "max_score": 0.99609,
+          "max_frame_start_seconds": 982.5,
+          "frames_at_least_0_25": 23,
+          "frames_at_least_0_5": 20
+        },
+        "Speech": {
+          "mean_score": 0.02002,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 993.06,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00957,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 989.22,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.07295,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 979.14,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.04424,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 989.7,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 980.58,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 981.06,
+          "thunder": 0.4141,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 981.54,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 982.02,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9805
+        },
+        {
+          "source_frame_start": 982.5,
+          "thunder": 0.9688,
+          "thunderstorm": 0.9961
+        },
+        {
+          "source_frame_start": 982.98,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9883
+        },
+        {
+          "source_frame_start": 983.46,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9922
+        },
+        {
+          "source_frame_start": 983.94,
+          "thunder": 0.918,
+          "thunderstorm": 0.9922
+        },
+        {
+          "source_frame_start": 984.42,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9883
+        },
+        {
+          "source_frame_start": 984.9,
+          "thunder": 0.918,
+          "thunderstorm": 0.9844
+        },
+        {
+          "source_frame_start": 985.38,
+          "thunder": 0.8008,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 985.86,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 988.26,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 988.74,
+          "thunder": 0.8008,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 989.22,
+          "thunder": 0.8906,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 990.18,
+          "thunder": 0.7383,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 990.66,
+          "thunder": 0.8516,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 991.14,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 991.62,
+          "thunder": 0.8008,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 992.1,
+          "thunder": 0.8008,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 992.58,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        }
+      ]
+    },
+    {
+      "id": "candidate-1594.6",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 72.6,
+      "duration": 20,
+      "timeline_onset_seconds": 1594.6,
+      "source_onset_seconds": 76.6,
+      "low_band_excess_db": 8.19,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.64717
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.61563
+        },
+        {
+          "label": "Water",
+          "score": 0.5082
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.31055
+        },
+        {
+          "label": "Fire",
+          "score": 0.08252
+        },
+        {
+          "label": "Crackle",
+          "score": 0.05508
+        },
+        {
+          "label": "Sound effect",
+          "score": 0.01816
+        },
+        {
+          "label": "White noise",
+          "score": 0.01807
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.64717,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 82.68,
+          "frames_at_least_0_25": 36,
+          "frames_at_least_0_5": 33
+        },
+        "Raindrop": {
+          "mean_score": 0.31055,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 82.68,
+          "frames_at_least_0_25": 26,
+          "frames_at_least_0_5": 7
+        },
+        "Rain on surface": {
+          "mean_score": 0.61563,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 82.68,
+          "frames_at_least_0_25": 37,
+          "frames_at_least_0_5": 32
+        },
+        "Water": {
+          "mean_score": 0.5082,
+          "max_score": 0.95703,
+          "max_frame_start_seconds": 82.68,
+          "frames_at_least_0_25": 35,
+          "frames_at_least_0_5": 23
+        },
+        "Thunder": {
+          "mean_score": 0.00811,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 88.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.01123,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 88.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00371,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 76.44,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.01377,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 78.84,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.01055,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 90.84,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.01172,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 90.36,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "candidate-1961.3",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 439.3,
+      "duration": 20,
+      "timeline_onset_seconds": 1961.3,
+      "source_onset_seconds": 443.3,
+      "low_band_excess_db": 15.58,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.94756
+        },
+        {
+          "label": "Water",
+          "score": 0.91465
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.91426
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.41748
+        },
+        {
+          "label": "Thunderstorm",
+          "score": 0.01699
+        },
+        {
+          "label": "Fire",
+          "score": 0.01436
+        },
+        {
+          "label": "Thunder",
+          "score": 0.01338
+        },
+        {
+          "label": "Explosion",
+          "score": 0.00928
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.94756,
+          "max_score": 0.99219,
+          "max_frame_start_seconds": 446.5,
+          "frames_at_least_0_25": 40,
+          "frames_at_least_0_5": 40
+        },
+        "Raindrop": {
+          "mean_score": 0.41748,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 441.7,
+          "frames_at_least_0_25": 39,
+          "frames_at_least_0_5": 12
+        },
+        "Rain on surface": {
+          "mean_score": 0.91426,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 445.54,
+          "frames_at_least_0_25": 40,
+          "frames_at_least_0_5": 40
+        },
+        "Water": {
+          "mean_score": 0.91465,
+          "max_score": 0.99609,
+          "max_frame_start_seconds": 455.62,
+          "frames_at_least_0_25": 40,
+          "frames_at_least_0_5": 40
+        },
+        "Thunder": {
+          "mean_score": 0.01338,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 443.62,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.01699,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 443.62,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00264,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 443.62,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00049,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 446.02,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.00195,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 443.62,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00127,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 444.1,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "candidate-2085.1",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 563.1,
+      "duration": 20,
+      "timeline_onset_seconds": 2085.1,
+      "source_onset_seconds": 567.1,
+      "low_band_excess_db": 9.4,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.50645
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.4874
+        },
+        {
+          "label": "Water",
+          "score": 0.35957
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.24297
+        },
+        {
+          "label": "Fire",
+          "score": 0.13965
+        },
+        {
+          "label": "White noise",
+          "score": 0.1041
+        },
+        {
+          "label": "Eruption",
+          "score": 0.08613
+        },
+        {
+          "label": "Static",
+          "score": 0.0792
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.50645,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 563.1,
+          "frames_at_least_0_25": 32,
+          "frames_at_least_0_5": 24
+        },
+        "Raindrop": {
+          "mean_score": 0.24297,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 580.38,
+          "frames_at_least_0_25": 20,
+          "frames_at_least_0_5": 4
+        },
+        "Rain on surface": {
+          "mean_score": 0.4874,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 563.1,
+          "frames_at_least_0_25": 32,
+          "frames_at_least_0_5": 24
+        },
+        "Water": {
+          "mean_score": 0.35957,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 563.1,
+          "frames_at_least_0_25": 25,
+          "frames_at_least_0_5": 13
+        },
+        "Thunder": {
+          "mean_score": 0.03301,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 577.5,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.03965,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 566.94,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.01348,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 564.06,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00361,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 570.3,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.03223,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 567.42,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.07031,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 575.58,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "candidate-2359.3",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 837.3,
+      "duration": 20,
+      "timeline_onset_seconds": 2359.3,
+      "source_onset_seconds": 841.3,
+      "low_band_excess_db": 7.87,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.504
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.49492
+        },
+        {
+          "label": "Water",
+          "score": 0.37744
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.25107
+        },
+        {
+          "label": "Static",
+          "score": 0.14912
+        },
+        {
+          "label": "White noise",
+          "score": 0.13945
+        },
+        {
+          "label": "Fire",
+          "score": 0.13027
+        },
+        {
+          "label": "Noise",
+          "score": 0.10303
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.504,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 848.82,
+          "frames_at_least_0_25": 35,
+          "frames_at_least_0_5": 21
+        },
+        "Raindrop": {
+          "mean_score": 0.25107,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 850.26,
+          "frames_at_least_0_25": 20,
+          "frames_at_least_0_5": 5
+        },
+        "Rain on surface": {
+          "mean_score": 0.49492,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 848.82,
+          "frames_at_least_0_25": 36,
+          "frames_at_least_0_5": 21
+        },
+        "Water": {
+          "mean_score": 0.37744,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 848.82,
+          "frames_at_least_0_25": 23,
+          "frames_at_least_0_5": 14
+        },
+        "Thunder": {
+          "mean_score": 0.01787,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 840.66,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.02354,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 840.66,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00547,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 851.7,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.01045,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 842.1,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.01875,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 840.18,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.10303,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 842.1,
+          "frames_at_least_0_25": 4,
+          "frames_at_least_0_5": 1
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "candidate-2538.0",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 1016.0,
+      "duration": 20,
+      "timeline_onset_seconds": 2538.0,
+      "source_onset_seconds": 1020.0,
+      "low_band_excess_db": 9.7,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.50244
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.48555
+        },
+        {
+          "label": "Water",
+          "score": 0.37178
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.28535
+        },
+        {
+          "label": "Fire",
+          "score": 0.16475
+        },
+        {
+          "label": "Static",
+          "score": 0.15469
+        },
+        {
+          "label": "White noise",
+          "score": 0.13818
+        },
+        {
+          "label": "Noise",
+          "score": 0.09814
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.50244,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 1016.48,
+          "frames_at_least_0_25": 34,
+          "frames_at_least_0_5": 19
+        },
+        "Raindrop": {
+          "mean_score": 0.28535,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 1018.4,
+          "frames_at_least_0_25": 24,
+          "frames_at_least_0_5": 7
+        },
+        "Rain on surface": {
+          "mean_score": 0.48555,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 1018.4,
+          "frames_at_least_0_25": 34,
+          "frames_at_least_0_5": 19
+        },
+        "Water": {
+          "mean_score": 0.37178,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 1016.48,
+          "frames_at_least_0_25": 23,
+          "frames_at_least_0_5": 12
+        },
+        "Thunder": {
+          "mean_score": 0.01787,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1020.8,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.02393,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 1020.8,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00791,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 1022.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00986,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 1024.16,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.02314,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1020.32,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.09814,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 1028.0,
+          "frames_at_least_0_25": 4,
+          "frames_at_least_0_5": 1
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "candidate-2604.7",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 1082.7,
+      "duration": 20,
+      "timeline_onset_seconds": 2604.7,
+      "source_onset_seconds": 1086.7,
+      "low_band_excess_db": 11.37,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.58281
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.55439
+        },
+        {
+          "label": "Water",
+          "score": 0.4415
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.34619
+        },
+        {
+          "label": "Fire",
+          "score": 0.14238
+        },
+        {
+          "label": "Crackle",
+          "score": 0.08057
+        },
+        {
+          "label": "White noise",
+          "score": 0.07266
+        },
+        {
+          "label": "Static",
+          "score": 0.06846
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.58281,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 1100.46,
+          "frames_at_least_0_25": 36,
+          "frames_at_least_0_5": 24
+        },
+        "Raindrop": {
+          "mean_score": 0.34619,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 1084.62,
+          "frames_at_least_0_25": 29,
+          "frames_at_least_0_5": 12
+        },
+        "Rain on surface": {
+          "mean_score": 0.55439,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 1100.46,
+          "frames_at_least_0_25": 36,
+          "frames_at_least_0_5": 24
+        },
+        "Water": {
+          "mean_score": 0.4415,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 1100.46,
+          "frames_at_least_0_25": 25,
+          "frames_at_least_0_5": 19
+        },
+        "Thunder": {
+          "mean_score": 0.01475,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 1090.86,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.02031,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1090.86,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00566,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 1088.94,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.01104,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 1088.46,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.01895,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1088.46,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.04746,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 1096.62,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "candidate-2679.5",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 1157.5,
+      "duration": 20,
+      "timeline_onset_seconds": 2679.5,
+      "source_onset_seconds": 1161.5,
+      "low_band_excess_db": 16.4,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.4043
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.36992
+        },
+        {
+          "label": "Water",
+          "score": 0.31211
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.22715
+        },
+        {
+          "label": "Fire",
+          "score": 0.19414
+        },
+        {
+          "label": "White noise",
+          "score": 0.11875
+        },
+        {
+          "label": "Static",
+          "score": 0.10029
+        },
+        {
+          "label": "Crackle",
+          "score": 0.09941
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.4043,
+          "max_score": 0.98047,
+          "max_frame_start_seconds": 1175.26,
+          "frames_at_least_0_25": 25,
+          "frames_at_least_0_5": 16
+        },
+        "Raindrop": {
+          "mean_score": 0.22715,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 1174.78,
+          "frames_at_least_0_25": 17,
+          "frames_at_least_0_5": 5
+        },
+        "Rain on surface": {
+          "mean_score": 0.36992,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 1175.26,
+          "frames_at_least_0_25": 23,
+          "frames_at_least_0_5": 15
+        },
+        "Water": {
+          "mean_score": 0.31211,
+          "max_score": 0.98438,
+          "max_frame_start_seconds": 1175.26,
+          "frames_at_least_0_25": 17,
+          "frames_at_least_0_5": 13
+        },
+        "Thunder": {
+          "mean_score": 0.0167,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1163.74,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.02314,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 1163.74,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00439,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 1161.82,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00967,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 1172.38,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.02217,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 1165.18,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.06719,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1157.98,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "candidate-2785.8",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 129.8,
+      "duration": 20,
+      "timeline_onset_seconds": 2785.8,
+      "source_onset_seconds": 133.8,
+      "low_band_excess_db": 13.71,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.32334
+        },
+        {
+          "label": "Water",
+          "score": 0.24199
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.23857
+        },
+        {
+          "label": "Thunderstorm",
+          "score": 0.23535
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.21885
+        },
+        {
+          "label": "Thunder",
+          "score": 0.20137
+        },
+        {
+          "label": "Stream",
+          "score": 0.07471
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.0541
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.32334,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 129.8,
+          "frames_at_least_0_25": 22,
+          "frames_at_least_0_5": 12
+        },
+        "Raindrop": {
+          "mean_score": 0.23857,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 142.28,
+          "frames_at_least_0_25": 19,
+          "frames_at_least_0_5": 5
+        },
+        "Rain on surface": {
+          "mean_score": 0.21885,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 129.8,
+          "frames_at_least_0_25": 20,
+          "frames_at_least_0_5": 4
+        },
+        "Water": {
+          "mean_score": 0.24199,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 129.8,
+          "frames_at_least_0_25": 18,
+          "frames_at_least_0_5": 5
+        },
+        "Thunder": {
+          "mean_score": 0.20137,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 135.08,
+          "frames_at_least_0_25": 12,
+          "frames_at_least_0_5": 8
+        },
+        "Thunderstorm": {
+          "mean_score": 0.23535,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 135.08,
+          "frames_at_least_0_25": 13,
+          "frames_at_least_0_5": 9
+        },
+        "Speech": {
+          "mean_score": 0.02148,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 131.72,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.0002,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 130.76,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.02891,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 132.68,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.0085,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 146.6,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 129.8,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 130.28,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 134.6,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 135.08,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 135.56,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 136.04,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 136.52,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 137.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 137.48,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 137.96,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 139.4,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 139.88,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        }
+      ]
+    },
+    {
+      "id": "candidate-2908.3",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 252.3,
+      "duration": 20,
+      "timeline_onset_seconds": 2908.3,
+      "source_onset_seconds": 256.3,
+      "low_band_excess_db": 18.56,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.3667
+        },
+        {
+          "label": "Thunder",
+          "score": 0.32285
+        },
+        {
+          "label": "Rain",
+          "score": 0.29932
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.20596
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.18594
+        },
+        {
+          "label": "Water",
+          "score": 0.17451
+        },
+        {
+          "label": "Boat, Water vehicle",
+          "score": 0.05801
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.05313
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.29932,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 262.86,
+          "frames_at_least_0_25": 22,
+          "frames_at_least_0_5": 10
+        },
+        "Raindrop": {
+          "mean_score": 0.20596,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 268.62,
+          "frames_at_least_0_25": 17,
+          "frames_at_least_0_5": 4
+        },
+        "Rain on surface": {
+          "mean_score": 0.18594,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 268.62,
+          "frames_at_least_0_25": 13,
+          "frames_at_least_0_5": 2
+        },
+        "Water": {
+          "mean_score": 0.17451,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 263.82,
+          "frames_at_least_0_25": 12,
+          "frames_at_least_0_5": 4
+        },
+        "Thunder": {
+          "mean_score": 0.32285,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 262.38,
+          "frames_at_least_0_25": 17,
+          "frames_at_least_0_5": 13
+        },
+        "Thunderstorm": {
+          "mean_score": 0.3667,
+          "max_score": 0.98047,
+          "max_frame_start_seconds": 262.38,
+          "frames_at_least_0_25": 19,
+          "frames_at_least_0_5": 15
+        },
+        "Speech": {
+          "mean_score": 0.01748,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 253.26,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00078,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 268.14,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.0334,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 259.02,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00791,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 252.78,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 256.14,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 259.02,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 259.5,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 259.98,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 260.46,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 260.94,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 261.42,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 261.9,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 262.38,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9805
+        },
+        {
+          "source_frame_start": 262.86,
+          "thunder": 0.918,
+          "thunderstorm": 0.9688
+        },
+        {
+          "source_frame_start": 263.34,
+          "thunder": 0.918,
+          "thunderstorm": 0.9688
+        },
+        {
+          "source_frame_start": 263.82,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 264.3,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 266.22,
+          "thunder": 0.5859,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 266.7,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 268.62,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 269.1,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        }
+      ]
+    },
+    {
+      "id": "candidate-3055.6",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 399.6,
+      "duration": 20,
+      "timeline_onset_seconds": 3055.6,
+      "source_onset_seconds": 403.6,
+      "low_band_excess_db": 11.21,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.42344
+        },
+        {
+          "label": "Thunder",
+          "score": 0.37783
+        },
+        {
+          "label": "Rain",
+          "score": 0.17588
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.08711
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.08418
+        },
+        {
+          "label": "Water",
+          "score": 0.08213
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.05684
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.05273
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.17588,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 415.92,
+          "frames_at_least_0_25": 13,
+          "frames_at_least_0_5": 3
+        },
+        "Raindrop": {
+          "mean_score": 0.08711,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 415.92,
+          "frames_at_least_0_25": 3,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.08418,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 415.92,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.08213,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 413.04,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.37783,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 414.48,
+          "frames_at_least_0_25": 23,
+          "frames_at_least_0_5": 16
+        },
+        "Thunderstorm": {
+          "mean_score": 0.42344,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 414.48,
+          "frames_at_least_0_25": 26,
+          "frames_at_least_0_5": 16
+        },
+        "Speech": {
+          "mean_score": 0.01777,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 408.72,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00049,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 411.6,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.03955,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 404.4,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00508,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 399.6,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 404.4,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 404.88,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 405.36,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 406.8,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 407.76,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 408.24,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 409.2,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 410.64,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 411.12,
+          "thunder": 0.4141,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 411.6,
+          "thunder": 0.5,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 412.08,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 412.56,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 413.04,
+          "thunder": 0.8516,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 413.52,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 414.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 414.48,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 414.96,
+          "thunder": 0.8906,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 415.44,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 415.92,
+          "thunder": 0.8906,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 416.4,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 416.88,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 417.84,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 418.32,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        }
+      ]
+    },
+    {
+      "id": "candidate-3132.1",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 476.1,
+      "duration": 20,
+      "timeline_onset_seconds": 3132.1,
+      "source_onset_seconds": 480.1,
+      "low_band_excess_db": 14.86,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.28086
+        },
+        {
+          "label": "Thunder",
+          "score": 0.25176
+        },
+        {
+          "label": "Rain",
+          "score": 0.19756
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.12207
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.10957
+        },
+        {
+          "label": "Water",
+          "score": 0.10684
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.04404
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.04297
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.19756,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 479.46,
+          "frames_at_least_0_25": 14,
+          "frames_at_least_0_5": 5
+        },
+        "Raindrop": {
+          "mean_score": 0.12207,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 482.82,
+          "frames_at_least_0_25": 7,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.10957,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 479.46,
+          "frames_at_least_0_25": 7,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.10684,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 484.74,
+          "frames_at_least_0_25": 7,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.25176,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 479.46,
+          "frames_at_least_0_25": 16,
+          "frames_at_least_0_5": 10
+        },
+        "Thunderstorm": {
+          "mean_score": 0.28086,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 479.46,
+          "frames_at_least_0_25": 17,
+          "frames_at_least_0_5": 11
+        },
+        "Speech": {
+          "mean_score": 0.01904,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 487.14,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00107,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 483.3,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.02588,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 477.06,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.01182,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 486.66,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 476.1,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 478.98,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 479.46,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 479.94,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 480.9,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 481.38,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 481.86,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 482.34,
+          "thunder": 0.8516,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 482.82,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 483.3,
+          "thunder": 0.332,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 483.78,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 484.26,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 484.74,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 485.22,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 489.06,
+          "thunder": 0.332,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 491.46,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        }
+      ]
+    },
+    {
+      "id": "candidate-3276.9",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 620.9,
+      "duration": 20,
+      "timeline_onset_seconds": 3276.9,
+      "source_onset_seconds": 624.9,
+      "low_band_excess_db": 10.71,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.24648
+        },
+        {
+          "label": "Thunder",
+          "score": 0.2168
+        },
+        {
+          "label": "Rain",
+          "score": 0.20879
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.13779
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.13633
+        },
+        {
+          "label": "Water",
+          "score": 0.12783
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.05635
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.05234
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.20879,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 622.34,
+          "frames_at_least_0_25": 13,
+          "frames_at_least_0_5": 5
+        },
+        "Raindrop": {
+          "mean_score": 0.13633,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 622.34,
+          "frames_at_least_0_25": 7,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.13779,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 622.82,
+          "frames_at_least_0_25": 6,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.12783,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 622.34,
+          "frames_at_least_0_25": 6,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.2168,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 622.82,
+          "frames_at_least_0_25": 14,
+          "frames_at_least_0_5": 7
+        },
+        "Thunderstorm": {
+          "mean_score": 0.24648,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 622.34,
+          "frames_at_least_0_25": 15,
+          "frames_at_least_0_5": 9
+        },
+        "Speech": {
+          "mean_score": 0.01865,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 631.94,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00068,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 637.7,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.03027,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 639.14,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00703,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 629.54,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 621.38,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 621.86,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 622.34,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 622.82,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 625.22,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 625.7,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 626.18,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 627.14,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 628.1,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 628.58,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 630.02,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 636.74,
+          "thunder": 0.332,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 637.22,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 637.7,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        }
+      ]
+    },
+    {
+      "id": "candidate-3377.2",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 721.2,
+      "duration": 20,
+      "timeline_onset_seconds": 3377.2,
+      "source_onset_seconds": 725.2,
+      "low_band_excess_db": 19.27,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.61826
+        },
+        {
+          "label": "Thunder",
+          "score": 0.5626
+        },
+        {
+          "label": "Rain",
+          "score": 0.28848
+        },
+        {
+          "label": "Water",
+          "score": 0.16465
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.12822
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.12393
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.04658
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.03184
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.28848,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 731.76,
+          "frames_at_least_0_25": 22,
+          "frames_at_least_0_5": 10
+        },
+        "Raindrop": {
+          "mean_score": 0.12822,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 724.08,
+          "frames_at_least_0_25": 9,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.12393,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 737.04,
+          "frames_at_least_0_25": 8,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.16465,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 731.76,
+          "frames_at_least_0_25": 13,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.5626,
+          "max_score": 0.95703,
+          "max_frame_start_seconds": 728.88,
+          "frames_at_least_0_25": 30,
+          "frames_at_least_0_5": 24
+        },
+        "Thunderstorm": {
+          "mean_score": 0.61826,
+          "max_score": 0.98438,
+          "max_frame_start_seconds": 728.88,
+          "frames_at_least_0_25": 31,
+          "frames_at_least_0_5": 29
+        },
+        "Speech": {
+          "mean_score": 0.01084,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 722.64,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00098,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 739.44,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.02939,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 726.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00732,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 733.68,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 724.08,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 725.04,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 725.52,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 726.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 726.48,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 726.96,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 727.44,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 727.92,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 728.4,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 728.88,
+          "thunder": 0.957,
+          "thunderstorm": 0.9844
+        },
+        {
+          "source_frame_start": 729.36,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9805
+        },
+        {
+          "source_frame_start": 729.84,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 730.32,
+          "thunder": 0.918,
+          "thunderstorm": 0.9805
+        },
+        {
+          "source_frame_start": 730.8,
+          "thunder": 0.8516,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 731.28,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9805
+        },
+        {
+          "source_frame_start": 731.76,
+          "thunder": 0.918,
+          "thunderstorm": 0.9688
+        },
+        {
+          "source_frame_start": 732.24,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 732.72,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 733.2,
+          "thunder": 0.8906,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 733.68,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 735.12,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 735.6,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 736.08,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 736.56,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 737.04,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 737.52,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 738.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 738.48,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 738.96,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 739.44,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        }
+      ]
+    },
+    {
+      "id": "candidate-3456.7",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 800.7,
+      "duration": 20,
+      "timeline_onset_seconds": 3456.7,
+      "source_onset_seconds": 804.7,
+      "low_band_excess_db": 16.24,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.56865
+        },
+        {
+          "label": "Thunder",
+          "score": 0.51621
+        },
+        {
+          "label": "Rain",
+          "score": 0.32617
+        },
+        {
+          "label": "Water",
+          "score": 0.16631
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.16064
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.15684
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.03369
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.02969
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.32617,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 804.06,
+          "frames_at_least_0_25": 22,
+          "frames_at_least_0_5": 13
+        },
+        "Raindrop": {
+          "mean_score": 0.15684,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 804.06,
+          "frames_at_least_0_25": 9,
+          "frames_at_least_0_5": 2
+        },
+        "Rain on surface": {
+          "mean_score": 0.16064,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 804.06,
+          "frames_at_least_0_25": 12,
+          "frames_at_least_0_5": 1
+        },
+        "Water": {
+          "mean_score": 0.16631,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 804.06,
+          "frames_at_least_0_25": 11,
+          "frames_at_least_0_5": 2
+        },
+        "Thunder": {
+          "mean_score": 0.51621,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 804.54,
+          "frames_at_least_0_25": 30,
+          "frames_at_least_0_5": 23
+        },
+        "Thunderstorm": {
+          "mean_score": 0.56865,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 804.54,
+          "frames_at_least_0_25": 30,
+          "frames_at_least_0_5": 26
+        },
+        "Speech": {
+          "mean_score": 0.01582,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 809.82,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00205,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 805.5,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.01934,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 816.06,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00537,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 802.14,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 800.7,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 801.18,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 801.66,
+          "thunder": 0.8516,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 802.14,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 802.62,
+          "thunder": 0.8516,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 803.1,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 803.58,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 804.06,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 804.54,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9688
+        },
+        {
+          "source_frame_start": 805.02,
+          "thunder": 0.8516,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 805.5,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 805.98,
+          "thunder": 0.8906,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 806.46,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 807.42,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 807.9,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 810.3,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 811.26,
+          "thunder": 0.332,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 811.74,
+          "thunder": 0.8906,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 812.22,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 812.7,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 813.66,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 814.62,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 815.1,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 815.58,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 816.06,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 816.54,
+          "thunder": 0.4141,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 817.02,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 817.5,
+          "thunder": 0.5,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 817.98,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 818.46,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        }
+      ]
+    },
+    {
+      "id": "candidate-3554.6",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 898.6,
+      "duration": 20,
+      "timeline_onset_seconds": 3554.6,
+      "source_onset_seconds": 902.6,
+      "low_band_excess_db": 11.69,
+      "analysed_seconds": 20.0,
+      "frames": 40,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.70938
+        },
+        {
+          "label": "Thunder",
+          "score": 0.66211
+        },
+        {
+          "label": "Rain",
+          "score": 0.33926
+        },
+        {
+          "label": "Water",
+          "score": 0.18564
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.16338
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.14717
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.04941
+        },
+        {
+          "label": "Wind",
+          "score": 0.03457
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.33926,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 912.52,
+          "frames_at_least_0_25": 25,
+          "frames_at_least_0_5": 14
+        },
+        "Raindrop": {
+          "mean_score": 0.14717,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 908.68,
+          "frames_at_least_0_25": 9,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.16338,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 912.52,
+          "frames_at_least_0_25": 16,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.18564,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 906.76,
+          "frames_at_least_0_25": 13,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.66211,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 903.88,
+          "frames_at_least_0_25": 33,
+          "frames_at_least_0_5": 30
+        },
+        "Thunderstorm": {
+          "mean_score": 0.70938,
+          "max_score": 0.98047,
+          "max_frame_start_seconds": 907.24,
+          "frames_at_least_0_25": 34,
+          "frames_at_least_0_5": 31
+        },
+        "Speech": {
+          "mean_score": 0.00723,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 899.56,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00088,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 903.88,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.03457,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 901.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00215,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 911.08,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 901.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 901.48,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 901.96,
+          "thunder": 0.5859,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 902.44,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 902.92,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 903.4,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 903.88,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9688
+        },
+        {
+          "source_frame_start": 904.36,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 904.84,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 905.32,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 905.8,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 906.28,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 906.76,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 907.24,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9805
+        },
+        {
+          "source_frame_start": 907.72,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 908.68,
+          "thunder": 0.4141,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 909.16,
+          "thunder": 0.8516,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 909.64,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 910.12,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 910.6,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 911.08,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 911.56,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 912.04,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 912.52,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9805
+        },
+        {
+          "source_frame_start": 913.0,
+          "thunder": 0.8906,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 913.48,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 913.96,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 914.92,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 915.4,
+          "thunder": 0.8906,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 915.88,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 916.36,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 916.84,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 917.32,
+          "thunder": 0.7383,
+          "thunderstorm": 0.7383
+        }
+      ]
+    },
+    {
+      "id": "430765-rain-80",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/430765-long_easy_rain_08.mp3",
+      "start": 80,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Water",
+          "score": 0.65519
+        },
+        {
+          "label": "Waterfall",
+          "score": 0.64412
+        },
+        {
+          "label": "Stream",
+          "score": 0.46908
+        },
+        {
+          "label": "Pink noise",
+          "score": 0.36043
+        },
+        {
+          "label": "Noise",
+          "score": 0.18368
+        },
+        {
+          "label": "Rain",
+          "score": 0.09074
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.0717
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.03288
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.09074,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 91.52,
+          "frames_at_least_0_25": 3,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.00903,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 91.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.03288,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 91.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.65519,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 90.56,
+          "frames_at_least_0_25": 48,
+          "frames_at_least_0_5": 40
+        },
+        "Thunder": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 80.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 8e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 83.36,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.01107,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 83.36,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 80.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.01107,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 83.36,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.18368,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 86.72,
+          "frames_at_least_0_25": 16,
+          "frames_at_least_0_5": 2
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "430765-rain-700",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/430765-long_easy_rain_08.mp3",
+      "start": 700,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Rustling leaves",
+          "score": 0.17562
+        },
+        {
+          "label": "Water",
+          "score": 0.13794
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.1272
+        },
+        {
+          "label": "Wind",
+          "score": 0.12565
+        },
+        {
+          "label": "Stream",
+          "score": 0.1145
+        },
+        {
+          "label": "Rain",
+          "score": 0.09855
+        },
+        {
+          "label": "Rustle",
+          "score": 0.08602
+        },
+        {
+          "label": "Pink noise",
+          "score": 0.06567
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.09855,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 706.72,
+          "frames_at_least_0_25": 5,
+          "frames_at_least_0_5": 1
+        },
+        "Raindrop": {
+          "mean_score": 0.03841,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 703.84,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.05216,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 706.72,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.13794,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 706.72,
+          "frames_at_least_0_25": 11,
+          "frames_at_least_0_5": 1
+        },
+        "Thunder": {
+          "mean_score": 0.0092,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 706.72,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.01457,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 706.72,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.02979,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 701.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 700.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.12565,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 716.32,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.04256,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 720.16,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "543481-rain-65",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/543481-night_rain_roof_puddles.mp3",
+      "start": 65,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.35075
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.28971
+        },
+        {
+          "label": "Thunderstorm",
+          "score": 0.26644
+        },
+        {
+          "label": "Water",
+          "score": 0.26025
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.24284
+        },
+        {
+          "label": "Thunder",
+          "score": 0.23682
+        },
+        {
+          "label": "Boiling",
+          "score": 0.20549
+        },
+        {
+          "label": "Fire",
+          "score": 0.10547
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.35075,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 79.88,
+          "frames_at_least_0_25": 40,
+          "frames_at_least_0_5": 12
+        },
+        "Raindrop": {
+          "mean_score": 0.28971,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 67.4,
+          "frames_at_least_0_25": 35,
+          "frames_at_least_0_5": 7
+        },
+        "Rain on surface": {
+          "mean_score": 0.24284,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 78.44,
+          "frames_at_least_0_25": 26,
+          "frames_at_least_0_5": 2
+        },
+        "Water": {
+          "mean_score": 0.26025,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 71.24,
+          "frames_at_least_0_25": 24,
+          "frames_at_least_0_5": 4
+        },
+        "Thunder": {
+          "mean_score": 0.23682,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 74.12,
+          "frames_at_least_0_25": 16,
+          "frames_at_least_0_5": 13
+        },
+        "Thunderstorm": {
+          "mean_score": 0.26644,
+          "max_score": 0.95703,
+          "max_frame_start_seconds": 73.64,
+          "frames_at_least_0_25": 16,
+          "frames_at_least_0_5": 13
+        },
+        "Speech": {
+          "mean_score": 0.02173,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 82.76,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00366,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 67.4,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.04199,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 72.2,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.03589,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 85.64,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 69.32,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 69.8,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 70.28,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 70.76,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 71.24,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 71.72,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 72.2,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 72.68,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 73.16,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 73.64,
+          "thunder": 0.8906,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 74.12,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 74.6,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 75.08,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 75.56,
+          "thunder": 0.5,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 76.04,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 77.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        }
+      ]
+    },
+    {
+      "id": "543481-rain-200",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/543481-night_rain_roof_puddles.mp3",
+      "start": 200,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.53784
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.48185
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.3995
+        },
+        {
+          "label": "Water",
+          "score": 0.39217
+        },
+        {
+          "label": "Stream",
+          "score": 0.14437
+        },
+        {
+          "label": "Boiling",
+          "score": 0.12386
+        },
+        {
+          "label": "Fire",
+          "score": 0.0695
+        },
+        {
+          "label": "Pour",
+          "score": 0.0542
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.53784,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 204.8,
+          "frames_at_least_0_25": 48,
+          "frames_at_least_0_5": 34
+        },
+        "Raindrop": {
+          "mean_score": 0.48185,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 202.4,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 28
+        },
+        "Rain on surface": {
+          "mean_score": 0.3995,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 204.8,
+          "frames_at_least_0_25": 42,
+          "frames_at_least_0_5": 17
+        },
+        "Water": {
+          "mean_score": 0.39217,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 202.4,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 13
+        },
+        "Thunder": {
+          "mean_score": 0.0446,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 220.64,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.04704,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 220.64,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.01986,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 212.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00146,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 216.32,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.02157,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 219.68,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.02767,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 216.32,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "733979-rain-300",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 300,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.79818
+        },
+        {
+          "label": "Water",
+          "score": 0.78459
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.74552
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.23275
+        },
+        {
+          "label": "Explosion",
+          "score": 0.07707
+        },
+        {
+          "label": "Fireworks",
+          "score": 0.05216
+        },
+        {
+          "label": "Fire",
+          "score": 0.01782
+        },
+        {
+          "label": "Firecracker",
+          "score": 0.01367
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.79818,
+          "max_score": 0.98047,
+          "max_frame_start_seconds": 302.88,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 45
+        },
+        "Raindrop": {
+          "mean_score": 0.23275,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 302.88,
+          "frames_at_least_0_25": 24,
+          "frames_at_least_0_5": 3
+        },
+        "Rain on surface": {
+          "mean_score": 0.74552,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 300.96,
+          "frames_at_least_0_25": 45,
+          "frames_at_least_0_5": 42
+        },
+        "Water": {
+          "mean_score": 0.78459,
+          "max_score": 0.98438,
+          "max_frame_start_seconds": 303.36,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 41
+        },
+        "Thunder": {
+          "mean_score": 0.00391,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 313.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.00513,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 313.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.0026,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 300.48,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00285,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 310.08,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.00098,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 313.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00049,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 313.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "733979-rain-700",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/733979-spring_night_thundershower.mp3",
+      "start": 700,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Rain",
+          "score": 0.85075
+        },
+        {
+          "label": "Water",
+          "score": 0.84058
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.8042
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.37646
+        },
+        {
+          "label": "Explosion",
+          "score": 0.03532
+        },
+        {
+          "label": "Fireworks",
+          "score": 0.03158
+        },
+        {
+          "label": "Fire",
+          "score": 0.02043
+        },
+        {
+          "label": "Crackle",
+          "score": 0.01188
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.85075,
+          "max_score": 0.98047,
+          "max_frame_start_seconds": 703.84,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 45
+        },
+        "Raindrop": {
+          "mean_score": 0.37646,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 716.32,
+          "frames_at_least_0_25": 39,
+          "frames_at_least_0_5": 15
+        },
+        "Rain on surface": {
+          "mean_score": 0.8042,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 700.48,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 44
+        },
+        "Water": {
+          "mean_score": 0.84058,
+          "max_score": 0.98828,
+          "max_frame_start_seconds": 703.84,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 45
+        },
+        "Thunder": {
+          "mean_score": 0.00448,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 706.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.0057,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 706.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00277,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 707.68,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00496,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 712.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.00277,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 708.16,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00171,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 706.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "616991-rain-100",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 100,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Water",
+          "score": 0.12484
+        },
+        {
+          "label": "Rain",
+          "score": 0.11108
+        },
+        {
+          "label": "Raindrop",
+          "score": 0.10775
+        },
+        {
+          "label": "Stream",
+          "score": 0.1005
+        },
+        {
+          "label": "Animal",
+          "score": 0.09985
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.09318
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.08293
+        },
+        {
+          "label": "Boat, Water vehicle",
+          "score": 0.06999
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.11108,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 118.72,
+          "frames_at_least_0_25": 9,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.10775,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 118.72,
+          "frames_at_least_0_25": 8,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.08293,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 118.72,
+          "frames_at_least_0_25": 6,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.12484,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 121.6,
+          "frames_at_least_0_25": 6,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.0201,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 109.12,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.02458,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 109.12,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.0284,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 100.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 100.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.04012,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 102.88,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.01359,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 108.16,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": []
+    },
+    {
+      "id": "616991-rain-500",
+      "path": "/workspace/ambience-video-pipeline/media/revised-night-rain/sources/616991-extended_thunderstorm.mp3",
+      "start": 500,
+      "duration": 24,
+      "analysed_seconds": 24.0,
+      "frames": 48,
+      "top_mean_labels": [
+        {
+          "label": "Thunderstorm",
+          "score": 0.38688
+        },
+        {
+          "label": "Thunder",
+          "score": 0.3549
+        },
+        {
+          "label": "Rain",
+          "score": 0.14795
+        },
+        {
+          "label": "Boat, Water vehicle",
+          "score": 0.1276
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.10864
+        },
+        {
+          "label": "Water",
+          "score": 0.09351
+        },
+        {
+          "label": "Rowboat, canoe, kayak",
+          "score": 0.0743
+        },
+        {
+          "label": "Rain on surface",
+          "score": 0.05762
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.14795,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 517.76,
+          "frames_at_least_0_25": 11,
+          "frames_at_least_0_5": 4
+        },
+        "Raindrop": {
+          "mean_score": 0.04883,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 520.16,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.05762,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 520.16,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.09351,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 517.76,
+          "frames_at_least_0_25": 4,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.3549,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 520.64,
+          "frames_at_least_0_25": 21,
+          "frames_at_least_0_5": 18
+        },
+        "Thunderstorm": {
+          "mean_score": 0.38688,
+          "max_score": 0.99219,
+          "max_frame_start_seconds": 520.64,
+          "frames_at_least_0_25": 25,
+          "frames_at_least_0_5": 19
+        },
+        "Speech": {
+          "mean_score": 0.01603,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 500.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00073,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 500.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.0411,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 509.6,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.00488,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 500.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 504.32,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 509.12,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 510.56,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 512.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 512.96,
+          "thunder": 0.332,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 514.4,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 514.88,
+          "thunder": 0.8516,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 515.36,
+          "thunder": 0.8516,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 515.84,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 516.32,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 516.8,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 517.76,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 518.24,
+          "thunder": 0.8516,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 518.72,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 519.2,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 519.68,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 520.16,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9688
+        },
+        {
+          "source_frame_start": 520.64,
+          "thunder": 0.9688,
+          "thunderstorm": 0.9922
+        },
+        {
+          "source_frame_start": 521.12,
+          "thunder": 0.918,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 521.6,
+          "thunder": 0.5859,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 522.56,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        }
+      ]
+    }
+  ],
+  "glow_selection": {
+    "rule": "Only candidates with Thunder maximum score >= 0.9 and at least 10 overlapping frames >= 0.5; strength intentionally subtle. Onsets come from 30\u2013180 Hz energy rise, corroborated semantically within the surrounding 20 seconds. Onset precision is limited by the energy detector and 0.975-second classifier window; no subjective listening verification.",
+    "selected": [
+      {
+        "time": 1270.7,
+        "strength": 0.06
+      },
+      {
+        "time": 2908.3,
+        "strength": 0.06
+      },
+      {
+        "time": 3377.2,
+        "strength": 0.075
+      },
+      {
+        "time": 3456.7,
+        "strength": 0.075
+      },
+      {
+        "time": 3554.6,
+        "strength": 0.075
+      }
+    ],
+    "excluded_source_733979": "All sampled low-frequency peaks classified primarily as Rain/Rain on surface, no Thunder above 0.14844; do not attach sky flashes to these candidates.",
+    "timeline_recipe": "Ross543481 source20..350 at timeline0..330; Joe430765 source25..1275 at314..1564; umbrella733979 source30..1180 at1548..2698; storm616991 source30..948 at2682..3600. All3crossfades16s."
+  },
+  "model_embedded_license": "Apache License. Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.",
+  "embedded_521_labels_match_official_class_map": true
+}

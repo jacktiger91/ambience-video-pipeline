@@ -1,0 +1,147 @@
+{
+  "recipe": {
+    "edits": [
+      {
+        "sound_id": "aporee_37802_43261",
+        "start": 10,
+        "duration": 1330,
+        "timeline_start": 0.0,
+        "timeline_end": 1330.0,
+        "source_start": 10.0,
+        "source_end": 1340.0,
+        "author": "david m",
+        "source_page": "https://archive.org/details/aporee_37802_43261",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "a0728de24948b0dfd2c5443c945b42329ecd7d6a69ba5f50cb23ccf545a2e9ea",
+        "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_37802_43261.mp3"
+      },
+      {
+        "sound_id": "aporee_41944_47808",
+        "start": 14,
+        "duration": 1636,
+        "timeline_start": 1314.0,
+        "timeline_end": 2950.0,
+        "source_start": 14.0,
+        "source_end": 1650.0,
+        "author": "Vincent Duseigne",
+        "source_page": "https://archive.org/details/aporee_41944_47808",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "2f0f3d7dc7d227e47fb945754818da5d27405ddfe60a1707d61ed06bac92faec",
+        "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_41944_47808.ogg"
+      },
+      {
+        "sound_id": "aporee_59218_67955",
+        "start": 10,
+        "duration": 500,
+        "timeline_start": 2934.0,
+        "timeline_end": 3434.0,
+        "source_start": 10.0,
+        "source_end": 510.0,
+        "author": "david m",
+        "source_page": "https://archive.org/details/aporee_59218_67955",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "c125639dd7bc482f0d582731c4ed6192972b07ddfa103d3440965b0658405dda",
+        "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_59218_67955.mp3"
+      },
+      {
+        "sound_id": "aporee_37802_43261",
+        "start": 1380,
+        "duration": 182,
+        "timeline_start": 3418.0,
+        "timeline_end": 3600.0,
+        "source_start": 1380.0,
+        "source_end": 1562.0,
+        "author": "david m",
+        "source_page": "https://archive.org/details/aporee_37802_43261",
+        "license": "CC-BY-3.0",
+        "license_url": "https://creativecommons.org/licenses/by/3.0/",
+        "source_sha256": "a0728de24948b0dfd2c5443c945b42329ecd7d6a69ba5f50cb23ccf545a2e9ea",
+        "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_37802_43261.mp3"
+      }
+    ],
+    "crossfade_seconds": 16.0,
+    "target_lufs": -22.0,
+    "target_true_peak": -4.0,
+    "floating_point_intermediate": true,
+    "version": 1,
+    "theme": "quiet-shore",
+    "duration_seconds": 3600.0
+  },
+  "source_loudness": [
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-27.8",
+      "input_tp": "0.1",
+      "input_lra": "9.1",
+      "input_thresh": "-37.8"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-22.5",
+      "input_tp": "-0.8",
+      "input_lra": "9.4",
+      "input_thresh": "-32.9"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-28.7",
+      "input_tp": "-3.6",
+      "input_lra": "8.2",
+      "input_thresh": "-39.0"
+    },
+    {
+      "measurement": "FFmpeg ebur128 with true-peak oversampling",
+      "input_i": "-29.5",
+      "input_tp": "-6.4",
+      "input_lra": "8.9",
+      "input_thresh": "-39.5"
+    }
+  ],
+  "source_gain_db": [
+    3.8000000000000007,
+    -1.5,
+    4.699999999999999,
+    5.5
+  ],
+  "assembled_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-24.0",
+    "input_tp": "3.9",
+    "input_lra": "9.0",
+    "input_thresh": "-34.2"
+  },
+  "final_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-22.0",
+    "input_tp": "-4.3",
+    "input_lra": "8.6",
+    "input_thresh": "-32.2"
+  },
+  "normalization_method": "Measured constant gain with oversampled lookahead peak limiting and a bounded final constant-gain trim",
+  "normalization_filter": "volume=2.000000dB,aresample=192000,alimiter=limit=0.595662144:level=false:latency=true:attack=5:release=200,aresample=48000",
+  "pre_trim_loudness": {
+    "measurement": "FFmpeg ebur128 with true-peak oversampling",
+    "input_i": "-22.2",
+    "input_tp": "-4.5",
+    "input_lra": "8.6",
+    "input_thresh": "-32.4"
+  },
+  "final_constant_gain_db": 0.1999999999999993,
+  "duration_seconds": 3600.0,
+  "sample_rate": 48000,
+  "channels": 2,
+  "comfortable_level_acceptance": {
+    "integrated_lufs": [
+      -24,
+      -20
+    ],
+    "maximum_true_peak_db": -3
+  },
+  "full_decode_passed": true,
+  "no_source_interval_repeats": true,
+  "auditory_review": "Automated full decode, loudness, source provenance and interval checks. Human listening remains recommended; these checks do not establish subjective quality.",
+  "sha256": "842ee2f80280c3eb9e67cb8680142536e8e4b3cac4f70c5f7d2ec6efb715fdc8"
+}

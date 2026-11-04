@@ -1,0 +1,32 @@
+{
+  "bundle_id": "REPLACE-YYYY-MM-DD-rain-window",
+  "intended_channel_id": "REPLACE_WITH_YOUR_UC_CHANNEL_ID",
+  "theme": "Gentle rain beside a quiet window",
+  "generator_theme": "night-rain",
+  "generator_seed": 20261103,
+  "long_video": "../media/verified-long.mp4",
+  "title": "Gentle Rain by the Window | One Hour of Relaxing Ambience",
+  "description": "An hour of gentle rain ambience for a quiet break. REPLACE_WITH_ACCURATE_RECORDING_CONTEXT",
+  "recording_credits": "REPLACE_WITH_ACTUAL_VISUAL_AND_AUDIO_CREATOR_CREDITS_AND_LICENSES",
+  "made_for_kids": false,
+  "contains_synthetic_media": false,
+  "playlist_id": "REPLACE_WITH_EXISTING_PLAYLIST_ID_OR_REMOVE_THIS_FIELD",
+  "shorts": [
+    {
+      "title": "A Quiet Moment by the Rainy Window",
+      "description": "Pause with the rain. Watch the full hour on our channel. #Shorts",
+      "start": 90,
+      "duration": 20,
+      "framing": "left",
+      "cover_offset": 4
+    },
+    {
+      "title": "Twenty Seconds of Gentle Rain",
+      "description": "Take a short rain break. The full hour is on our channel. #Shorts",
+      "start": 450,
+      "duration": 25,
+      "framing": "right",
+      "cover_offset": 7
+    }
+  ]
+}

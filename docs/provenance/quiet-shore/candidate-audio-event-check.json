@@ -1,0 +1,1927 @@
+{
+  "method": "Official YAMNet TFLite AudioSet event classification, 16 kHz mono analysis only; original stereo media untouched.",
+  "limitations": "Automated scores are not calibrated probabilities, do not prove natural origin or rights, and do not replace human listening. No subjective listening was possible in this environment.",
+  "model_url": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/audio_classification/android/lite-model_yamnet_classification_tflite_1.tflite",
+  "model_sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+  "class_map_sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2",
+  "class_map_url": "https://raw.githubusercontent.com/tensorflow/models/master/research/audioset/yamnet/yamnet_class_map.csv",
+  "model_code_license": "Apache-2.0; https://github.com/tensorflow/models/blob/master/LICENSE",
+  "model_embedded_license": "Apache License. Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.",
+  "embedded_521_labels_match_official_class_map": true,
+  "runtime": "ai-edge-litert 2.3.0 (Apache-2.0), temporary install",
+  "runtime_linux_cp312_wheel_sha256": "dc9f56c23e0dcf182b6c35f23fbb102ed048296588882b806d5eff7654c04c88",
+  "hop_seconds": 1.0,
+  "records": [
+    {
+      "id": "aporee_41944_47808",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_41944_47808.ogg",
+      "start": 0,
+      "duration": 1800.071837,
+      "channels": 2,
+      "sample_rate": "44100",
+      "analysed_seconds": 1800.0718125,
+      "frames": 1800,
+      "top_mean_labels": [
+        {
+          "label": "Water",
+          "score": 0.74295
+        },
+        {
+          "label": "Ocean",
+          "score": 0.70518
+        },
+        {
+          "label": "Waves, surf",
+          "score": 0.63529
+        },
+        {
+          "label": "Stream",
+          "score": 0.17006
+        },
+        {
+          "label": "Wind",
+          "score": 0.15181
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "score": 0.11837
+        },
+        {
+          "label": "Boat, Water vehicle",
+          "score": 0.06767
+        },
+        {
+          "label": "Waterfall",
+          "score": 0.06639
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.01228,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 1515.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.00089,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1515.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.00364,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 1515.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.74295,
+          "max_score": 0.99609,
+          "max_frame_start_seconds": 1472.0,
+          "frames_at_least_0_25": 1771,
+          "frames_at_least_0_5": 1655
+        },
+        "Thunder": {
+          "mean_score": 0.00213,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 756.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.00535,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 235.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00297,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 767.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00021,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 233.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.15181,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 62.0,
+          "frames_at_least_0_25": 290,
+          "frames_at_least_0_5": 1
+        },
+        "Noise": {
+          "mean_score": 0.00833,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 226.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Ocean": {
+          "mean_score": 0.70518,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 74.0,
+          "frames_at_least_0_25": 1668,
+          "frames_at_least_0_5": 1476
+        },
+        "Waves, surf": {
+          "mean_score": 0.63529,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 74.0,
+          "frames_at_least_0_25": 1637,
+          "frames_at_least_0_5": 1400
+        },
+        "Stream": {
+          "mean_score": 0.17006,
+          "max_score": 0.98047,
+          "max_frame_start_seconds": 1451.0,
+          "frames_at_least_0_25": 428,
+          "frames_at_least_0_5": 235
+        },
+        "Splash, splatter": {
+          "mean_score": 0.00345,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1363.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.11837,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 871.0,
+          "frames_at_least_0_25": 88,
+          "frames_at_least_0_5": 0
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 1e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 9.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 0.00021,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 1799.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 0.00165,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 8.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 1
+        },
+        "Vehicle": {
+          "mean_score": 0.02363,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 1687.0,
+          "frames_at_least_0_25": 15,
+          "frames_at_least_0_5": 1
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 4e-05,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.00166,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 322.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 1e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.00039,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 9.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": [
+        {
+          "source_frame_start": 8.0,
+          "events": {
+            "Fireworks": 0.5
+          },
+          "top_labels": [
+            "Fireworks",
+            "Explosion",
+            "Firecracker"
+          ]
+        },
+        {
+          "source_frame_start": 1687.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Motorboat, speedboat",
+            "Vehicle"
+          ]
+        }
+      ],
+      "source_sha256": "2f0f3d7dc7d227e47fb945754818da5d27405ddfe60a1707d61ed06bac92faec",
+      "source_page": "https://archive.org/details/aporee_41944_47808"
+    },
+    {
+      "id": "aporee_71019_82826",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_71019_82826.mp3",
+      "start": 0,
+      "duration": 1240.502857,
+      "channels": 2,
+      "sample_rate": "44100",
+      "analysed_seconds": 1240.47675,
+      "frames": 1240,
+      "top_mean_labels": [
+        {
+          "label": "Pink noise",
+          "score": 0.41003
+        },
+        {
+          "label": "Ocean",
+          "score": 0.33196
+        },
+        {
+          "label": "Water",
+          "score": 0.30615
+        },
+        {
+          "label": "Waves, surf",
+          "score": 0.29336
+        },
+        {
+          "label": "Noise",
+          "score": 0.28386
+        },
+        {
+          "label": "Wind",
+          "score": 0.21661
+        },
+        {
+          "label": "Thunderstorm",
+          "score": 0.20754
+        },
+        {
+          "label": "White noise",
+          "score": 0.17233
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.12057,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 434.0,
+          "frames_at_least_0_25": 220,
+          "frames_at_least_0_5": 22
+        },
+        "Raindrop": {
+          "mean_score": 0.01283,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 434.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.03368,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 434.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.30615,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 794,
+          "frames_at_least_0_5": 242
+        },
+        "Thunder": {
+          "mean_score": 0.14981,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 434.0,
+          "frames_at_least_0_25": 285,
+          "frames_at_least_0_5": 129
+        },
+        "Thunderstorm": {
+          "mean_score": 0.20754,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 434.0,
+          "frames_at_least_0_25": 394,
+          "frames_at_least_0_5": 207
+        },
+        "Speech": {
+          "mean_score": 0.00518,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 465.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.002,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 799.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.21661,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 30.0,
+          "frames_at_least_0_25": 536,
+          "frames_at_least_0_5": 9
+        },
+        "Noise": {
+          "mean_score": 0.28386,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 724.0,
+          "frames_at_least_0_25": 637,
+          "frames_at_least_0_5": 259
+        },
+        "Ocean": {
+          "mean_score": 0.33196,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 15.0,
+          "frames_at_least_0_25": 691,
+          "frames_at_least_0_5": 387
+        },
+        "Waves, surf": {
+          "mean_score": 0.29336,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 15.0,
+          "frames_at_least_0_25": 639,
+          "frames_at_least_0_5": 318
+        },
+        "Stream": {
+          "mean_score": 0.01765,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 243.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Splash, splatter": {
+          "mean_score": 0.0001,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 13.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.09423,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 30.0,
+          "frames_at_least_0_25": 55,
+          "frames_at_least_0_5": 2
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 11.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 0.00021,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 11.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 0.00046,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 1090.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 0.0003,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 24.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.01301,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 51.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 0.00031,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 12.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.00515,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 51.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 2e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 11.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.00345,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 11.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 4.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 5.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 8.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 17.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 21.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 41.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 42.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 50.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 52.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 55.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 56.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 61.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 69.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 89.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 92.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 100.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 112.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 115.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 139.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 140.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 142.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 143.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 152.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 154.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 158.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 160.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 163.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 170.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 180.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 182.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 183.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 189.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 199.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 200.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 215.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 216.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 226.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 232.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 242.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 254.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 257.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 259.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 265.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 273.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 279.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 285.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 286.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 287.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 288.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 289.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 290.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 296.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 301.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 312.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 317.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 326.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 332.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 344.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 346.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 349.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 350.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 351.0,
+          "thunder": 0.8516,
+          "thunderstorm": 0.9414
+        },
+        {
+          "source_frame_start": 354.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 355.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 356.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 358.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 363.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 364.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 365.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 366.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 367.0,
+          "thunder": 0.8906,
+          "thunderstorm": 0.957
+        },
+        {
+          "source_frame_start": 370.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 371.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 375.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 376.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 377.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 378.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 382.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 386.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 387.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 388.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 389.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 391.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 392.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 399.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 404.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 405.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 406.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 407.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 411.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 412.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 416.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 421.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 422.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 423.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 424.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 427.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 431.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 432.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 433.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 434.0,
+          "thunder": 0.9414,
+          "thunderstorm": 0.9688
+        },
+        {
+          "source_frame_start": 435.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 439.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 440.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 444.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 445.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 446.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 451.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 452.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 453.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 458.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 459.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 463.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 469.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 473.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 490.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 503.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 506.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 512.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 515.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 516.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 525.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 552.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 556.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 557.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 558.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 562.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 563.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 564.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 570.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 571.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 572.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 575.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 576.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 579.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 588.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 590.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 595.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 598.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 601.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 605.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 606.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 610.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 615.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 616.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 617.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 625.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 634.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 640.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 641.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 642.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 646.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 652.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 654.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 659.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 660.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 680.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 681.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 684.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 688.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 693.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 694.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 699.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 700.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 701.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 706.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 710.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 711.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 712.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 713.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 719.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 734.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 735.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 738.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 741.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 745.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 749.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 752.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 753.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 754.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 757.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 759.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 760.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 762.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 770.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 772.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 775.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 779.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 784.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 788.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 794.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 797.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 799.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 801.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 809.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 811.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 812.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 819.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 824.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 831.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 832.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 834.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 845.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 848.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 852.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 853.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 858.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 860.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 868.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 873.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 878.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 880.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 886.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 889.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 894.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 897.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 903.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 904.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 906.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 913.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 915.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 930.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 938.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 939.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 944.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 945.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 948.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 949.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 950.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 955.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 956.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 975.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 979.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 982.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 988.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 990.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 996.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 1009.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 1010.0,
+          "thunder": 0.7383,
+          "thunderstorm": 0.8516
+        },
+        {
+          "source_frame_start": 1013.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 1014.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1019.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1020.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1024.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1030.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1039.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1040.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 1041.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 1045.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 1046.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1055.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 1056.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 1064.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 1065.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 1066.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 1086.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 1087.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 1092.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 1098.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 1102.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1117.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 1118.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1119.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1124.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.668
+        },
+        {
+          "source_frame_start": 1125.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 1129.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1130.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.918
+        },
+        {
+          "source_frame_start": 1139.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 1144.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 1146.0,
+          "thunder": 0.8008,
+          "thunderstorm": 0.8906
+        },
+        {
+          "source_frame_start": 1152.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1159.0,
+          "thunder": 0.668,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 1167.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 1170.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.2617
+        },
+        {
+          "source_frame_start": 1176.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1177.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 1186.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 1187.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1197.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.7383
+        },
+        {
+          "source_frame_start": 1205.0,
+          "thunder": 0.5859,
+          "thunderstorm": 0.8008
+        },
+        {
+          "source_frame_start": 1206.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 1213.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        },
+        {
+          "source_frame_start": 1216.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1223.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 1234.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        }
+      ],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": [
+        {
+          "source_frame_start": 30.0,
+          "events": {
+            "Wind noise (microphone)": 0.5
+          },
+          "top_labels": [
+            "Ocean",
+            "Waves, surf",
+            "Water"
+          ]
+        },
+        {
+          "source_frame_start": 820.0,
+          "events": {
+            "Wind noise (microphone)": 0.5
+          },
+          "top_labels": [
+            "Ocean",
+            "Waves, surf",
+            "Water"
+          ]
+        }
+      ],
+      "source_sha256": "faa7a2e3df6503850bfb399e602a31092a1403cc8149f0785b0c89fb5fa4224d",
+      "source_page": "https://archive.org/details/aporee_71019_82826"
+    }
+  ],
+  "source_hash_binding": "SHA-256 identifiers from the verified source manifest; the mix builder rechecks input hashes before use."
+}

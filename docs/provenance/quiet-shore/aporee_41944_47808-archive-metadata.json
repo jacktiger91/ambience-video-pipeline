@@ -1,0 +1,179 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710906.ca.archive.org",
+        "dir": "/0/items/aporee_41944_47808"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710906.ca.archive.org",
+        "dir": "/0/items/aporee_41944_47808"
+      }
+    ]
+  },
+  "created": 1793811413,
+  "d1": "dn601300.us.archive.org",
+  "dir": "/0/items/aporee_41944_47808",
+  "files": [
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1542626311",
+      "size": "3229",
+      "md5": "f18d86e4527ce6b2d6b5313960237a8b",
+      "crc32": "e01317d8",
+      "sha1": "3d7f184e820f522bb3b8937e63d466a5decba206",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "aporee_41944_47808_archive.torrent",
+      "source": "metadata",
+      "btih": "3d3b3118ee180f74f39ceb681fa94141722dd8da",
+      "mtime": "1594440969",
+      "size": "6131",
+      "md5": "a40f213f433bd8d1a307325746c45ef4",
+      "crc32": "c3cf40b8",
+      "sha1": "7974ead2db6c64c02aa5d6e4a283b7954eebfdba",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_41944_47808_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "7503133195923d4930e847d75ea98075",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_41944_47808_meta.sqlite",
+      "source": "original",
+      "mtime": "1542626125",
+      "size": "11264",
+      "md5": "e91b87e4167e2b9d5172685ab10123fb",
+      "crc32": "bcb816cf",
+      "sha1": "5954fac4802b065ecc7761b6ea79b87bf6baa012",
+      "format": "Metadata"
+    },
+    {
+      "name": "aporee_41944_47808_meta.xml",
+      "source": "original",
+      "mtime": "1788916841",
+      "size": "1706",
+      "format": "Metadata",
+      "md5": "c41325263e5780a59a04685c19a7d49c",
+      "crc32": "fc5ac45a",
+      "sha1": "a1fd6597ea2a687370a582b17ed5567ebaa06dab"
+    },
+    {
+      "name": "dehaan151121h05APO.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "dehaan151121h05APO.mp3",
+      "mtime": "1542626307",
+      "size": "410152",
+      "md5": "c27596d31f0c2b18a5be831a349aed42",
+      "crc32": "2fc3c1aa",
+      "sha1": "b530b47caa9374a8299c2a0a011d854a5ec0e95b"
+    },
+    {
+      "name": "dehaan151121h05APO.mp3",
+      "source": "original",
+      "mtime": "1542626108",
+      "size": "72007097",
+      "md5": "356577026fcc27b654c0df50157c9f2f",
+      "crc32": "416ea55b",
+      "sha1": "5097b19f87e1b367856974dc41b4f7f7dea28bf1",
+      "format": "VBR MP3",
+      "length": "1800.08",
+      "height": "0",
+      "width": "0",
+      "title": "8420 De Haan, Belgique / The sea during low tide",
+      "artist": "Vincent Duseigne",
+      "album": "radio aporee",
+      "track": "1/1",
+      "genre": "ambient phonography",
+      "external-identifier-match-date": "acoustid:2019-03-26T18:47:03Z",
+      "external-identifier": "urn:acoustid:db7ce695-c64e-48bf-8a0a-bffa6978204f"
+    },
+    {
+      "name": "dehaan151121h05APO.ogg",
+      "source": "derivative",
+      "format": "Ogg Vorbis",
+      "original": "dehaan151121h05APO.mp3",
+      "mtime": "1542626183",
+      "size": "21043919",
+      "md5": "64dc5e11df53919498a18f30a36f5fc7",
+      "crc32": "1c9dbe05",
+      "sha1": "b8989f3c74f3c34f814c209089b1f3376dba34de",
+      "length": "1800.07",
+      "height": "0",
+      "width": "0"
+    },
+    {
+      "name": "dehaan151121h05APO.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "dehaan151121h05APO.mp3",
+      "mtime": "1542626270",
+      "size": "13121",
+      "md5": "906615b57870c909fe34c3a70c3a534b",
+      "crc32": "2ba462ed",
+      "sha1": "7b72056469ef8bb105010ae479ba7b97fe3a55a2"
+    },
+    {
+      "name": "dehaan151121h05APO_spectrogram.png",
+      "source": "derivative",
+      "format": "Spectrogram",
+      "original": "dehaan151121h05APO.mp3",
+      "mtime": "1542626281",
+      "size": "275417",
+      "md5": "3c188bf6dec721e17bb68966d5a339c9",
+      "crc32": "59ff72cb",
+      "sha1": "0f987f09d8b21bbb280feb257e73de37665bc11a"
+    }
+  ],
+  "files_count": 10,
+  "item_last_updated": 1788916842,
+  "item_size": 93772036,
+  "metadata": {
+    "identifier": "aporee_41944_47808",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=51.276374241143; longitude=3.0231606535926; elevation=0; name=Koninklijke Baan 6, 8420 De Haan, Belgium; date=2018-11-15 21:05:00 Europe/Brussels;",
+    "creator": "Vincent Duseigne",
+    "date": "2018-11-15 21:05:00",
+    "description": "Recording of the sea during the low tide. Recorded on the De Haan (Le Coq) beach, at night, during one hour. This is here an half a hour excerpt.",
+    "latitude": "51.276374241143",
+    "licenseurl": "http://creativecommons.org/licenses/by/3.0/",
+    "longitude": "3.0231606535926",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"http://aporee.org/maps/?loc=41944\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"http://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/Brussels",
+    "title": "8420 De Haan, Belgique - The sea during low tide",
+    "collection": "radio-aporee-maps",
+    "publicdate": "2018-11-19 11:15:09",
+    "uploader": "radio@aporee.org",
+    "addeddate": "2018-11-19 11:15:09",
+    "external_metadata_update": "2019-03-26T18:47:03Z",
+    "backup_location": "ia906804_11"
+  },
+  "server": "dn601300.us.archive.org",
+  "simplelists": {
+    "solo_manifest": {
+      "solo_manifest_dn601300": {
+        "sys_changed_by": {
+          "source": "task",
+          "task_id": "5618114815"
+        },
+        "sys_last_changed": "2026-09-09 01:20:46.419414"
+      }
+    }
+  },
+  "solo": true,
+  "uniq": 1730060364,
+  "workable_servers": [
+    "dn601300.us.archive.org"
+  ]
+}

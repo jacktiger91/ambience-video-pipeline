@@ -1,0 +1,63 @@
+# Local source media and rendered output
+/media/
+/outputs/
+/renders/
+/tmp/
+
+# Media files, wherever they are placed
+*.[mM][pP]4
+*.[mM]4[vV]
+*.[mM][kK][vV]
+*.[mM][oO][vV]
+*.[aA][vV][iI]
+*.[wW][eE][bB][mM]
+*.[mM][pP][gG]
+*.[mM][pP][eE][gG]
+*.[tT][sS]
+*.[mM][tT][sS]
+*.[pP][nN][gG]
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[wW][eE][bB][pP]
+*.[bB][mM][pP]
+*.[gG][iI][fF]
+*.[tT][iI][fF]
+*.[tT][iI][fF][fF]
+*.[hH][eE][iI][cC]
+*.[hH][eE][iI][fF]
+*.[aA][vV][iI][fF]
+*.[wW][aA][vV]
+*.[mM][pP]3
+*.[fF][lL][aA][cC]
+*.[aA][aA][cC]
+*.[mM]4[aA]
+*.[oO][gG][gG]
+*.[oO][pP][uU][sS]
+*.[aA][iI][fF]
+*.[aA][iI][fF][fF]
+*.[wW][mM][aA]
+
+# Temporary files and local configuration
+*.tmp
+*.part
+*.log
+.env
+.env.*
+!.env.example
+
+# OAuth grants and private resumable upload state must stay outside the checkout.
+client_secret*.json
+credentials*.json
+token.json
+*.private.json
+.secrets/
+secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.coverage
+htmlcov/

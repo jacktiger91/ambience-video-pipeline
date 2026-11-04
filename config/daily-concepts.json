@@ -1,0 +1,518 @@
+{
+  "schema_version": 1,
+  "rotation_start_date": "2026-11-04",
+  "publishing_copy": "daily-publishing-copy.json",
+  "brand": {
+    "name": "Quiet Hours Relaxing Sounds",
+    "channel_handle": "@QuietHoursRelaxingSounds",
+    "style_guide": "docs/CHANNEL-STYLE.md",
+    "style_specification": "config/brand-style.json"
+  },
+  "repeat_after_end": false,
+  "concepts": [
+    {
+      "id": "quiet-shore",
+      "title": "Quiet Shore",
+      "theme": "Quiet Shore",
+      "sound_family": "coastal_lapping",
+      "setting": "Sheltered pebble cove at blue hour, small amber-window beach hut on the far left.",
+      "framing": "Low view from the open pebble beach across shallow clear water; no porch or framing posts.",
+      "backdrop_brief": "Hut left, open blue water right, wet submerged pebbles foreground, distant headland and restrained sunset light.",
+      "thumbnail_brief": "Place QUIET / SHORE in open sky/water right, gold 1 HOUR capsule above; keep hut visible.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Close gentle seawater lapping, small stones and water receding; occasional distant natural gulls are acceptable."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "large crashing breakers",
+          "rain",
+          "thunder",
+          "close harsh gull calls"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show small waves visibly advancing onto and receding from the pebble shore, with shallow water flowing around stones and reflections responding to the moving water. Keep the hut, land and camera steady.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "forest-dawn",
+      "title": "Forest Dawn",
+      "theme": "Forest Dawn",
+      "sound_family": "woodland_birdsong",
+      "setting": "Misty deciduous woodland just after sunrise with ferns and a pale sunbeam.",
+      "framing": "Camera low beside a fern-covered fallen log looking through layered trees; no building or lantern.",
+      "backdrop_brief": "Photographic dew on ferns, soft morning mist, green shadows and restrained warm sunlight; birds need not be visible.",
+      "thumbnail_brief": "FOREST / DAWN in a darker gap between trees; cream lettering and gold badge, avoid covering the fern focal point.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Gentle real woodland birdsong with a quiet wind-and-leaf bed."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "loud crow or predator calls",
+          "rain",
+          "strong wind",
+          "traffic"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show gentle irregular movement in nearby ferns, leaves and fine branches that matches a light woodland breeze. Keep trunks, ground and camera steady; audible birds do not require fabricated visible birds.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "lake-evening",
+      "title": "Lake Evening",
+      "theme": "Lake Evening",
+      "sound_family": "freshwater_lapping",
+      "setting": "Reed-lined freshwater lake in late evening, a small weathered jetty receding into the distance.",
+      "framing": "Diagonal view along the waterline past reeds; the jetty is a secondary detail rather than a foreground porch.",
+      "backdrop_brief": "Still distant hills, cool reflective water, isolated amber sunset highlights and crisp reed silhouettes.",
+      "thumbnail_brief": "LAKE / EVENING over uncluttered water/sky; retain reeds and the receding jetty as visible habitat cues.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Soft lake water lapping through reeds and gentle natural shoreline movement."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "ocean breakers",
+          "engines",
+          "close shouting waterfowl",
+          "thunder"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show small waves lapping against the lake bank and jetty, expanding surface ripples and gentle reed movement. Reflections must follow the moving water; keep the jetty, hills and camera steady.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "meadow-dusk",
+      "title": "Meadow Dusk",
+      "theme": "Meadow Dusk",
+      "sound_family": "grassland_insects",
+      "setting": "Summer wildflower meadow at dusk, long grass and a distant low hedgerow.",
+      "framing": "Eye level among grasses with a winding natural path leading toward soft evening light.",
+      "backdrop_brief": "Photographic grasses and seed heads, soft warm horizon, cool green shadows and no buildings.",
+      "thumbnail_brief": "MEADOW / DUSK against a naturally darker upper background; gold capsule and clear cream title.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Quiet field crickets and gentle grass rustle, with sparse distant birds if present in the same take."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "close buzzing insects",
+          "loud cicada chorus",
+          "traffic",
+          "artificial music"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show grasses, seed heads and a few wildflowers swaying gently at different rates in a light breeze. Keep the path, distant landscape and camera steady; avoid adding artificial insect swarms.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "hidden-stream",
+      "title": "Hidden Stream",
+      "theme": "Hidden Stream",
+      "sound_family": "forest_stream",
+      "setting": "A small clear stream between moss-covered stones in a sheltered woodland hollow.",
+      "framing": "Fixed camera just above water level looking upstream toward a natural bend.",
+      "backdrop_brief": "Detailed wet moss and clear water, gentle reflected canopy light, deep green shade and a warm sun fleck.",
+      "thumbnail_brief": "HIDDEN / STREAM above or beside the stream bend, preserving the distinctive mossy stone foreground.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Small flowing brook with individual ripples and close water around stones, without a roaring waterfall."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "large waterfall roar",
+          "ocean waves",
+          "heavy rain",
+          "engines"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show continuous directional flow around mossy stones, small changing eddies and ripples traveling downstream. Keep stones, banks and camera steady; changing highlights alone are insufficient.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "soft-rain",
+      "title": "Soft Rain",
+      "theme": "Soft Rain",
+      "sound_family": "rain_on_leaves",
+      "setting": "Rain falling through a lush fern glade below a broad natural tree canopy.",
+      "framing": "Ground-level view across wet leaves and a fallen mossy trunk; no cottage, porch or lantern.",
+      "backdrop_brief": "Photographic raindrops on foliage, cool green depth and soft silver daylight, no copied Night Rain courtyard.",
+      "thumbnail_brief": "SOFT / RAIN in dark canopy space, warm gold badge as the graphic accent instead of a repeated lamp.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Real gentle-to-steady rain on leaves and close forest drips with natural variation."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "loud thunder cracks",
+          "synthetic noise bed",
+          "traffic",
+          "strong storm wind"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show rain visibly falling at different depths, drops collecting and dripping from leaves, and small splashes where drops land. Keep the camera steady and match the rainfall intensity to the soundtrack.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "reed-birds",
+      "title": "Reed Birds",
+      "theme": "Reed Birds",
+      "sound_family": "wetland_birdsong",
+      "setting": "Quiet wetland reed bed at first light with narrow channels of reflective water.",
+      "framing": "Low fixed view through separated foreground reeds toward a small open channel.",
+      "backdrop_brief": "Soft pink-gold dawn band, cool reed silhouettes and believable reflected sky in the water channel.",
+      "thumbnail_brief": "REED / BIRDS in an uncluttered sky area; keep the channel readable and avoid fake close bird portraits.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Gentle wetland birdsong, subtle water movement and quiet reed rustle from real recordings."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "loud geese",
+          "distress calls",
+          "boat motors",
+          "rain"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show reeds and leaves moving gently in a light breeze, with small ripples traveling through the water channel. Keep the banks and camera steady; bird sounds do not require invented visible bird activity.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "gentle-surf",
+      "title": "Gentle Surf",
+      "theme": "Gentle Surf",
+      "sound_family": "sandy_beach_surf",
+      "setting": "A broad empty sandy beach at early morning with low, soft rolling surf.",
+      "framing": "Fixed wide view almost parallel to the shore with a long receding foam edge.",
+      "backdrop_brief": "Pale golden edge light on wet sand, cool open sea, distant dunes and small natural waves.",
+      "thumbnail_brief": "GENTLE / SURF over darker sea/sky; gold badge and cream title, preserve the sweeping shoreline.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Soft shorebreak and water washing back over sand; more open sea than Quiet Shore, without storm surf."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "crashing storm waves",
+          "crowds",
+          "loud gull flocks",
+          "music"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show small waves washing onto the sand and receding, with a moving foam edge, a changing wet-sand boundary and shallow wash draining back to sea. Keep the dunes, horizon and camera steady.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "pine-breeze",
+      "title": "Pine Breeze",
+      "theme": "Pine Breeze",
+      "sound_family": "tree_canopy_wind",
+      "setting": "Sunlit pine woodland on a calm ridge, with layered trunks and soft needle-covered ground.",
+      "framing": "Looking across a small opening in the trees rather than down a waterway or out from a building.",
+      "backdrop_brief": "Photographic bark and needles, cool shaded greens, warm rim light and gentle natural haze.",
+      "thumbnail_brief": "PINE / BREEZE in open shadowed canopy space with the same condensed cream type and gold capsule.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Soft wind through pine needles and occasional distant woodland birds."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "gusty microphone wind",
+          "creaking structures",
+          "traffic",
+          "rain"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show pine needles and fine branches moving gently and irregularly in the breeze at several depths. Keep major trunks, forest floor and camera steady; a camera pan or animated light alone is insufficient.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "mountain-brook",
+      "title": "Mountain Brook",
+      "theme": "Mountain Brook",
+      "sound_family": "alpine_stream",
+      "setting": "A narrow alpine brook through a small grassy meadow below distant rounded mountains.",
+      "framing": "Low bank-side view following clear water past smooth stones into an open valley.",
+      "backdrop_brief": "Clear shallow water, restrained afternoon gold on grass, cool mountain shadows and a distinct open landscape.",
+      "thumbnail_brief": "MOUNTAIN / BROOK in negative space above the valley; leave nearby water texture and distant peaks visible.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "A light natural brook with varied trickles around pebbles, without heavy rapids."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "waterfall roar",
+          "tourists",
+          "engines",
+          "storm wind"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show clear water visibly flowing around pebbles, with traveling ripples and changing little eddies along the brook. Keep the stones, meadow, distant mountains and camera steady.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "garden-birds",
+      "title": "Garden Birds",
+      "theme": "Garden Birds",
+      "sound_family": "orchard_birdsong",
+      "setting": "A quiet blossoming orchard with an old stone path and a small empty wooden bench.",
+      "framing": "Camera beside low flowers looking diagonally between fruit trees; no porch, cottage wall or rain lantern.",
+      "backdrop_brief": "Natural blossom detail, dew, soft morning gold and cool grass shadows; no visibly artificial birds.",
+      "thumbnail_brief": "GARDEN / BIRDS in a darker foliage area, gold badge above, keep blossoms and path as the new visual subject.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Soft real songbirds in a quiet garden or orchard, with light leaves moving in the breeze."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "lawn mowers",
+          "close harsh calls",
+          "voices",
+          "rain"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show gentle irregular movement in orchard leaves, blossom clusters and foreground flowers. Keep the bench, path and camera steady; no fabricated birds are needed to accompany recorded birdsong.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "rainy-lake",
+      "title": "Rainy Lake",
+      "theme": "Rainy Lake",
+      "sound_family": "rain_on_freshwater",
+      "setting": "Fine rain on a small secluded lake with distant pines and reeds along one bank.",
+      "framing": "Open bank-side view across water; no shelter or human-built foreground.",
+      "backdrop_brief": "Photographic spreading ripples, mist-softened tree line and muted cool daylight with a subtle warm reed accent.",
+      "thumbnail_brief": "RAINY / LAKE above the misty water line using the familiar cream lettering and gold 1 HOUR capsule.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Real rain striking lake water and nearby reeds with small individual droplets and a continuous soft bed."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "close thunder cracks",
+          "synthetic rainfall",
+          "boat engines",
+          "heavy surf"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show falling rain, small drop impacts and expanding rings across the lake, with restrained movement in nearby reeds. Keep the shore, distant tree line and camera steady.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "evening-pond",
+      "title": "Evening Pond",
+      "theme": "Evening Pond",
+      "sound_family": "pond_wildlife",
+      "setting": "A peaceful small pond at twilight with lily leaves and softly lit grasses around the margins.",
+      "framing": "Low close view over lily leaves toward a darker distant bank, no house or garden porch.",
+      "backdrop_brief": "Photographic reflections, dark blue-green water and a thin soft amber twilight edge; no fake glowing insects.",
+      "thumbnail_brief": "EVENING / POND in clear darker water/sky space with the consistent gold badge and cream title.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Quiet pond insects and restrained natural frog calls with subtle water movement."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "loud dense frog chorus",
+          "harsh buzzing",
+          "voices",
+          "music"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show subtle but clearly visible surface ripples and natural movement of lily leaves and bank grasses. Keep the banks and camera steady; do not invent glowing insects or animated animal calls.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    },
+    {
+      "id": "silver-tide",
+      "title": "Silver Tide",
+      "theme": "Silver Tide",
+      "sound_family": "rockpool_water",
+      "setting": "A silver-blue rocky shoreline with shallow tidal pools and gentle water entering narrow channels.",
+      "framing": "Oblique close view across clear pools and dark smooth rocks, with the open sea only in the upper distance.",
+      "backdrop_brief": "Detailed wet stone and clear pools, cool moonlit highlights and restrained warm horizon glow; no beach hut.",
+      "thumbnail_brief": "SILVER / TIDE in darker upper sea space, cream capitals and gold capsule; preserve the rock-pool pattern.",
+      "audio_requirements": {
+        "kind": "real_field_recording",
+        "required_sounds": [
+          "Small natural waves trickling and lapping through rock channels, with a calm low sea bed."
+        ],
+        "excluded_sounds": [
+          "speech",
+          "music",
+          "storm breakers",
+          "engines",
+          "harsh bird calls",
+          "rain"
+        ],
+        "license_requirement": "Verified permission for commercial YouTube use, creator/source URL, licence text/link, actual stereo source bytes and provenance before rendering."
+      },
+      "motion_requirements": {
+        "required": true,
+        "camera": "fixed",
+        "brief": "Show seawater entering and withdrawing through rock channels, water levels gently rising and falling in shallow pools, and traveling ripples. Keep rocks, distant land and camera steady.",
+        "applies_to": [
+          "long",
+          "short1",
+          "short2"
+        ],
+        "review_required": true
+      }
+    }
+  ]
+}

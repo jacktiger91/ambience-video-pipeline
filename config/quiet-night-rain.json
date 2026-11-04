@@ -1,0 +1,33 @@
+{
+  "bundle_id": "first-test-quiet-night-rain",
+  "intended_channel_id": null,
+  "intended_channel_handle": "@QuietHoursRelaxingSounds",
+  "theme": "Quiet Night Rain",
+  "long_video": "../outputs/first-test/long-source.mp4",
+  "title": "Quiet Night Rain | 1 Hour of Gentle Rain Ambience for Rest & Focus",
+  "description": "A quiet illustrated window, gentle night rain, and one uninterrupted hour to unwind. This original, softly varying synthesized rain soundscape has no music or spoken voice. Use it as a calm background for reading, studying, resting, or a slow evening.\n\nThe visuals are an original procedural illustration and the rain is synthesized; this is not a field recording. Created for Quiet Hours Relaxing Sounds.\n\n#RainAmbience #RelaxingSounds #QuietHours",
+  "recording_credits": "Original procedural illustration and synthesized rain soundscape created for Quiet Hours Relaxing Sounds using Python and FFmpeg. No field recordings, music, or third-party media used.",
+  "made_for_kids": false,
+  "contains_synthetic_media": true,
+  "playlist_id": null,
+  "shorts": [
+    {
+      "title": "A Quiet Rainy Window | Take a 20-Second Pause",
+      "description": "Pause beside a quiet rainy window. A 20-second moment from Quiet Night Rain, our original one-hour illustrated rain ambience. Original synthesized rain; no field recording.\n\n#Shorts #RainAmbience #QuietHours",
+      "start": 300,
+      "duration": 20,
+      "framing": "left",
+      "cover_offset": 17
+    },
+    {
+      "title": "Let the Night Rain Slow Things Down | 20 Seconds of Calm",
+      "description": "Let the night rain be your reminder to slow down. A different moment and framing from Quiet Night Rain, our one-hour ambience for rest and focus. Original illustration and synthesized rain.\n\n#Shorts #RelaxingSounds #Rain",
+      "start": 2100,
+      "duration": 20,
+      "framing": "right",
+      "cover_offset": 17
+    }
+  ],
+  "generator_theme": "night-rain",
+  "generator_seed": 20261103
+}

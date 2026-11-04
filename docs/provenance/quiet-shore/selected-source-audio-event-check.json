@@ -1,0 +1,2540 @@
+{
+  "method": "Official YAMNet TFLite AudioSet event classification, 16 kHz mono analysis only; original stereo media untouched.",
+  "limitations": "Automated scores are not calibrated probabilities, do not prove natural origin or rights, and do not replace human listening. No subjective listening was possible in this environment.",
+  "model_url": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/audio_classification/android/lite-model_yamnet_classification_tflite_1.tflite",
+  "model_sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+  "class_map_sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2",
+  "class_map_url": "https://raw.githubusercontent.com/tensorflow/models/master/research/audioset/yamnet/yamnet_class_map.csv",
+  "model_code_license": "Apache-2.0; https://github.com/tensorflow/models/blob/master/LICENSE",
+  "model_embedded_license": "Apache License. Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.",
+  "embedded_521_labels_match_official_class_map": true,
+  "runtime": "ai-edge-litert 2.3.0 (Apache-2.0), temporary install",
+  "runtime_linux_cp312_wheel_sha256": "dc9f56c23e0dcf182b6c35f23fbb102ed048296588882b806d5eff7654c04c88",
+  "hop_seconds": 1.0,
+  "records": [
+    {
+      "id": "aporee_37802_43261-10",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_37802_43261.mp3",
+      "start": 10,
+      "duration": 1330,
+      "analysed_seconds": 1330.0,
+      "frames": 1330,
+      "top_mean_labels": [
+        {
+          "label": "Boat, Water vehicle",
+          "score": 0.51523
+        },
+        {
+          "label": "Sailboat, sailing ship",
+          "score": 0.3113
+        },
+        {
+          "label": "Ocean",
+          "score": 0.27125
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.25554
+        },
+        {
+          "label": "Water",
+          "score": 0.21155
+        },
+        {
+          "label": "Waves, surf",
+          "score": 0.20758
+        },
+        {
+          "label": "Rowboat, canoe, kayak",
+          "score": 0.19685
+        },
+        {
+          "label": "Wind",
+          "score": 0.18189
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.0104,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 1223.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 1
+        },
+        "Raindrop": {
+          "mean_score": 0.00267,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 1223.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.00426,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1223.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.21155,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 544.0,
+          "frames_at_least_0_25": 466,
+          "frames_at_least_0_5": 88
+        },
+        "Thunder": {
+          "mean_score": 0.00362,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 861.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.00568,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 861.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 1
+        },
+        "Speech": {
+          "mean_score": 0.01605,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 947.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00039,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 284.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.18189,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 97.0,
+          "frames_at_least_0_25": 377,
+          "frames_at_least_0_5": 2
+        },
+        "Noise": {
+          "mean_score": 0.00159,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 455.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Ocean": {
+          "mean_score": 0.27125,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 665.0,
+          "frames_at_least_0_25": 684,
+          "frames_at_least_0_5": 202
+        },
+        "Waves, surf": {
+          "mean_score": 0.20758,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 662.0,
+          "frames_at_least_0_25": 491,
+          "frames_at_least_0_5": 105
+        },
+        "Stream": {
+          "mean_score": 0.07148,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 454.0,
+          "frames_at_least_0_25": 70,
+          "frames_at_least_0_5": 9
+        },
+        "Splash, splatter": {
+          "mean_score": 0.00841,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 208.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.17688,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 97.0,
+          "frames_at_least_0_25": 358,
+          "frames_at_least_0_5": 1
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 10.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 10.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 4e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 133.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 6e-05,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 819.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.25554,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 381.0,
+          "frames_at_least_0_25": 690,
+          "frames_at_least_0_5": 113
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 1e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 191.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.00206,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 1041.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 0.00068,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 326.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.00441,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 794.0,
+          "frames_at_least_0_25": 3,
+          "frames_at_least_0_5": 2
+        },
+        "Boat, Water vehicle": {
+          "mean_score": 0.51523,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 381.0,
+          "frames_at_least_0_25": 1203,
+          "frames_at_least_0_5": 848
+        },
+        "Sailboat, sailing ship": {
+          "mean_score": 0.3113,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 285.0,
+          "frames_at_least_0_25": 940,
+          "frames_at_least_0_5": 232
+        },
+        "Rowboat, canoe, kayak": {
+          "mean_score": 0.19685,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 305.0,
+          "frames_at_least_0_25": 449,
+          "frames_at_least_0_5": 85
+        },
+        "Motorboat, speedboat": {
+          "mean_score": 0.04077,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 876.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Engine": {
+          "mean_score": 9e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 474.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gurgling": {
+          "mean_score": 0.03833,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 31.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Slosh": {
+          "mean_score": 0.0091,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 30.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 861.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.5
+        }
+      ],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": [
+        {
+          "source_frame_start": 17.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 18.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 26.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 27.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 35.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 37.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 40.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 41.0,
+          "events": {
+            "Vehicle": 0.668
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 63.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 64.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 72.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 81.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 92.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 97.0,
+          "events": {
+            "Wind noise (microphone)": 0.5
+          },
+          "top_labels": [
+            "Ocean",
+            "Waves, surf",
+            "Boat, Water vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 129.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 130.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 132.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 142.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 143.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 156.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 175.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 176.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 197.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 201.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 203.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 206.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 217.0,
+          "events": {
+            "Vehicle": 0.668
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 218.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 242.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 285.0,
+          "events": {
+            "Vehicle": 0.668
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 299.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 305.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 329.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 336.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 341.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 342.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 380.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 381.0,
+          "events": {
+            "Vehicle": 0.8008
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 391.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 413.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 416.0,
+          "events": {
+            "Vehicle": 0.668
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 420.0,
+          "events": {
+            "Vehicle": 0.668
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 433.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 451.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 452.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 477.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 482.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 488.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 495.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 512.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 516.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 531.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 532.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 534.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 554.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 585.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 596.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 614.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 616.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 635.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 636.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 648.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 652.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 668.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 669.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 691.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 704.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 705.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 706.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 707.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 730.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 738.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 745.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 751.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 759.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 773.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 790.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 794.0,
+          "events": {
+            "Bird": 0.5859
+          },
+          "top_labels": [
+            "Pigeon, dove",
+            "Bird",
+            "Animal"
+          ]
+        },
+        {
+          "source_frame_start": 803.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 813.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 824.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 844.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 848.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 857.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 864.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 875.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 878.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 925.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 933.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 944.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 946.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 974.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1010.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1018.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1019.0,
+          "events": {
+            "Vehicle": 0.668
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1040.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1045.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1051.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1057.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1060.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Rowboat, canoe, kayak",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1063.0,
+          "events": {
+            "Vehicle": 0.668
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1070.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1099.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1108.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1141.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1160.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1177.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1202.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1210.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1251.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1257.0,
+          "events": {
+            "Bird": 0.5859
+          },
+          "top_labels": [
+            "Bird",
+            "Wild animals",
+            "Pigeon, dove"
+          ]
+        },
+        {
+          "source_frame_start": 1299.0,
+          "events": {
+            "Vehicle": 0.7383
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1310.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1320.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1327.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1328.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        }
+      ],
+      "source_sha256": "a0728de24948b0dfd2c5443c945b42329ecd7d6a69ba5f50cb23ccf545a2e9ea",
+      "source_page": "https://archive.org/details/aporee_37802_43261"
+    },
+    {
+      "id": "aporee_41944_47808-14",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_41944_47808.ogg",
+      "start": 14,
+      "duration": 1636,
+      "analysed_seconds": 1636.0,
+      "frames": 1636,
+      "top_mean_labels": [
+        {
+          "label": "Water",
+          "score": 0.74946
+        },
+        {
+          "label": "Ocean",
+          "score": 0.70992
+        },
+        {
+          "label": "Waves, surf",
+          "score": 0.64062
+        },
+        {
+          "label": "Stream",
+          "score": 0.17184
+        },
+        {
+          "label": "Wind",
+          "score": 0.15335
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "score": 0.11985
+        },
+        {
+          "label": "Waterfall",
+          "score": 0.06906
+        },
+        {
+          "label": "Boat, Water vehicle",
+          "score": 0.06629
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.01255,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 1515.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.00088,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1515.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.00369,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 1515.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.74946,
+          "max_score": 0.99609,
+          "max_frame_start_seconds": 1472.0,
+          "frames_at_least_0_25": 1620,
+          "frames_at_least_0_5": 1520
+        },
+        "Thunder": {
+          "mean_score": 0.00218,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 756.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.00549,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 235.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00282,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 767.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00021,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 233.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.15335,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 62.0,
+          "frames_at_least_0_25": 272,
+          "frames_at_least_0_5": 1
+        },
+        "Noise": {
+          "mean_score": 0.00841,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 226.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Ocean": {
+          "mean_score": 0.70992,
+          "max_score": 0.96875,
+          "max_frame_start_seconds": 74.0,
+          "frames_at_least_0_25": 1524,
+          "frames_at_least_0_5": 1348
+        },
+        "Waves, surf": {
+          "mean_score": 0.64062,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 74.0,
+          "frames_at_least_0_25": 1496,
+          "frames_at_least_0_5": 1280
+        },
+        "Stream": {
+          "mean_score": 0.17184,
+          "max_score": 0.98047,
+          "max_frame_start_seconds": 1451.0,
+          "frames_at_least_0_25": 395,
+          "frames_at_least_0_5": 219
+        },
+        "Splash, splatter": {
+          "mean_score": 0.00323,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1363.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.11985,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 871.0,
+          "frames_at_least_0_25": 84,
+          "frames_at_least_0_5": 0
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 14.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 1e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 115.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 0.00011,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 154.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 0.00118,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 1375.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.02227,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 1516.0,
+          "frames_at_least_0_25": 8,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 2e-05,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 1030.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.0016,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 322.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 0.0,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 115.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.00035,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 115.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Boat, Water vehicle": {
+          "mean_score": 0.06629,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 89.0,
+          "frames_at_least_0_25": 41,
+          "frames_at_least_0_5": 5
+        },
+        "Sailboat, sailing ship": {
+          "mean_score": 0.02641,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 120.0,
+          "frames_at_least_0_25": 5,
+          "frames_at_least_0_5": 0
+        },
+        "Rowboat, canoe, kayak": {
+          "mean_score": 0.01673,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 89.0,
+          "frames_at_least_0_25": 3,
+          "frames_at_least_0_5": 0
+        },
+        "Motorboat, speedboat": {
+          "mean_score": 0.0042,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 179.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Engine": {
+          "mean_score": 3e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 1516.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gurgling": {
+          "mean_score": 0.01197,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 1363.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Slosh": {
+          "mean_score": 0.00308,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 125.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": [],
+      "source_sha256": "2f0f3d7dc7d227e47fb945754818da5d27405ddfe60a1707d61ed06bac92faec",
+      "source_page": "https://archive.org/details/aporee_41944_47808"
+    },
+    {
+      "id": "aporee_59218_67955-10",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_59218_67955.mp3",
+      "start": 10,
+      "duration": 500,
+      "analysed_seconds": 500.0,
+      "frames": 500,
+      "top_mean_labels": [
+        {
+          "label": "Ocean",
+          "score": 0.40924
+        },
+        {
+          "label": "Water",
+          "score": 0.38259
+        },
+        {
+          "label": "Waves, surf",
+          "score": 0.35241
+        },
+        {
+          "label": "Wind",
+          "score": 0.22721
+        },
+        {
+          "label": "Pink noise",
+          "score": 0.18675
+        },
+        {
+          "label": "Wind noise (microphone)",
+          "score": 0.12749
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.10891
+        },
+        {
+          "label": "Rain",
+          "score": 0.0899
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.0899,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 61.0,
+          "frames_at_least_0_25": 45,
+          "frames_at_least_0_5": 7
+        },
+        "Raindrop": {
+          "mean_score": 0.01757,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 61.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.03561,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 61.0,
+          "frames_at_least_0_25": 6,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.38259,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 27.0,
+          "frames_at_least_0_25": 410,
+          "frames_at_least_0_5": 158
+        },
+        "Thunder": {
+          "mean_score": 0.0314,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 100.0,
+          "frames_at_least_0_25": 6,
+          "frames_at_least_0_5": 1
+        },
+        "Thunderstorm": {
+          "mean_score": 0.04661,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 100.0,
+          "frames_at_least_0_25": 14,
+          "frames_at_least_0_5": 1
+        },
+        "Speech": {
+          "mean_score": 0.00594,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 427.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.0007,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 36.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.22721,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 271.0,
+          "frames_at_least_0_25": 236,
+          "frames_at_least_0_5": 1
+        },
+        "Noise": {
+          "mean_score": 0.07755,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 277.0,
+          "frames_at_least_0_25": 43,
+          "frames_at_least_0_5": 2
+        },
+        "Ocean": {
+          "mean_score": 0.40924,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 82.0,
+          "frames_at_least_0_25": 363,
+          "frames_at_least_0_5": 213
+        },
+        "Waves, surf": {
+          "mean_score": 0.35241,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 508.0,
+          "frames_at_least_0_25": 322,
+          "frames_at_least_0_5": 162
+        },
+        "Stream": {
+          "mean_score": 0.07491,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 168.0,
+          "frames_at_least_0_25": 16,
+          "frames_at_least_0_5": 4
+        },
+        "Splash, splatter": {
+          "mean_score": 0.00293,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 427.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.12749,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 271.0,
+          "frames_at_least_0_25": 49,
+          "frames_at_least_0_5": 2
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 10.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 2e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 22.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 0.00194,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 115.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 0.00112,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 408.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.03206,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 56.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 7e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 55.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.00316,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 22.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 4e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 58.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.00281,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 223.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Boat, Water vehicle": {
+          "mean_score": 0.06832,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 64.0,
+          "frames_at_least_0_25": 32,
+          "frames_at_least_0_5": 4
+        },
+        "Sailboat, sailing ship": {
+          "mean_score": 0.04123,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 43.0,
+          "frames_at_least_0_25": 13,
+          "frames_at_least_0_5": 0
+        },
+        "Rowboat, canoe, kayak": {
+          "mean_score": 0.01476,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 56.0,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 0
+        },
+        "Motorboat, speedboat": {
+          "mean_score": 0.00527,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 315.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Engine": {
+          "mean_score": 2e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 95.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gurgling": {
+          "mean_score": 0.01398,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 357.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Slosh": {
+          "mean_score": 0.00402,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 427.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 61.0,
+          "thunder": 0.4141,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 63.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 100.0,
+          "thunder": 0.5,
+          "thunderstorm": 0.5859
+        },
+        {
+          "source_frame_start": 161.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.4141
+        },
+        {
+          "source_frame_start": 322.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        },
+        {
+          "source_frame_start": 348.0,
+          "thunder": 0.332,
+          "thunderstorm": 0.4141
+        }
+      ],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": [
+        {
+          "source_frame_start": 271.0,
+          "events": {
+            "Wind noise (microphone)": 0.5
+          },
+          "top_labels": [
+            "Ocean",
+            "Waves, surf",
+            "Water"
+          ]
+        },
+        {
+          "source_frame_start": 405.0,
+          "events": {
+            "Wind noise (microphone)": 0.5
+          },
+          "top_labels": [
+            "Ocean",
+            "Waves, surf",
+            "Water"
+          ]
+        }
+      ],
+      "source_sha256": "c125639dd7bc482f0d582731c4ed6192972b07ddfa103d3440965b0658405dda",
+      "source_page": "https://archive.org/details/aporee_59218_67955"
+    },
+    {
+      "id": "aporee_37802_43261-1380",
+      "path": "/workspace/ambience-video-pipeline/media/quiet-shore/sources/aporee_37802_43261.mp3",
+      "start": 1380,
+      "duration": 182,
+      "analysed_seconds": 182.0,
+      "frames": 182,
+      "top_mean_labels": [
+        {
+          "label": "Boat, Water vehicle",
+          "score": 0.48158
+        },
+        {
+          "label": "Sailboat, sailing ship",
+          "score": 0.29582
+        },
+        {
+          "label": "Ocean",
+          "score": 0.277
+        },
+        {
+          "label": "Vehicle",
+          "score": 0.23706
+        },
+        {
+          "label": "Waves, surf",
+          "score": 0.216
+        },
+        {
+          "label": "Water",
+          "score": 0.20458
+        },
+        {
+          "label": "Wind",
+          "score": 0.17713
+        },
+        {
+          "label": "Rowboat, canoe, kayak",
+          "score": 0.16908
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.01138,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 1476.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.00275,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 1476.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.00474,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 1476.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.20458,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 1411.0,
+          "frames_at_least_0_25": 53,
+          "frames_at_least_0_5": 11
+        },
+        "Thunder": {
+          "mean_score": 0.00391,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 1476.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.00592,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 1476.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.01625,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 1434.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00024,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 1440.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.17713,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 1478.0,
+          "frames_at_least_0_25": 42,
+          "frames_at_least_0_5": 1
+        },
+        "Noise": {
+          "mean_score": 0.00161,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 1395.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Ocean": {
+          "mean_score": 0.277,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 1410.0,
+          "frames_at_least_0_25": 100,
+          "frames_at_least_0_5": 26
+        },
+        "Waves, surf": {
+          "mean_score": 0.216,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 1410.0,
+          "frames_at_least_0_25": 70,
+          "frames_at_least_0_5": 16
+        },
+        "Stream": {
+          "mean_score": 0.06061,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 1485.0,
+          "frames_at_least_0_25": 7,
+          "frames_at_least_0_5": 1
+        },
+        "Splash, splatter": {
+          "mean_score": 0.00695,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 1503.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.16728,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 1464.0,
+          "frames_at_least_0_25": 38,
+          "frames_at_least_0_5": 0
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 1380.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 1380.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 2e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 1440.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 2e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 1448.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.23706,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 1391.0,
+          "frames_at_least_0_25": 88,
+          "frames_at_least_0_5": 11
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 2e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 1531.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.00236,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 1485.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 0.00034,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 1382.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.00453,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1519.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Boat, Water vehicle": {
+          "mean_score": 0.48158,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 1495.0,
+          "frames_at_least_0_25": 160,
+          "frames_at_least_0_5": 93
+        },
+        "Sailboat, sailing ship": {
+          "mean_score": 0.29582,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 1398.0,
+          "frames_at_least_0_25": 119,
+          "frames_at_least_0_5": 24
+        },
+        "Rowboat, canoe, kayak": {
+          "mean_score": 0.16908,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 1548.0,
+          "frames_at_least_0_25": 45,
+          "frames_at_least_0_5": 8
+        },
+        "Motorboat, speedboat": {
+          "mean_score": 0.04542,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1489.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Engine": {
+          "mean_score": 0.00013,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 1531.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gurgling": {
+          "mean_score": 0.03131,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1481.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Slosh": {
+          "mean_score": 0.00738,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 1503.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": [
+        {
+          "source_frame_start": 1391.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1435.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1472.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1474.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1480.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1489.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1495.0,
+          "events": {
+            "Vehicle": 0.5859
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1510.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        },
+        {
+          "source_frame_start": 1536.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Sailboat, sailing ship"
+          ]
+        },
+        {
+          "source_frame_start": 1539.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Vehicle",
+            "Rowboat, canoe, kayak"
+          ]
+        },
+        {
+          "source_frame_start": 1551.0,
+          "events": {
+            "Vehicle": 0.5
+          },
+          "top_labels": [
+            "Boat, Water vehicle",
+            "Sailboat, sailing ship",
+            "Vehicle"
+          ]
+        }
+      ],
+      "source_sha256": "a0728de24948b0dfd2c5443c945b42329ecd7d6a69ba5f50cb23ccf545a2e9ea",
+      "source_page": "https://archive.org/details/aporee_37802_43261"
+    }
+  ],
+  "source_hash_binding": "SHA-256 identifiers from the verified source manifest; the mix builder rechecks input hashes before use."
+}

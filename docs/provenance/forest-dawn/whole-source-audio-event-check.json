@@ -1,0 +1,1329 @@
+{
+  "method": "Official YAMNet TFLite AudioSet event classification, 16 kHz mono analysis only; original stereo media untouched.",
+  "limitations": "Automated scores are not calibrated probabilities, do not prove natural origin or rights, and do not replace human listening. No subjective listening was possible in this environment.",
+  "model_url": "https://storage.googleapis.com/download.tensorflow.org/models/tflite/task_library/audio_classification/android/lite-model_yamnet_classification_tflite_1.tflite",
+  "model_sha256": "10c95ea3eb9a7bb4cb8bddf6feb023250381008177ac162ce169694d05c317de",
+  "class_map_sha256": "cdf24d193e196d9e95912a2667051ae203e92a2ba09449218ccb40ef787c6df2",
+  "class_map_url": "https://raw.githubusercontent.com/tensorflow/models/master/research/audioset/yamnet/yamnet_class_map.csv",
+  "model_code_license": "Apache-2.0; https://github.com/tensorflow/models/blob/master/LICENSE",
+  "model_embedded_license": "Apache License. Version 2.0 http://www.apache.org/licenses/LICENSE-2.0.",
+  "embedded_521_labels_match_official_class_map": true,
+  "runtime": "ai-edge-litert 2.3.0 (Apache-2.0), temporary install",
+  "runtime_linux_cp312_wheel_sha256": "dc9f56c23e0dcf182b6c35f23fbb102ed048296588882b806d5eff7654c04c88",
+  "hop_seconds": 0.48,
+  "records": [
+    {
+      "id": "aporee_48022_54624",
+      "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_48022_54624.mp3",
+      "start": 0,
+      "duration": 1844.871837,
+      "source_sha256": "c4e484d746b1443ea97e385e80bb4a9f392b0cd36231a9df4596c35a6f366a47",
+      "analysed_seconds": 1844.866,
+      "frames": 3842,
+      "top_mean_labels": [
+        {
+          "label": "Animal",
+          "score": 0.31829
+        },
+        {
+          "label": "Bird",
+          "score": 0.2743
+        },
+        {
+          "label": "Wild animals",
+          "score": 0.2589
+        },
+        {
+          "label": "Environmental noise",
+          "score": 0.2339
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.21109
+        },
+        {
+          "label": "Bird vocalization, bird call, bird song",
+          "score": 0.20352
+        },
+        {
+          "label": "Chirp, tweet",
+          "score": 0.13431
+        },
+        {
+          "label": "Wind",
+          "score": 0.07729
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.00927,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 84.0,
+          "frames_at_least_0_25": 4,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.00176,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 1436.16,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 0.00287,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 26.4,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.03885,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 201.12,
+          "frames_at_least_0_25": 212,
+          "frames_at_least_0_5": 88
+        },
+        "Thunder": {
+          "mean_score": 0.00401,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 84.0,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.0081,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 84.0,
+          "frames_at_least_0_25": 7,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00772,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 1054.08,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00043,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 1370.4,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.07729,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 3.36,
+          "frames_at_least_0_25": 408,
+          "frames_at_least_0_5": 31
+        },
+        "Noise": {
+          "mean_score": 0.06948,
+          "max_score": 0.41406,
+          "max_frame_start_seconds": 1799.04,
+          "frames_at_least_0_25": 46,
+          "frames_at_least_0_5": 0
+        },
+        "Ocean": {
+          "mean_score": 0.03804,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 201.12,
+          "frames_at_least_0_25": 222,
+          "frames_at_least_0_5": 95
+        },
+        "Waves, surf": {
+          "mean_score": 0.03169,
+          "max_score": 0.80078,
+          "max_frame_start_seconds": 201.12,
+          "frames_at_least_0_25": 198,
+          "frames_at_least_0_5": 64
+        },
+        "Stream": {
+          "mean_score": 0.0089,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 125.28,
+          "frames_at_least_0_25": 5,
+          "frames_at_least_0_5": 0
+        },
+        "Splash, splatter": {
+          "mean_score": 2e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 14.4,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.02585,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 78.72,
+          "frames_at_least_0_25": 18,
+          "frames_at_least_0_5": 0
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 267.84,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 0.00074,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 762.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 0.00039,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 1592.16,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 0.00041,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 237.12,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.01356,
+          "max_score": 0.33203,
+          "max_frame_start_seconds": 252.48,
+          "frames_at_least_0_25": 5,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 0.00095,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 245.76,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.00185,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 480.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 0.00052,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 15.36,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.2743,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 1321.92,
+          "frames_at_least_0_25": 2271,
+          "frames_at_least_0_5": 524
+        },
+        "Boat, Water vehicle": {
+          "mean_score": 0.005,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 125.76,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Sailboat, sailing ship": {
+          "mean_score": 0.00258,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 125.76,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rowboat, canoe, kayak": {
+          "mean_score": 0.00056,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 125.76,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Motorboat, speedboat": {
+          "mean_score": 0.00056,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 63.84,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Engine": {
+          "mean_score": 5e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 716.64,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gurgling": {
+          "mean_score": 0.00167,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 36.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Slosh": {
+          "mean_score": 4e-05,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 237.12,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Crow": {
+          "mean_score": 0.00822,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 1362.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Caw": {
+          "mean_score": 0.00493,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 1362.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird vocalization, bird call, bird song": {
+          "mean_score": 0.20352,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 1321.92,
+          "frames_at_least_0_25": 1415,
+          "frames_at_least_0_5": 410
+        },
+        "Chirp, tweet": {
+          "mean_score": 0.13431,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 1321.92,
+          "frames_at_least_0_25": 732,
+          "frames_at_least_0_5": 88
+        },
+        "Insect": {
+          "mean_score": 0.01843,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1660.8,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Cricket": {
+          "mean_score": 0.00704,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 1660.8,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Rustling leaves": {
+          "mean_score": 0.04465,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 3.36,
+          "frames_at_least_0_25": 53,
+          "frames_at_least_0_5": 2
+        },
+        "Rustle": {
+          "mean_score": 0.01508,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 180.48,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [
+        {
+          "source_frame_start": 84.0,
+          "thunder": 0.2617,
+          "thunderstorm": 0.332
+        }
+      ],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": []
+    },
+    {
+      "id": "aporee_56785_64952",
+      "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_56785_64952.mp3",
+      "start": 0,
+      "duration": 3563.470875,
+      "source_sha256": "2cab023ba99025d4e4424adec299d5663bba4c682d2d438c9a61e12bdd3a860b",
+      "analysed_seconds": 3563.470875,
+      "frames": 7422,
+      "top_mean_labels": [
+        {
+          "label": "Animal",
+          "score": 0.62029
+        },
+        {
+          "label": "Bird",
+          "score": 0.61644
+        },
+        {
+          "label": "Wild animals",
+          "score": 0.61577
+        },
+        {
+          "label": "Bird vocalization, bird call, bird song",
+          "score": 0.54888
+        },
+        {
+          "label": "Chirp, tweet",
+          "score": 0.40093
+        },
+        {
+          "label": "Environmental noise",
+          "score": 0.23561
+        },
+        {
+          "label": "Noise",
+          "score": 0.08486
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.07604
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.00016,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.00013,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 6e-05,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.00044,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 0.00011,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.00015,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00342,
+          "max_score": 0.58594,
+          "max_frame_start_seconds": 1025.76,
+          "frames_at_least_0_25": 2,
+          "frames_at_least_0_5": 1
+        },
+        "Music": {
+          "mean_score": 0.00434,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 2933.76,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 1
+        },
+        "Wind": {
+          "mean_score": 0.00273,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.08486,
+          "max_score": 0.66797,
+          "max_frame_start_seconds": 706.56,
+          "frames_at_least_0_25": 688,
+          "frames_at_least_0_5": 41
+        },
+        "Ocean": {
+          "mean_score": 1e-05,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Waves, surf": {
+          "mean_score": 0.0,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Stream": {
+          "mean_score": 4e-05,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Splash, splatter": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 9e-05,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Screaming": {
+          "mean_score": 1e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 1607.04,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 8e-05,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 140.64,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 2e-05,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 2e-05,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 1080.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.0004,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 1122.72,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 2e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 6e-05,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 466.56,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 0.00031,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 2079.36,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.61644,
+          "max_score": 0.99609,
+          "max_frame_start_seconds": 2903.04,
+          "frames_at_least_0_25": 7052,
+          "frames_at_least_0_5": 5138
+        },
+        "Boat, Water vehicle": {
+          "mean_score": 2e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 1072.32,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Sailboat, sailing ship": {
+          "mean_score": 0.0,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 1072.32,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rowboat, canoe, kayak": {
+          "mean_score": 0.0,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Motorboat, speedboat": {
+          "mean_score": 0.0,
+          "max_score": 0.00781,
+          "max_frame_start_seconds": 1072.32,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Engine": {
+          "mean_score": 3e-05,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 1122.72,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gurgling": {
+          "mean_score": 1e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 1072.32,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Slosh": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Crow": {
+          "mean_score": 0.00458,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 986.4,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Caw": {
+          "mean_score": 0.00343,
+          "max_score": 0.14844,
+          "max_frame_start_seconds": 986.4,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird vocalization, bird call, bird song": {
+          "mean_score": 0.54888,
+          "max_score": 0.95703,
+          "max_frame_start_seconds": 2580.48,
+          "frames_at_least_0_25": 6132,
+          "frames_at_least_0_5": 4757
+        },
+        "Chirp, tweet": {
+          "mean_score": 0.40093,
+          "max_score": 0.85156,
+          "max_frame_start_seconds": 2436.48,
+          "frames_at_least_0_25": 5177,
+          "frames_at_least_0_5": 3476
+        },
+        "Insect": {
+          "mean_score": 0.0394,
+          "max_score": 0.89062,
+          "max_frame_start_seconds": 3249.12,
+          "frames_at_least_0_25": 110,
+          "frames_at_least_0_5": 21
+        },
+        "Cricket": {
+          "mean_score": 0.0261,
+          "max_score": 0.94141,
+          "max_frame_start_seconds": 3249.12,
+          "frames_at_least_0_25": 90,
+          "frames_at_least_0_5": 21
+        },
+        "Rustling leaves": {
+          "mean_score": 0.00331,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rustle": {
+          "mean_score": 0.00204,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 48.96,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [],
+      "speech_music_candidates": [
+        {
+          "source_frame_start": 995.52,
+          "speech": 0.4141,
+          "music": 0.0,
+          "top_labels": [
+            "Speech",
+            "Bird",
+            "Animal"
+          ]
+        },
+        {
+          "source_frame_start": 1025.76,
+          "speech": 0.5859,
+          "music": 0.0,
+          "top_labels": [
+            "Speech",
+            "Inside, small room",
+            "Inside, large room or hall"
+          ]
+        },
+        {
+          "source_frame_start": 2933.76,
+          "speech": 0.0,
+          "music": 0.668,
+          "top_labels": [
+            "Music",
+            "Chime",
+            "Electronic music"
+          ]
+        }
+      ],
+      "incidental_event_candidates": [
+        {
+          "source_frame_start": 1803.84,
+          "events": {
+            "Insect": 0.5859,
+            "Cricket": 0.7383
+          },
+          "top_labels": [
+            "Cricket",
+            "Insect",
+            "Animal"
+          ]
+        },
+        {
+          "source_frame_start": 1822.08,
+          "events": {
+            "Insect": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Bird vocalization, bird call, bird song"
+          ]
+        },
+        {
+          "source_frame_start": 2096.16,
+          "events": {
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Wild animals",
+            "Animal",
+            "Cricket"
+          ]
+        },
+        {
+          "source_frame_start": 2135.52,
+          "events": {
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Bird"
+          ]
+        },
+        {
+          "source_frame_start": 2247.36,
+          "events": {
+            "Insect": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Bird vocalization, bird call, bird song"
+          ]
+        },
+        {
+          "source_frame_start": 2318.4,
+          "events": {
+            "Insect": 0.5859,
+            "Cricket": 0.668
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Cricket"
+          ]
+        },
+        {
+          "source_frame_start": 2511.84,
+          "events": {
+            "Insect": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Bird vocalization, bird call, bird song"
+          ]
+        },
+        {
+          "source_frame_start": 2624.64,
+          "events": {
+            "Insect": 0.5,
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Wild animals",
+            "Animal",
+            "Insect"
+          ]
+        },
+        {
+          "source_frame_start": 2687.04,
+          "events": {
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Cricket"
+          ]
+        },
+        {
+          "source_frame_start": 3118.56,
+          "events": {
+            "Insect": 0.5
+          },
+          "top_labels": [
+            "Insect",
+            "Animal",
+            "Wild animals"
+          ]
+        },
+        {
+          "source_frame_start": 3141.6,
+          "events": {
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Cricket"
+          ]
+        },
+        {
+          "source_frame_start": 3149.76,
+          "events": {
+            "Insect": 0.5859,
+            "Cricket": 0.5859
+          },
+          "top_labels": [
+            "Insect",
+            "Cricket",
+            "Wild animals"
+          ]
+        },
+        {
+          "source_frame_start": 3177.12,
+          "events": {
+            "Insect": 0.5859
+          },
+          "top_labels": [
+            "Animal",
+            "Insect",
+            "Wild animals"
+          ]
+        },
+        {
+          "source_frame_start": 3238.56,
+          "events": {
+            "Insect": 0.5,
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Insect"
+          ]
+        },
+        {
+          "source_frame_start": 3242.4,
+          "events": {
+            "Insect": 0.5859,
+            "Cricket": 0.5859
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Bird"
+          ]
+        },
+        {
+          "source_frame_start": 3249.12,
+          "events": {
+            "Insect": 0.8906,
+            "Cricket": 0.9414
+          },
+          "top_labels": [
+            "Cricket",
+            "Animal",
+            "Insect"
+          ]
+        },
+        {
+          "source_frame_start": 3253.92,
+          "events": {
+            "Insect": 0.8008,
+            "Cricket": 0.668
+          },
+          "top_labels": [
+            "Animal",
+            "Insect",
+            "Wild animals"
+          ]
+        },
+        {
+          "source_frame_start": 3357.12,
+          "events": {
+            "Insect": 0.5,
+            "Cricket": 0.5859
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Cricket"
+          ]
+        },
+        {
+          "source_frame_start": 3361.92,
+          "events": {
+            "Insect": 0.7383,
+            "Cricket": 0.7383
+          },
+          "top_labels": [
+            "Insect",
+            "Cricket",
+            "Animal"
+          ]
+        },
+        {
+          "source_frame_start": 3368.16,
+          "events": {
+            "Insect": 0.5859,
+            "Cricket": 0.5859
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Insect"
+          ]
+        },
+        {
+          "source_frame_start": 3405.12,
+          "events": {
+            "Insect": 0.668,
+            "Cricket": 0.5859
+          },
+          "top_labels": [
+            "Insect",
+            "Animal",
+            "Cricket"
+          ]
+        },
+        {
+          "source_frame_start": 3422.88,
+          "events": {
+            "Insect": 0.668,
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Wild animals",
+            "Insect"
+          ]
+        },
+        {
+          "source_frame_start": 3431.52,
+          "events": {
+            "Insect": 0.5,
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Insect",
+            "Cricket",
+            "Wild animals"
+          ]
+        },
+        {
+          "source_frame_start": 3432.0,
+          "events": {
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Wild animals",
+            "Cricket",
+            "Animal"
+          ]
+        },
+        {
+          "source_frame_start": 3439.2,
+          "events": {
+            "Insect": 0.5859,
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Animal",
+            "Insect",
+            "Wild animals"
+          ]
+        },
+        {
+          "source_frame_start": 3443.52,
+          "events": {
+            "Insect": 0.5859
+          },
+          "top_labels": [
+            "Insect",
+            "Animal",
+            "Cricket"
+          ]
+        },
+        {
+          "source_frame_start": 3492.0,
+          "events": {
+            "Cricket": 0.5
+          },
+          "top_labels": [
+            "Wild animals",
+            "Bird",
+            "Animal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "aporee_40553_46296",
+      "path": "/workspace/ambience-video-pipeline/media/forest-dawn/source-audio/aporee_40553_46296.mp3",
+      "start": 0,
+      "duration": 600.061975,
+      "source_sha256": "47b4f226ec60138d68bf3770aa0a95737be560e08a92a9b6d3f3d689152b3f41",
+      "analysed_seconds": 600.0588125,
+      "frames": 1249,
+      "top_mean_labels": [
+        {
+          "label": "Bird vocalization, bird call, bird song",
+          "score": 0.58661
+        },
+        {
+          "label": "Bird",
+          "score": 0.57716
+        },
+        {
+          "label": "Animal",
+          "score": 0.57598
+        },
+        {
+          "label": "Wild animals",
+          "score": 0.56355
+        },
+        {
+          "label": "Environmental noise",
+          "score": 0.45592
+        },
+        {
+          "label": "Chirp, tweet",
+          "score": 0.31516
+        },
+        {
+          "label": "Noise",
+          "score": 0.16862
+        },
+        {
+          "label": "Outside, rural or natural",
+          "score": 0.11147
+        }
+      ],
+      "events": {
+        "Rain": {
+          "mean_score": 0.00032,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Raindrop": {
+          "mean_score": 0.00017,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rain on surface": {
+          "mean_score": 8e-05,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Water": {
+          "mean_score": 0.00066,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunder": {
+          "mean_score": 5e-05,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Thunderstorm": {
+          "mean_score": 0.0001,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Speech": {
+          "mean_score": 0.00201,
+          "max_score": 0.10938,
+          "max_frame_start_seconds": 250.08,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Music": {
+          "mean_score": 0.00012,
+          "max_score": 0.01953,
+          "max_frame_start_seconds": 373.44,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind": {
+          "mean_score": 0.00577,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 229.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Noise": {
+          "mean_score": 0.16862,
+          "max_score": 0.5,
+          "max_frame_start_seconds": 331.2,
+          "frames_at_least_0_25": 282,
+          "frames_at_least_0_5": 3
+        },
+        "Ocean": {
+          "mean_score": 4e-05,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Waves, surf": {
+          "mean_score": 2e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Stream": {
+          "mean_score": 0.00014,
+          "max_score": 0.01562,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Splash, splatter": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Wind noise (microphone)": {
+          "mean_score": 0.00012,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 229.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Screaming": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Siren": {
+          "mean_score": 1e-05,
+          "max_score": 0.01172,
+          "max_frame_start_seconds": 524.64,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gunshot, gunfire": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Fireworks": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle": {
+          "mean_score": 0.00014,
+          "max_score": 0.03125,
+          "max_frame_start_seconds": 229.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Vehicle horn, car horn, honking": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Aircraft": {
+          "mean_score": 0.00011,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 229.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Dog": {
+          "mean_score": 1e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 95.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird": {
+          "mean_score": 0.57716,
+          "max_score": 0.95703,
+          "max_frame_start_seconds": 150.24,
+          "frames_at_least_0_25": 1227,
+          "frames_at_least_0_5": 905
+        },
+        "Boat, Water vehicle": {
+          "mean_score": 1e-05,
+          "max_score": 0.00391,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Sailboat, sailing ship": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rowboat, canoe, kayak": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Motorboat, speedboat": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Engine": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Gurgling": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Slosh": {
+          "mean_score": 0.0,
+          "max_score": 0.0,
+          "max_frame_start_seconds": 0.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Crow": {
+          "mean_score": 0.00182,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 229.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Caw": {
+          "mean_score": 0.00111,
+          "max_score": 0.08203,
+          "max_frame_start_seconds": 229.92,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Bird vocalization, bird call, bird song": {
+          "mean_score": 0.58661,
+          "max_score": 0.91797,
+          "max_frame_start_seconds": 60.96,
+          "frames_at_least_0_25": 1186,
+          "frames_at_least_0_5": 920
+        },
+        "Chirp, tweet": {
+          "mean_score": 0.31516,
+          "max_score": 0.73828,
+          "max_frame_start_seconds": 150.24,
+          "frames_at_least_0_25": 838,
+          "frames_at_least_0_5": 237
+        },
+        "Insect": {
+          "mean_score": 0.02733,
+          "max_score": 0.19922,
+          "max_frame_start_seconds": 318.24,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Cricket": {
+          "mean_score": 0.01258,
+          "max_score": 0.26172,
+          "max_frame_start_seconds": 318.24,
+          "frames_at_least_0_25": 1,
+          "frames_at_least_0_5": 0
+        },
+        "Rustling leaves": {
+          "mean_score": 0.00622,
+          "max_score": 0.05859,
+          "max_frame_start_seconds": 24.0,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        },
+        "Rustle": {
+          "mean_score": 0.0018,
+          "max_score": 0.04297,
+          "max_frame_start_seconds": 11.52,
+          "frames_at_least_0_25": 0,
+          "frames_at_least_0_5": 0
+        }
+      },
+      "thunder_frames": [],
+      "speech_music_candidates": [],
+      "incidental_event_candidates": []
+    }
+  ]
+}

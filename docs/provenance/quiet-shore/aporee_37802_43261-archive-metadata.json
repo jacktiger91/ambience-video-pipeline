@@ -1,0 +1,169 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn711002.ca.archive.org",
+        "dir": "/0/items/aporee_37802_43261"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn711002.ca.archive.org",
+        "dir": "/0/items/aporee_37802_43261"
+      }
+    ]
+  },
+  "created": 1793811630,
+  "d1": "dn601709.us.archive.org",
+  "dir": "/0/items/aporee_37802_43261",
+  "files": [
+    {
+      "name": "1708290259.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "1708290259.mp3",
+      "mtime": "1504087955",
+      "size": "411680",
+      "md5": "f4f52958124d8c2e0968326eb9aa64d9",
+      "crc32": "2b88ad12",
+      "sha1": "7d164f8c68797d8e8cd9b37924251a66c5f8a29c"
+    },
+    {
+      "name": "1708290259.mp3",
+      "source": "original",
+      "mtime": "1504087768",
+      "size": "84022464",
+      "md5": "96e5646f2024254b599754f09e9d0265",
+      "crc32": "59864eaa",
+      "sha1": "6c2d25c162c676efa3589720c27a882960226d09",
+      "format": "VBR MP3",
+      "length": "2100.43",
+      "height": "0",
+      "width": "0",
+      "title": "Gurgling under the slip way ... / 38 Henrietta St, Whitby YO22 4DW, UK",
+      "artist": "david m",
+      "album": "radio aporee",
+      "track": "1/1",
+      "genre": "Other",
+      "external-identifier-match-date": "acoustid:2019-03-31T04:28:27Z",
+      "external-identifier": "urn:acoustid:7b5aba9e-2070-4770-ba42-8182b68855d2"
+    },
+    {
+      "name": "1708290259.ogg",
+      "source": "derivative",
+      "format": "Ogg Vorbis",
+      "original": "1708290259.mp3",
+      "mtime": "1504087869",
+      "size": "24754106",
+      "md5": "39a79d1244a375833de1a0ef9c6ac8bc",
+      "crc32": "da6eea7f",
+      "sha1": "92dd506aa1fd768c58e272f846e2dd605df9cbcc",
+      "length": "2100.41",
+      "height": "0",
+      "width": "0"
+    },
+    {
+      "name": "1708290259.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "1708290259.mp3",
+      "mtime": "1504087915",
+      "size": "11025",
+      "md5": "91630996c874116e8b977a1d82a077f6",
+      "crc32": "710b4f00",
+      "sha1": "9d9bb3ad6699d1cdc5e2921393e18ea5a41dadec"
+    },
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1537383857",
+      "size": "2454",
+      "md5": "44e90acffb87d0183ab5e2a9e3e10767",
+      "crc32": "c7619095",
+      "sha1": "2e96bf3cf296a38275a2f4a622e94bc969c670a4",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "aporee_37802_43261_archive.torrent",
+      "source": "metadata",
+      "btih": "cb8bcd817116dbee813353400cb6a96c95bc870a",
+      "mtime": "1554006522",
+      "size": "6510",
+      "md5": "d4093b122db752207627765d89456420",
+      "crc32": "c42ed837",
+      "sha1": "d6f11992ac0db8d742df0fe8fa1eb4da7dd91739",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_37802_43261_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "504b3542684887a4eaeeb185de8597b4",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_37802_43261_meta.sqlite",
+      "source": "original",
+      "mtime": "1506938951",
+      "size": "11264",
+      "format": "Metadata",
+      "md5": "f29fb0ab16157284ff00ec4af185a36f",
+      "crc32": "52430dc9",
+      "sha1": "f3dd5f7610896c2519caceeaa7976355890b3897"
+    },
+    {
+      "name": "aporee_37802_43261_meta.xml",
+      "source": "original",
+      "mtime": "1772571973",
+      "size": "1719",
+      "format": "Metadata",
+      "md5": "398f2b2b72a3fda681d04071da3db77c",
+      "crc32": "bb847662",
+      "sha1": "7c824c803c8b8b94922c5682156a169cc8d4d36e"
+    }
+  ],
+  "files_count": 9,
+  "item_last_updated": 1772571974,
+  "item_size": 109221222,
+  "metadata": {
+    "identifier": "aporee_37802_43261",
+    "altitude": "1",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=54.490619854115; longitude=-0.60929328203201; elevation=1; name=East Pier, Whitby YO22 4DW, UK; date=2017-08-29 10:00:00 Europe/London;",
+    "creator": "david m",
+    "date": "2017-08-29 10:00:00",
+    "description": "Gurgling under the slip way ... East Pier Whitby ... open lavalier mics clipped to sandwich box ... almost flat calm sea ... overcast ...",
+    "latitude": "54.490619854115",
+    "licenseurl": "http://creativecommons.org/licenses/by/3.0/",
+    "longitude": "-0.60929328203201",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"http://aporee.org/maps/?loc=37802\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"http://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/London",
+    "title": "East Pier, Whitby YO22 4DW, UK - Gurgling under the slip way ...",
+    "collection": "radio-aporee-maps",
+    "publicdate": "2017-10-02 10:09:08",
+    "uploader": "radio@aporee.org",
+    "addeddate": "2017-10-02 10:09:08",
+    "backup_location": "ia906506_23",
+    "external_metadata_update": "2019-03-31T04:28:27Z"
+  },
+  "server": "dn601709.us.archive.org",
+  "simplelists": {
+    "solo_manifest": {
+      "solo_manifest_dn601709": {
+        "sys_changed_by": {
+          "source": "task",
+          "task_id": "5618306121"
+        },
+        "sys_last_changed": "2026-09-09 02:43:50.772024"
+      }
+    }
+  },
+  "solo": true,
+  "uniq": 928848869,
+  "workable_servers": [
+    "dn601709.us.archive.org"
+  ]
+}

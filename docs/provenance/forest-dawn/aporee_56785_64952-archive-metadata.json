@@ -1,0 +1,162 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710001.ca.archive.org",
+        "dir": "/0/items/aporee_56785_64952"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710001.ca.archive.org",
+        "dir": "/0/items/aporee_56785_64952"
+      }
+    ]
+  },
+  "created": 1793827378,
+  "d1": "dn601707.us.archive.org",
+  "dir": "/0/items/aporee_56785_64952",
+  "files": [
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1652091281",
+      "size": "2873",
+      "md5": "93aff222ee469f856f3b2db28745b45d",
+      "crc32": "01ab2399",
+      "sha1": "318405c6823c584a1bc1bb822c5870b4fe49f4d1",
+      "format": "Item Tile",
+      "rotation": "0"
+    },
+    {
+      "name": "abingdonOckDawnChorus02052022.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "abingdonOckDawnChorus02052022.mp3",
+      "mtime": "1652091270",
+      "size": "598544",
+      "md5": "cdb6d302a0fc72cf7ab07bd0f0a9d482",
+      "crc32": "29dab087",
+      "sha1": "08ec6eadbd6447670fb7a47037c1db8f49892c05"
+    },
+    {
+      "name": "abingdonOckDawnChorus02052022.mp3",
+      "source": "original",
+      "mtime": "1652090919",
+      "size": "114042034",
+      "md5": "2a2565d75bab557de1bc7abaf32535c1",
+      "crc32": "7c4c3e73",
+      "sha1": "1e64b63475fd0450e1359c3586dfcaf98da65638",
+      "format": "VBR MP3",
+      "length": "3563.47",
+      "title": "May 2022 Dawn Chorus / Ock river walk, Abingdon, UK",
+      "creator": "alun@alunward.co.uk",
+      "album": "radio aporee",
+      "track": "1/1",
+      "artist": "alun@alunward.co.uk",
+      "genre": "ambient phonography",
+      "comment": "datum=WGS84; latitude=51.668528333855; longitude=-1.2879137320844; elevation=53; name=Vale of White Horse, Oxfordshire, South East England, England, United Kingdom; date=2022-05-02 05:00:00 Europe/London"
+    },
+    {
+      "name": "abingdonOckDawnChorus02052022.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "abingdonOckDawnChorus02052022.mp3",
+      "mtime": "1652091114",
+      "size": "30507",
+      "md5": "e113cb076908d5ca7795a3a7eda80495",
+      "crc32": "d017c7dd",
+      "sha1": "7ea0355d89789dd546712402897e525f166e56a4"
+    },
+    {
+      "name": "abingdonOckDawnChorus02052022_spectrogram.png",
+      "source": "derivative",
+      "format": "Spectrogram",
+      "original": "abingdonOckDawnChorus02052022.mp3",
+      "mtime": "1652091159",
+      "size": "299705",
+      "md5": "d21af414dbf5733d27323065b0121306",
+      "crc32": "ee79d1b1",
+      "sha1": "b0573624e78d0d9044630e927f94cb8c748a80fd"
+    },
+    {
+      "name": "aporee_56785_64952_archive.torrent",
+      "source": "metadata",
+      "btih": "7d36d944de992b6c8850bb56c2b1447227dbf9c7",
+      "mtime": "1652091295",
+      "size": "6817",
+      "md5": "d3d24b2a0850351a23b97e48fd3c2705",
+      "crc32": "a27023e7",
+      "sha1": "e5036dc8ff91b345fd5e12cc26e8e9901f998c08",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_56785_64952_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "b45f7732d38b2d3c5815e3a64927e138",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_56785_64952_meta.sqlite",
+      "source": "original",
+      "mtime": "1652090960",
+      "size": "20480",
+      "md5": "fd918a3cab7603e7c7595d5eb620cbdf",
+      "crc32": "cd2a7af6",
+      "sha1": "70da24fe553a2aa84943c70ccd0033c308e0a168",
+      "format": "Metadata"
+    },
+    {
+      "name": "aporee_56785_64952_meta.xml",
+      "source": "original",
+      "mtime": "1788936092",
+      "size": "1821",
+      "md5": "8fe23f11c679215b602ae315d8874eed",
+      "crc32": "bd137280",
+      "sha1": "1a58d18ca088252c81b0c89c71e637d26f9d48b0",
+      "format": "Metadata"
+    }
+  ],
+  "files_count": 9,
+  "item_last_updated": 1788936092,
+  "item_size": 115002781,
+  "metadata": {
+    "identifier": "aporee_56785_64952",
+    "altitude": "53",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=51.668528333855; longitude=-1.2879137320844; elevation=53; name=Vale of White Horse, Oxfordshire, South East England, England, United Kingdom; date=2022-05-02 05:00:00 Europe/London;",
+    "creator": "alun",
+    "date": "2022-05-02 05:00:00",
+    "description": "Recorded in the Ock Valley Walk woodland at dawn on Bank Holiday Monday. Equipment was a Sound Devices MixPre 3 mixer and two DPA 4060 stereo mics attached to nettles. Dry, wind-less, so although in a fairly busy town, this was a quiet time. You can distinctly hear Muntjac deer cracking twigs underfoot.<br />",
+    "latitude": "51.668528333855",
+    "licenseurl": "https://creativecommons.org/licenses/by/3.0/",
+    "longitude": "-1.2879137320844",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"https://aporee.org/maps/?loc=56785&snd=64952\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"https://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/London",
+    "title": "Ock river walk, Abingdon, UK - May 2022 Dawn Chorus",
+    "collection": "radio-aporee-maps",
+    "uploader": "radio@aporee.org",
+    "publicdate": "2022-05-09 10:09:03",
+    "addeddate": "2022-05-09 10:09:03"
+  },
+  "server": "dn601707.us.archive.org",
+  "simplelists": {
+    "solo_manifest": {
+      "solo_manifest_dn601707": {
+        "sys_changed_by": {
+          "source": "task",
+          "task_id": "5618873315"
+        },
+        "sys_last_changed": "2026-09-09 06:41:38.752948"
+      }
+    }
+  },
+  "solo": true,
+  "uniq": 1951259991,
+  "workable_servers": [
+    "dn601707.us.archive.org"
+  ]
+}

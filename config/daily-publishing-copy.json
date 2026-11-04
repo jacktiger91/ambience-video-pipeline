@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "concepts": {
+    "quiet-shore": {
+      "status": "ready",
+      "long": {
+        "title": "Quiet Shore at Dusk | 1 Hour of Real Coastal Sounds",
+        "description": "A warm-windowed shore hut, clear water over pebbles and the last light on an open horizon. Quiet Shore pairs this fictional, AI-created coastal scene and subtle water animation with an hour-long arrangement of real stereo field recordings from Whitby, De Haan and Dunwich.\n\nLong, unrepeated source passages and gentle transitions leave room for the natural movement and texture of the water. Settle in for reading, winding down, or a quiet pause at the coast. Recording attribution and changes are listed below.\n\n#QuietShore #CoastalAmbience #OceanSounds #QuietHours"
+      },
+      "shorts": [
+        {
+          "title": "A Warm Light by the Shore | A 25-Second Pause",
+          "description": "A warm light by the shore, pebbles beneath clear water, and a brief pause at dusk. This 25-second passage uses real recorded water from david m's Whitby field recording, paired with an AI-created coastal scene and subtle water animation.\n\n#Shorts #QuietShore #CoastalAmbience"
+        },
+        {
+          "title": "Open Water at Sunset | 25 Seconds of Coastal Calm",
+          "description": "Look across open water toward the fading sunset. This distinct 25-second passage uses real coastal waves recorded by Vincent Duseigne in De Haan, paired with an AI-created open-water scene and gentle animation.\n\n#Shorts #QuietShore #RelaxingSounds"
+        }
+      ]
+    },
+    "forest-dawn": {
+      "status": "draft",
+      "long": {
+        "title": "Forest Dawn | 1 Hour of Gentle Woodland Birdsong",
+        "description": "Step into a misty woodland as morning light reaches the ferns. Gentle birdsong and a quiet bed of leaves and breeze give this hour its natural rhythm, with space between the calls to settle into the scene. Play it while reading, easing into your morning, or taking a break from a busy day.\n\nThe sound uses real field recordings; the woodland backdrop is an AI-created scene. Find more quiet places on Quiet Hours.\n\n#Birdsong #ForestAmbience #NatureSounds"
+      },
+      "shorts": [
+        {
+          "title": "Before the Forest Wakes | Gentle Morning Birdsong",
+          "description": "A little morning birdsong among misty trees and dew-covered ferns. Real field-recorded sounds accompany an AI-created woodland scene.\n\n#Shorts #Birdsong #ForestDawn"
+        },
+        {
+          "title": "Sunlight Through the Ferns | A Woodland Pause",
+          "description": "Pause where the first light reaches the forest floor. Soft woodland calls and leaf sounds come from real field recordings; the scene is AI-created.\n\n#Shorts #WoodlandSounds #QuietHours"
+        }
+      ]
+    },
+    "lake-evening": {
+      "status": "draft",
+      "long": {
+        "title": "Lake Evening | 1 Hour of Gentle Water Lapping",
+        "description": "Stay beside a quiet lake as the evening light fades across the water. Small waves meet the bank and move through the reeds, creating a gentle, changing pattern of close shoreline sounds. A distant jetty and cool reflections leave the view open and unhurried. Let this hour accompany reading, a quiet task, or the end of your day.\n\nReal field recordings are paired with an AI-created lakeside scene. Explore more natural soundscapes on Quiet Hours.\n\n#LakeSounds #WaterLapping #QuietHours"
+      },
+      "shorts": [
+        {
+          "title": "Small Waves at the Lake | An Evening Pause",
+          "description": "Listen to small waves reaching a reed-lined bank as evening settles over the lake. The water sounds are real field recordings; the lakeside scene is AI-created.\n\n#Shorts #LakeSounds #WaterLapping"
+        },
+        {
+          "title": "Beyond the Reeds | Quiet Lake Water",
+          "description": "A closer pause beside the reeds, with soft water moving along the shore. Real recorded lake sounds accompany an AI-created view.\n\n#Shorts #LakeEvening #NatureSounds"
+        }
+      ]
+    },
+    "meadow-dusk": {
+      "status": "draft",
+      "long": {
+        "title": "Meadow Dusk | 1 Hour of Soft Crickets & Grass Rustle",
+        "description": "Follow a narrow path into a summer meadow as the last light rests on the grasses. Quiet cricket calls and soft rustling create a small, detailed evening soundscape, leaving room for the changing spaces between natural sounds. Put this hour on while journaling, reading, or simply watching the light fade.\n\nThe audio uses real field recordings. The meadow is an AI-created scene, separate from the recording locations. Discover another quiet corner on Quiet Hours.\n\n#CricketSounds #MeadowAmbience #NatureSounds"
+      },
+      "shorts": [
+        {
+          "title": "When the Meadow Grows Quiet | Evening Crickets",
+          "description": "Take a short pause among long grasses as soft cricket calls mark the evening. Real field-recorded sounds accompany an AI-created meadow.\n\n#Shorts #CricketSounds #MeadowDusk"
+        },
+        {
+          "title": "Last Light on the Grasses | A Meadow Moment",
+          "description": "Evening light catches the seed heads while quiet insects and gentle grass rustle fill the background. The sounds are real recordings; the scene is AI-created.\n\n#Shorts #EveningSounds #QuietHours"
+        }
+      ]
+    },
+    "hidden-stream": {
+      "status": "draft",
+      "long": {
+        "title": "Hidden Stream | 1 Hour of Gentle Forest Water",
+        "description": "Follow the sound of water into a shaded woodland hollow. A small stream slips between moss-covered stones, with close trickles and changing ripples giving each passage its own texture. The low view keeps the water near and the forest around it still. Use this hour as a quiet companion for reading, studying, or an unhurried break.\n\nReal field recordings are paired with an AI-created stream scene. Find more places to pause on Quiet Hours.\n\n#StreamSounds #ForestAmbience #FlowingWater"
+      },
+      "shorts": [
+        {
+          "title": "Between the Mossy Stones | A Gentle Stream",
+          "description": "Listen close as a little stream finds its way between mossy stones. The flowing water comes from real field recordings; the woodland scene is AI-created.\n\n#Shorts #StreamSounds #HiddenStream"
+        },
+        {
+          "title": "A Quiet Bend in the Stream | Forest Water Sounds",
+          "description": "A shaded bend, clear water and the small sounds of a stream moving past. Real recorded water accompanies an AI-created woodland view.\n\n#Shorts #FlowingWater #ForestSounds"
+        }
+      ]
+    },
+    "soft-rain": {
+      "status": "draft",
+      "long": {
+        "title": "Soft Rain | 1 Hour of Rain on Forest Leaves",
+        "description": "Watch the forest darken gently under a passing shower. Rain taps on broad leaves, gathers into drops and falls through the ferns, moving between lighter and steadier passages. This hour stays close to those small textures of rainfall, with a sheltered green view and an unhurried pace. Settle in with a book or let the rain accompany a quiet evening.\n\nThe rainfall is field-recorded; the forest scene is AI-created. Find more natural ambience on Quiet Hours.\n\n#RainSounds #ForestRain #QuietHours"
+      },
+      "shorts": [
+        {
+          "title": "Raindrops on the Ferns | Soft Forest Rain",
+          "description": "Take a brief pause beside wet ferns as rain taps on the leaves. Real rainfall recordings accompany an AI-created forest scene.\n\n#Shorts #RainSounds #SoftRain"
+        },
+        {
+          "title": "Under the Green Canopy | Rain on Leaves",
+          "description": "Listen to small drops gathering and falling beneath the forest canopy. The rain comes from real field recordings; the leafy scene is AI-created.\n\n#Shorts #ForestRain #NatureSounds"
+        }
+      ]
+    },
+    "reed-birds": {
+      "status": "draft",
+      "long": {
+        "title": "Reed Birds | 1 Hour of Gentle Wetland Birdsong",
+        "description": "First light opens a narrow channel through the reeds. Gentle bird calls carry across the water, with quiet reed movement and small shoreline sounds underneath. This hour leaves space around the calls so the wetland can unfold at its own pace. Enjoy it with a slow morning, a page of writing, or a quiet pause by the window.\n\nReal field recordings accompany an AI-created wetland scene. Explore more everyday escapes on Quiet Hours.\n\n#WetlandSounds #Birdsong #NatureAmbience"
+      },
+      "shorts": [
+        {
+          "title": "First Calls Across the Reeds | Wetland Birdsong",
+          "description": "Morning calls drift across a small channel between the reeds. Real wetland recordings accompany an AI-created dawn scene.\n\n#Shorts #Birdsong #ReedBirds"
+        },
+        {
+          "title": "A Channel Through the Reeds | A Quiet Morning",
+          "description": "Pause by reflective water with soft bird calls and a little reed rustle. The sounds are field-recorded; the view is AI-created.\n\n#Shorts #WetlandSounds #QuietHours"
+        }
+      ]
+    },
+    "gentle-surf": {
+      "status": "draft",
+      "long": {
+        "title": "Gentle Surf | 1 Hour of Soft Ocean Waves",
+        "description": "An empty beach stretches into the morning light as small waves reach the sand and slip back again. Listen for the soft arrival of the shorebreak and the finer sound of water receding along the beach. This hour gives those familiar coastal movements room to vary naturally, alongside an open view of sea and sky.\n\nThe surf comes from real field recordings; the beach scene is AI-created. Spend another quiet hour with Quiet Hours.\n\n#OceanWaves #BeachSounds #GentleSurf"
+      },
+      "shorts": [
+        {
+          "title": "A Small Wave Reaches the Sand | Gentle Surf",
+          "description": "Watch a small wave arrive, then listen as the water slips back over the sand. Real surf recordings accompany an AI-created beach scene.\n\n#Shorts #OceanWaves #BeachSounds"
+        },
+        {
+          "title": "Morning Along an Empty Beach | Soft Ocean Sounds",
+          "description": "A sweeping shoreline and soft waves offer a brief coastal pause. The sea sounds come from real field recordings; the morning beach is AI-created.\n\n#Shorts #GentleSurf #QuietHours"
+        }
+      ]
+    },
+    "pine-breeze": {
+      "status": "draft",
+      "long": {
+        "title": "Pine Breeze | 1 Hour of Soft Wind Through the Trees",
+        "description": "Look across a sunlit opening in the pines as a light breeze moves through the canopy. Soft needle rustle and occasional distant bird calls create a gentle woodland background, with warm light on the trunks and cool shade below. Let this hour sit alongside reading, writing, or a slow start to the day.\n\nReal field recordings supply the natural sounds; the pine woodland scene is AI-created. Find more quiet landscapes on Quiet Hours.\n\n#WindInTrees #PineForest #NatureSounds"
+      },
+      "shorts": [
+        {
+          "title": "A Breeze Through the Pines | Soft Woodland Sounds",
+          "description": "A little wind moves through the pine canopy, with space for distant natural calls. Real field-recorded sounds accompany an AI-created woodland view.\n\n#Shorts #WindInTrees #PineBreeze"
+        },
+        {
+          "title": "Sunlight Between the Trunks | A Pine Forest Pause",
+          "description": "Pause in a patch of forest light and listen to the soft movement of the trees. The audio is field-recorded; the pine scene is AI-created.\n\n#Shorts #ForestSounds #QuietHours"
+        }
+      ]
+    },
+    "mountain-brook": {
+      "status": "draft",
+      "long": {
+        "title": "Mountain Brook | 1 Hour of Clear Water & Gentle Trickles",
+        "description": "A narrow brook winds through an open meadow beneath distant mountains. Close water moves around smooth stones, combining small trickles with a steady flow and subtle changes in texture. The low viewpoint keeps the stream near while the valley opens beyond it. Enjoy this hour alongside a book, focused work, or a quiet afternoon.\n\nThe water sounds use real field recordings; the mountain landscape is AI-created. Explore more natural soundscapes on Quiet Hours.\n\n#BrookSounds #FlowingWater #MountainAmbience"
+      },
+      "shorts": [
+        {
+          "title": "Clear Water Over Smooth Stones | A Gentle Brook",
+          "description": "Look close at a small brook and listen to the water finding its way around the stones. Real field recordings accompany an AI-created mountain scene.\n\n#Shorts #BrookSounds #MountainBrook"
+        },
+        {
+          "title": "A Stream Through the Meadow | A Mountain Pause",
+          "description": "A little stream crosses an open meadow beneath distant hills. The natural water sounds are field-recorded; the landscape is AI-created.\n\n#Shorts #FlowingWater #QuietHours"
+        }
+      ]
+    },
+    "garden-birds": {
+      "status": "draft",
+      "long": {
+        "title": "Garden Birds | 1 Hour of Gentle Songbirds & Leaf Rustle",
+        "description": "Take a seat beside an old stone path as morning birdsong moves through a blossoming orchard. Soft calls and light leaf rustle give the scene a sense of space, with dew on the flowers and quiet shade beneath the trees. Let this hour accompany a cup of tea, some reading, or a slower morning routine.\n\nReal field recordings are paired with an AI-created garden scene. Find your next quiet place on Quiet Hours.\n\n#GardenBirds #Birdsong #NatureSounds"
+      },
+      "shorts": [
+        {
+          "title": "Birdsong Among the Blossoms | A Garden Morning",
+          "description": "A brief morning pause among blossoms and soft bird calls. The songbirds and leaf sounds come from real field recordings; the garden scene is AI-created.\n\n#Shorts #Birdsong #GardenBirds"
+        },
+        {
+          "title": "An Empty Bench in the Orchard | Quiet Bird Sounds",
+          "description": "Imagine a seat beside the orchard path as gentle bird calls drift through the leaves. Real recorded sounds accompany an AI-created garden view.\n\n#Shorts #GardenSounds #QuietHours"
+        }
+      ]
+    },
+    "rainy-lake": {
+      "status": "draft",
+      "long": {
+        "title": "Rainy Lake | 1 Hour of Gentle Rain on Water",
+        "description": "Fine rain crosses a secluded lake, spreading little rings across the surface and tapping on the reeds near the bank. Listen to close droplets against a soft, continuous bed of rainfall as the distant trees fade into mist. This hour pairs detailed water sounds with an open, quiet view for reading or winding down.\n\nThe rainfall uses real field recordings; the lakeside backdrop is AI-created. Explore more natural ambience on Quiet Hours.\n\n#RainOnWater #LakeAmbience #RainSounds"
+      },
+      "shorts": [
+        {
+          "title": "Little Rings on the Lake | Gentle Rain",
+          "description": "Rain touches the lake in small spreading rings, with soft droplets close to the bank. Real rainfall recordings accompany an AI-created scene.\n\n#Shorts #RainOnWater #RainyLake"
+        },
+        {
+          "title": "Rain Beside the Reeds | A Lakeside Pause",
+          "description": "A quiet shoreline, misty trees and the sound of rain gathering on water and reeds. The audio is field-recorded; the lakeside view is AI-created.\n\n#Shorts #RainSounds #QuietHours"
+        }
+      ]
+    },
+    "evening-pond": {
+      "status": "draft",
+      "long": {
+        "title": "Evening Pond | 1 Hour of Quiet Insects & Gentle Frog Calls",
+        "description": "Twilight settles over a small pond edged with grasses and lily leaves. Quiet insects, restrained frog calls and subtle water movement make up an evening soundscape with room between the sounds. Cool reflections and a thin line of fading light keep the scene simple. Spend an unhurried hour here while reading, journaling, or ending the day.\n\nReal field recordings accompany an AI-created pond scene. Discover more quiet corners on Quiet Hours.\n\n#PondSounds #EveningNature #NatureAmbience"
+      },
+      "shorts": [
+        {
+          "title": "Twilight by the Lily Leaves | Quiet Pond Sounds",
+          "description": "Pause beside the lily leaves as soft insects and occasional frog calls mark the evening. Real pond recordings accompany an AI-created twilight scene.\n\n#Shorts #PondSounds #EveningPond"
+        },
+        {
+          "title": "The Last Light on the Pond | Evening Wildlife",
+          "description": "A little evening wildlife and quiet water beneath the fading sky. The natural sounds are field-recorded; the pond view is AI-created.\n\n#Shorts #EveningSounds #QuietHours"
+        }
+      ]
+    },
+    "silver-tide": {
+      "status": "draft",
+      "long": {
+        "title": "Silver Tide | 1 Hour of Gentle Waves & Rock Pool Water",
+        "description": "Stay close to the rocky shore as small waves enter shallow pools and trickle through narrow channels. Clear water moves over dark stone, with a quiet sea beyond and silver-blue reflections across the foreground. This hour follows those small tidal movements and changing water textures, leaving space for a book, quiet work, or a pause at the coast.\n\nReal field recordings accompany an AI-created shoreline scene. Find more coastal moments on Quiet Hours.\n\n#RockPoolSounds #GentleWaves #CoastalAmbience"
+      },
+      "shorts": [
+        {
+          "title": "Water Between the Rocks | A Quiet Tide",
+          "description": "Listen close as seawater slips through a narrow rock channel and settles into a shallow pool. Real coastal recordings accompany an AI-created shoreline.\n\n#Shorts #RockPoolSounds #SilverTide"
+        },
+        {
+          "title": "Silver Light on a Tidal Pool | Coastal Calm",
+          "description": "A small tidal pool catches the last light while gentle water moves around the stones. The sounds are field-recorded; the coastal scene is AI-created.\n\n#Shorts #CoastalSounds #QuietHours"
+        }
+      ]
+    }
+  }
+}

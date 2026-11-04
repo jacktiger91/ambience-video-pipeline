@@ -1,0 +1,38 @@
+{
+  "bundle_id": "revised-night-rain-veranda-v2",
+  "intended_channel_id": null,
+  "intended_channel_handle": "@QuietHoursRelaxingSounds",
+  "theme": "Night Rain — Sheltered Veranda",
+  "long_video": "../outputs/revised-night-rain/long-source.mp4",
+  "thumbnail_path": "../media/revised-night-rain/thumbnail-source.png",
+  "title": "Night Rain on a Cozy Veranda | 1 Hour of Real Rain Sounds",
+  "description": "Shelter under a warm lantern while night rain falls across a cool courtyard. An hour-long arrangement of four real rain field recordings from different locations, edited as long, unrepeated passages with gentle transitions. Natural changes in rainfall, nearby drips and occasional thunder remain part of the atmosphere.\n\nA calm background for reading, winding down, or simply watching the rain. The veranda is an AI-generated scene with added rain animation; the sound comes from the real recordings credited below.\n\n#NightRain #RainSounds #RainAmbience #QuietHours",
+  "recording_credits": "long_easy_rain_08.wav by joedeshon\nCreator: joedeshon\nhttps://freesound.org/people/joedeshon/sounds/430765/\nLicense: CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/\n\n200088_RossJuterbock_Rain Recording.wav by RossJuterbock\nCreator: RossJuterbock\nhttps://freesound.org/people/RossJuterbock/sounds/543481/\nLicense: CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/\n\nThundershower at a spring night and rain hit the umbrella by lastraindrop\nCreator: lastraindrop\nhttps://freesound.org/people/lastraindrop/sounds/733979/\nLicense: CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/\n\n210914 Thunderstorm, extended, moves closer then distant, rolling, medium cracks, rain, urban, TORONTO 1am.mp3 by TRP\nCreator: TRP\nhttps://freesound.org/people/TRP/sounds/616991/\nLicense: CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/\n\nAudio uses real field recordings supplied as Freesound high-quality MP3 previews, with level matching and gentle crossfades. Visual scene and thumbnail are AI-generated; rain animation and editing were created for Quiet Hours Relaxing Sounds.",
+  "made_for_kids": false,
+  "contains_synthetic_media": true,
+  "playlist_id": null,
+  "shorts": [
+    {
+      "title": "Quiet Veranda Rain | A 25-Second Pause",
+      "description": "A warm lantern, falling rain and a brief pause beneath the veranda. Listen to a real recording of rain hitting an umbrella by lastraindrop, paired with the AI-created veranda scene and rain animation. This 25-second moment comes from our full hour of Night Rain.\n\n#Shorts #NightRain #RainSounds",
+      "recording_credits": "Thundershower at a spring night and rain hit the umbrella by lastraindrop\nCreator: lastraindrop\nhttps://freesound.org/people/lastraindrop/sounds/733979/\nLicense: CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/\n\nThis excerpt uses the credited real field recording supplied as a Freesound high-quality MP3 preview, level-matched for the full-hour edit. Visual scene and thumbnail are AI-generated; rain animation and editing were created for Quiet Hours Relaxing Sounds.",
+      "start": 1818,
+      "duration": 25,
+      "framing": "center",
+      "crop_position": 0.19,
+      "cover_offset": 22,
+      "cta": "quiet-hours"
+    },
+    {
+      "title": "Rain on Roof and Puddles | 25 Seconds of Night Ambience",
+      "description": "Take a closer listen to rain on a roof and nearby puddles, with a different view of the cool night courtyard. This 25-second excerpt comes from our full-hour Night Rain ambience. Real field-recorded sound; AI-created scene with rain animation.\n\n#Shorts #RainAmbience #RelaxingSounds",
+      "recording_credits": "200088_RossJuterbock_Rain Recording.wav by RossJuterbock\nCreator: RossJuterbock\nhttps://freesound.org/people/RossJuterbock/sounds/543481/\nLicense: CC0 1.0 Universal — https://creativecommons.org/publicdomain/zero/1.0/\n\nThis excerpt uses the credited real field recording supplied as a Freesound high-quality MP3 preview, level-matched for the full-hour edit. Visual scene and thumbnail are AI-generated; rain animation and editing were created for Quiet Hours Relaxing Sounds.",
+      "start": 45,
+      "duration": 25,
+      "framing": "center",
+      "crop_position": 0.85,
+      "cover_offset": 22,
+      "cta": "quiet-hours"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "created_at_utc": "2026-11-04T17:04:44.643627+00:00",
+  "scene_id": "quiet-shore-pebble-cove-blue-hour-20261104",
+  "user_authorization": "User asked for new daily sound ideas, backdrops and thumbnails matching their supplied channel design reference.",
+  "origin_and_rights_basis": "Original generated artwork produced for the user; no third-party stock photograph reused. The supplied reference was used for the requested design style, not copied as a new coastal scene.",
+  "contains_synthetic_media": true,
+  "assets": {
+    "backdrop": {
+      "path": "media/quiet-shore/scene.png",
+      "sha256": "841916b3f74d00da8551b2936bb3bc2e8160828bd76953ebdd6fcbc15157b59e",
+      "origin": "AI-generated original artwork created for this user with the available image-generation tool.",
+      "creator": "Quiet Hours Relaxing Sounds production workflow",
+      "scene_id": "quiet-shore-pebble-cove-blue-hour-20261104",
+      "source_scene_id": "quiet-shore-pebble-cove-blue-hour-20261104",
+      "description": "A new pebble-cove/beach-hut composition. The user-provided Night Rain thumbnail informs typography and graphic style only.",
+      "credit": "AI-generated coastal scene and thumbnail; not camera footage of the recording location.",
+      "generated_asset_names": {
+        "backdrop": "exec-da8ce889-d3b9-4945-84d5-ab4a15e2e48d.png",
+        "thumbnail": "exec-6c0cf0b0-848b-4d3c-a956-eb2ec18418c2.png"
+      }
+    },
+    "thumbnail": {
+      "path": "media/quiet-shore/thumbnail-source.png",
+      "sha256": "282c0f7c32874feeb9832e8a1a6b03cd17a85cb6698f88b45b16ae429bf13c02",
+      "origin": "AI-generated original artwork created for this user with the available image-generation tool.",
+      "creator": "Quiet Hours Relaxing Sounds production workflow",
+      "scene_id": "quiet-shore-pebble-cove-blue-hour-20261104",
+      "source_scene_id": "quiet-shore-pebble-cove-blue-hour-20261104",
+      "description": "A new pebble-cove/beach-hut composition. The user-provided Night Rain thumbnail informs typography and graphic style only.",
+      "credit": "AI-generated coastal scene and thumbnail; not camera footage of the recording location.",
+      "generated_asset_names": {
+        "backdrop": "exec-da8ce889-d3b9-4945-84d5-ab4a15e2e48d.png",
+        "thumbnail": "exec-6c0cf0b0-848b-4d3c-a956-eb2ec18418c2.png"
+      }
+    }
+  }
+}

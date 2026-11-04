@@ -1,0 +1,180 @@
+{
+  "alternate_locations": {
+    "servers": [
+      {
+        "server": "dn710802.ca.archive.org",
+        "dir": "/0/items/aporee_40553_46296"
+      }
+    ],
+    "workable": [
+      {
+        "server": "dn710802.ca.archive.org",
+        "dir": "/0/items/aporee_40553_46296"
+      }
+    ]
+  },
+  "created": 1793827351,
+  "d1": "dn601701.us.archive.org",
+  "dir": "/0/items/aporee_40553_46296",
+  "files": [
+    {
+      "name": "__ia_thumb.jpg",
+      "source": "original",
+      "mtime": "1533339073",
+      "size": "3041",
+      "format": "JPEG Thumb",
+      "rotation": "0",
+      "md5": "8c1ea940e687cf6ca966cc1ba42453a9",
+      "crc32": "ce1fed60",
+      "sha1": "6ccff31fd7c68ddd455d9716683c22aea2f0aca3"
+    },
+    {
+      "name": "aporee_40553_46296_archive.torrent",
+      "source": "metadata",
+      "btih": "f91d6a6a750b90440092668fd6ad257366a8c83d",
+      "mtime": "1554160413",
+      "size": "3775",
+      "md5": "dff23750cb1e7800fa2581db643349af",
+      "crc32": "5f6b5e2f",
+      "sha1": "c8285ce9bd54a9a669fed17f5b82a5d4632abd73",
+      "format": "Archive BitTorrent"
+    },
+    {
+      "name": "aporee_40553_46296_files.xml",
+      "source": "original",
+      "format": "Metadata",
+      "md5": "a7443fbbd8d824cc796978f929a575bd",
+      "summation": "md5"
+    },
+    {
+      "name": "aporee_40553_46296_meta.sqlite",
+      "source": "original",
+      "mtime": "1530094214",
+      "size": "11264",
+      "md5": "9e21a333dc7d2c95a199eb2596c040e8",
+      "crc32": "099af008",
+      "sha1": "c693cbf5b504d85dc826623ecfcacc747b76e8ea",
+      "format": "Metadata"
+    },
+    {
+      "name": "aporee_40553_46296_meta.xml",
+      "source": "original",
+      "mtime": "1789107108",
+      "size": "1723",
+      "format": "Metadata",
+      "md5": "43a57d65e48d41454c5a7844665ba7fd",
+      "crc32": "075b125d",
+      "sha1": "26295bde9b60af819f53ad2b8f9d53d1ab6f7439"
+    },
+    {
+      "name": "louvetterie23064h45.afpk",
+      "source": "derivative",
+      "format": "Columbia Peaks",
+      "original": "louvetterie23064h45.mp3",
+      "mtime": "1530094293",
+      "size": "106488",
+      "md5": "952d0fc49256f7a12e0816a1912b254e",
+      "crc32": "6eafe7f5",
+      "sha1": "ab74fa128b2a9842bbe00277dd0fd279527cf5c4"
+    },
+    {
+      "name": "louvetterie23064h45.mp3",
+      "source": "original",
+      "mtime": "1530094190",
+      "size": "24006575",
+      "md5": "a85b578bf7f1e3c85114cf085fdb92d2",
+      "crc32": "d99fec3a",
+      "sha1": "849dcf5a5f2f29dcc3b83d3e3b8555fd63889a80",
+      "format": "VBR MP3",
+      "length": "600.06",
+      "height": "0",
+      "width": "0",
+      "title": "Forest waking up / 4830 Limbourg, Belgium",
+      "artist": "Vincent Duseigne",
+      "album": "radio aporee",
+      "track": "1/1",
+      "genre": "ambient phonography",
+      "external-identifier-match-date": "acoustid:2019-04-01T23:13:25Z",
+      "external-identifier": "urn:acoustid:11e745da-401f-40c5-b17e-a9168bac9681"
+    },
+    {
+      "name": "louvetterie23064h45.ogg",
+      "source": "derivative",
+      "format": "Ogg Vorbis",
+      "original": "louvetterie23064h45.mp3",
+      "mtime": "1530094248",
+      "size": "7301626",
+      "md5": "44ebb141ac64df5384ec613c7afea4b4",
+      "crc32": "540c8e55",
+      "sha1": "96c573a8cb733e9ae5e7101d47e6bee1764fca32",
+      "length": "600.06",
+      "height": "0",
+      "width": "0"
+    },
+    {
+      "name": "louvetterie23064h45.png",
+      "source": "derivative",
+      "format": "PNG",
+      "original": "louvetterie23064h45.mp3",
+      "mtime": "1530094274",
+      "size": "12163",
+      "md5": "1c20133f34bb14f33cf765da539ce9c8",
+      "crc32": "7bbc05bc",
+      "sha1": "66f4deaad11c93d6bb264b9f95c2dc8a1b191987"
+    },
+    {
+      "name": "louvetterie23064h45_spectrogram.png",
+      "source": "derivative",
+      "format": "Spectrogram",
+      "original": "louvetterie23064h45.mp3",
+      "mtime": "1530094280",
+      "size": "247088",
+      "md5": "1362909319c7f0d783c37499fa2bfe4c",
+      "crc32": "0d0f9aa9",
+      "sha1": "f5e1f550b3d1b4b289fe94ac35fbfa1ca12d2094"
+    }
+  ],
+  "files_count": 10,
+  "item_last_updated": 1789107109,
+  "item_size": 31693743,
+  "metadata": {
+    "identifier": "aporee_40553_46296",
+    "altitude": "351",
+    "contributor": "radio aporee",
+    "coverage": "datum=WGS84; latitude=50.588193451084; longitude=5.935411123955; elevation=351; name=Louveterie 25, 4830 Limbourg, Belgium; date=2018-06-23 04:45:00 Europe/Brussels;",
+    "creator": "Vincent Duseigne",
+    "date": "2018-06-23 04:45:00",
+    "description": "Forest quietly waking up, very early on the morning. Ambiance is not noisy, it's appeased. Robin singing on a nearby tree, and distant blackbirds.",
+    "latitude": "50.588193451084",
+    "licenseurl": "http://creativecommons.org/licenses/by/3.0/",
+    "longitude": "5.935411123955",
+    "mediatype": "audio",
+    "notes": "<b>radio aporee ::: sounds of the world:</b><br /> \t\t\t open this recording on <a href=\"http://aporee.org/maps/?loc=40553\" rel=\"ugc nofollow\">radio aporee ::: maps</a>, \t\t\t a global sound-mapping project dedicated to field recording, phonography and the art of listening. \t\t\t <a href=\"http://aporee.org/maps/info/\" rel=\"ugc nofollow\">read more...</a>",
+    "subject": "field recording;phonography;soundscape;sound art;soundmap;radio;ephemeral;listening;radio aporee",
+    "timezone": "Europe/Brussels",
+    "title": "4830 Limbourg, Belgium - Forest waking up",
+    "collection": "radio-aporee-maps",
+    "publicdate": "2018-06-27 10:09:51",
+    "uploader": "radio@aporee.org",
+    "addeddate": "2018-06-27 10:09:51",
+    "backup_location": "ia906707_24",
+    "external_metadata_update": "2019-04-01T23:13:25Z"
+  },
+  "server": "dn601701.us.archive.org",
+  "simplelists": {
+    "solo_manifest": {
+      "solo_manifest_dn601701": {
+        "sys_changed_by": {
+          "source": "task",
+          "task_id": "5624386170"
+        },
+        "sys_last_changed": "2026-09-11 06:11:54.769537"
+      }
+    }
+  },
+  "solo": true,
+  "uniq": 1403007211,
+  "workable_servers": [
+    "dn601701.us.archive.org"
+  ]
+}

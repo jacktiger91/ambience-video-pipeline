@@ -1,0 +1,241 @@
+name: Prepare ambience for review (manual only)
+
+# There is deliberately no schedule, push, or pull_request trigger.
+# Publishing remains a human action in YouTube Studio.
+on:
+  workflow_dispatch:
+    inputs:
+      episode_config:
+        description: Approved episode JSON path in this repository
+        required: true
+        default: config/episode.example.json
+        type: string
+      source_mode:
+        description: Reuse a completed verified episode, or render distinct verified real-audio assets
+        required: true
+        default: reuse-long
+        type: choice
+        options: [reuse-long, verified-assets]
+      asset_history:
+        description: Retained nonsecret asset-history path (required for verified-assets)
+        required: false
+        default: outputs/daily-asset-history.json
+        type: string
+      stage_uploads:
+        description: Connect and upload all three as unlisted for manual review
+        default: false
+        type: boolean
+      deliver_to_filebin:
+        description: Upload to Filebin and store public receipt/download URLs in this repository
+        default: false
+        type: boolean
+      filebin_backdrop:
+        description: Verified backdrop image path (required when delivering to Filebin)
+        required: false
+        type: string
+      apply_playlist:
+        description: Apply the configured playlist (requires the extra OAuth scope)
+        default: false
+        type: boolean
+      retain_review_artifact:
+        description: Save MP4s/details for one day (requires confirmed zero paid storage)
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+concurrency:
+  group: youtube-review-channel
+  cancel-in-progress: false
+
+jobs:
+  prepare-and-review:
+    # Standard GitHub-hosted public-repository runners are the selected free tier.
+    # A private repo is refused rather than assuming included minutes remain.
+    if: github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    environment: youtube-review
+    permissions:
+      contents: write # Nonsecret YouTube/Filebin receipts on dedicated branches.
+    env:
+      YOUTUBE_CHANNEL_ID: ${{ vars.YOUTUBE_CHANNEL_ID }}
+      YOUTUBE_CHANNEL_HANDLE: ${{ vars.YOUTUBE_CHANNEL_HANDLE }}
+      ZERO_SPEND_CONFIRMED: ${{ vars.ZERO_SPEND_CONFIRMED }}
+      EPISODE_CONFIG: ${{ inputs.episode_config }}
+      SOURCE_MODE: ${{ inputs.source_mode }}
+      ASSET_HISTORY: ${{ inputs.asset_history }}
+      APPLY_PLAYLIST: ${{ inputs.apply_playlist }}
+      SOURCE_LONG_VIDEO_SHA256: ${{ vars.SOURCE_LONG_VIDEO_SHA256 }}
+      FILEBIN_BACKDROP: ${{ inputs.filebin_backdrop }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Check free-tier gate and approved configuration
+        run: |
+          set -euo pipefail
+          if [ "$ZERO_SPEND_CONFIRMED" != true ]; then
+            echo 'Blocked: confirm paid GitHub Actions/storage usage is disabled before running.'
+            exit 1
+          fi
+          python3 - <<'PY'
+          import json, os, pathlib, re
+          root = pathlib.Path.cwd().resolve()
+          config = (root / os.environ['EPISODE_CONFIG']).resolve()
+          config.relative_to(root)
+          data = json.loads(config.read_text())
+          bundle_id = data.get('bundle_id', '')
+          if not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]{0,79}', bundle_id):
+              raise SystemExit('Invalid bundle_id.')
+          if 'REPLACE' in json.dumps(data):
+              raise SystemExit('Replace all example metadata before running.')
+          with open(os.environ['GITHUB_ENV'], 'a') as f:
+              f.write('BUNDLE_ID=' + bundle_id + '\n')
+          PY
+
+      - name: Install local free media tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends ffmpeg fonts-dejavu-core
+          python3 --version
+          ffmpeg -version
+
+      - name: Prepare and fully decode-check all three videos
+        env:
+          SOURCE_LONG_VIDEO_URL: ${{ secrets.SOURCE_LONG_VIDEO_URL }}
+        run: |
+          python3 daily.py prepare --episode "$EPISODE_CONFIG" \
+            --source-mode "$SOURCE_MODE" --asset-history "$ASSET_HISTORY" \
+            --output-dir "outputs/$BUNDLE_ID"
+
+      - name: Refresh token in Cloud and verify the intended channel
+        if: inputs.stage_uploads
+        env:
+          YOUTUBE_OAUTH_CLIENT_JSON: ${{ secrets.YOUTUBE_OAUTH_CLIENT_JSON }}
+          YOUTUBE_OAUTH_TOKEN_JSON: ${{ secrets.YOUTUBE_OAUTH_TOKEN_JSON }}
+        run: |
+          args=()
+          if [ -n "$YOUTUBE_CHANNEL_ID" ]; then
+            args+=(--expected-channel "$YOUTUBE_CHANNEL_ID")
+          elif [ -n "$YOUTUBE_CHANNEL_HANDLE" ]; then
+            args+=(--expected-handle "$YOUTUBE_CHANNEL_HANDLE")
+          fi
+          if [ "${#args[@]}" -eq 0 ]; then echo 'Set YOUTUBE_CHANNEL_ID or YOUTUBE_CHANNEL_HANDLE first.'; exit 1; fi
+          python3 youtube_auth.py check "${args[@]}" --allow-testing
+
+      - name: Restore durable Filebin delivery receipt
+        if: inputs.deliver_to_filebin
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/filebin-state"
+          python3 filebin_cloud_state.py pull --bundle-id "$BUNDLE_ID" \
+            --output "$RUNNER_TEMP/filebin-state/delivery.json"
+
+      - name: Deliver this concept's media and publishing copy to Filebin
+        if: inputs.deliver_to_filebin
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$FILEBIN_BACKDROP" ]; then
+            echo 'Set filebin_backdrop so the complete daily package includes its backdrop image.'
+            exit 1
+          fi
+          python3 filebin_delivery.py --bundle "outputs/$BUNDLE_ID/bundle.json" \
+            --state "$RUNNER_TEMP/filebin-state/delivery.json" --approved-filebin \
+            --backdrop "$FILEBIN_BACKDROP" \
+            --state-sync-command '["python3","filebin_cloud_state.py","sync"]'
+
+      - name: Restore durable nonsecret upload ledger
+        if: inputs.stage_uploads
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p "$RUNNER_TEMP/youtube-private"
+          chmod 700 "$RUNNER_TEMP/youtube-private"
+          python3 cloud_ledger.py pull --bundle-id "$BUNDLE_ID" \
+            --output "$RUNNER_TEMP/youtube-private/ledger.json"
+          chmod +x cloud_ledger.py
+
+      - name: Stage unlisted uploads and record IDs immediately
+        if: inputs.stage_uploads
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          YOUTUBE_OAUTH_CLIENT_JSON: ${{ secrets.YOUTUBE_OAUTH_CLIENT_JSON }}
+          YOUTUBE_OAUTH_TOKEN_JSON: ${{ secrets.YOUTUBE_OAUTH_TOKEN_JSON }}
+        run: |
+          args=()
+          if [ "$APPLY_PLAYLIST" = true ]; then args+=(--apply-playlist); fi
+          if [ -n "$YOUTUBE_CHANNEL_ID" ]; then
+            args+=(--expected-channel "$YOUTUBE_CHANNEL_ID")
+          elif [ -n "$YOUTUBE_CHANNEL_HANDLE" ]; then
+            args+=(--expected-handle "$YOUTUBE_CHANNEL_HANDLE")
+          fi
+          python3 youtube.py stage --bundle "outputs/$BUNDLE_ID/bundle.json" \
+            --journal "$RUNNER_TEMP/youtube-private/upload-journal.json" \
+            --ledger "$RUNNER_TEMP/youtube-private/ledger.json" \
+            --ledger-sync-command "$GITHUB_WORKSPACE/cloud_ledger.py" \
+            --review-report "outputs/$BUNDLE_ID/youtube-review.json" "${args[@]}"
+
+      - name: Write one review summary
+        if: always() && env.BUNDLE_ID != ''
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib
+          directory = pathlib.Path('outputs') / os.environ['BUNDLE_ID']
+          report = directory / 'youtube-review.json'
+          summary = ['## Ambience test review', '', 'Daily delivery target: 18:00 Asia/Nicosia. No automatic schedule is deployed. YouTube publication remains manual.', '']
+          delivery = pathlib.Path(os.environ['RUNNER_TEMP']) / 'filebin-state' / 'delivery.json'
+          if delivery.is_file():
+              sent = json.loads(delivery.read_text())
+              if sent.get('status') == 'delivered':
+                  summary += [f"[This concept's videos, images and publishing copy]({sent['folder_url']})", '', 'Filebin expiry: ' + sent['expires_at'], '']
+              else:
+                  summary += ['Filebin delivery is incomplete. Preserve its cloud receipt and retry the same bundle; do not create a second delivery manually.', '']
+          if report.is_file():
+              data = json.loads(report.read_text())
+              if data.get('connection_warning'):
+                  summary += ['Connection warning: ' + data['connection_warning'], '']
+              for video in data.get('videos', []):
+                  label = video['key']
+                  if video.get('video_id'):
+                      summary += [f"- {label}: [Studio edit]({video['studio_url']}) · [YouTube preview]({video['watch_url']}) · visibility: {video.get('actual_visibility', 'not yet verified')}"]
+                  else:
+                      summary += [f'- {label}: no confirmed YouTube ID; inspect the failed step before retrying.']
+              summary += ['', 'The sanitized report includes API restrictions and settings still requiring Studio.', '']
+          else:
+              summary += ['YouTube uploads remain manual unless the separate optional API staging step was explicitly selected.', '']
+          summary += ['Upload as Unlisted, select the playlist, and set each Short’s Related video and cover frame in Studio. Review and publish the full video first, then the Shorts.', '', 'The confirmed 18:00 daily target still requires a deployed runner and prepared, verified media. Saving this workflow does not enable a schedule.']
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as stream:
+              stream.write('\n'.join(summary) + '\n')
+          PY
+
+      - name: Enforce review artifact size and zero-spend gate
+        id: artifact_check
+        if: always() && inputs.retain_review_artifact && env.BUNDLE_ID != ''
+        run: |
+          test -f "outputs/$BUNDLE_ID/bundle.json"
+          python3 daily.py check-artifact-budget --directory "outputs/$BUNDLE_ID" --max-mib 400
+
+      - name: Save review media and sanitized details
+        if: always() && steps.artifact_check.outcome == 'success'
+        uses: actions/upload-artifact@v4
+        with:
+          name: review-${{ env.BUNDLE_ID }}-${{ github.run_id }}
+          path: |
+            outputs/${{ env.BUNDLE_ID }}/*.mp4
+            outputs/${{ env.BUNDLE_ID }}/*.jpg
+            outputs/${{ env.BUNDLE_ID }}/bundle.json
+            outputs/${{ env.BUNDLE_ID }}/upload-details.md
+            outputs/${{ env.BUNDLE_ID }}/youtube-review.json
+          retention-days: 1
+          compression-level: 0
+          if-no-files-found: error
+
+      - name: Remove sensitive runtime files
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/youtube-private"

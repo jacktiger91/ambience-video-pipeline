@@ -1,0 +1,29 @@
+{
+  "theme": "quiet-shore",
+  "duration_seconds": 3600,
+  "crossfade_seconds": 16,
+  "edits": [
+    {
+      "sound_id": "aporee_37802_43261",
+      "start": 10,
+      "duration": 1330
+    },
+    {
+      "sound_id": "aporee_41944_47808",
+      "start": 14,
+      "duration": 1636
+    },
+    {
+      "sound_id": "aporee_59218_67955",
+      "start": 10,
+      "duration": 500
+    },
+    {
+      "sound_id": "aporee_37802_43261",
+      "start": 1380,
+      "duration": 182
+    }
+  ],
+  "selection_notes": "Selected3,648seconds passed full-interval automated classification: noSpeech/Music>=0.25; Engine<=0.01172; noMotorboat>=0.5. Distinct stereo channels verified. Excludes all detected speech/impact events and possible late DeHaanboat.",
+  "quality_report": "docs/provenance/quiet-shore/selected-source-audio-event-check.json"
+}
