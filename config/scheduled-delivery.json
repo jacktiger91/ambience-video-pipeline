@@ -15,7 +15,15 @@
     "sha256": "eaf992794cf15952035c28f3b2e5d01f5094482e999e802ad148685bfbb46518",
     "size": 4747
   },
-  "prepared_episodes": {},
+  "prepared_episodes": {
+    "2026-11-05": {
+      "bundle_id": "2026-11-05-forest-dawn",
+      "asset_id": 711144948,
+      "asset_size": 1878466560,
+      "asset_sha256": "3452cc6c819757cd5d7758539f29649be9e9b86976d89aaf53177c0095a759be",
+      "delivery_identity": "ca8baac7e381a02ee278aefc4de00b707112f4261888b72f53a445e92dd8d1e9"
+    }
+  },
   "notes": [
     "This selector does not deploy a cron job, prepare artwork, or find licensed recordings.",
     "Restore a prepared bundle, backdrop, final motion review and retained receipt into private local paths before checking readiness.",
