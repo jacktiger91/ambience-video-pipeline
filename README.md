@@ -1,116 +1,67 @@
-# Ambience video renderer
+# Quiet Hours ambience production
 
-Render a moving visual and a finished ambience soundtrack into a YouTube-ready
-MP4 using Python, FFmpeg, and FFprobe. The project also prepares two Shorts,
-artwork and publishing copy, then delivers approved packages through Filebin.
-Rendering and delivery run in Linux cloud environments; a Windows laptop is not
-needed. The basic `render.py` command uses only Python's standard library and
-FFmpeg/FFprobe. Optional artwork and archive helpers have their own dependencies.
+Create a new daily nature ambience package in the cloud, with a ready-by target
+of **18:00 Asia/Nicosia** and a **€0 service budget**. YouTube upload, review and
+publication remain manual. The personal computer can be switched off.
 
-YouTube upload, review and publication remain manual. Each daily episode must
-have its recordings, rights, moving scene and thumbnail prepared and verified
-before it enters the delivery queue.
+Each package contains:
 
-## Three-video review workflow
+- One hour of real stereo field recordings and a fixed, naturally moving 1080p scene.
+- Two distinct 15–30-second vertical Shorts at 1080 × 1920, with ambience audio and an invitation to the full hour.
+- A matching photographic backdrop and thumbnail in the cream-title/gold-badge channel style, plus two suggested Short covers.
+- Separate titles and descriptions for all three videos, actual source credits, licence links and manual Studio settings.
 
-Each new episode needs its own real stereo field-recording arrangement,
-photographic backdrop, matching thumbnail and two distinct 15–30-second Shorts.
-The channel keeps the [same cream-title/gold-badge design](docs/CHANNEL-STYLE.md)
-while changing the soundscape, location and composition. Retitling the Night
-Rain porch is not a new daily episode.
+[Daily production](.github/workflows/daily-production.yml) discovers fresh
+commercially permitted sources, screens the sound and motion, makes the artwork
+and publishing copy, and renders a day ahead. It uses actual camera footage;
+water, rain or foliage moves within the scene. The visual clip repeats with a
+brief dissolve. The separately recorded soundtrack uses distinct passages with
+smooth transitions, never a short repeating audio loop.
 
-The [daily concept queue](config/daily-concepts.json) contains fourteen distinct
-briefs, beginning with **Quiet Shore**. Create or reuse a dated brief with:
+[Daily delivery](.github/workflows/daily-filebin.yml) starts at 12:00 Cyprus time
+and retries before the 18:00 target. Both jobs use standard free Linux runners
+in this public repository; no paid API, Google Cloud account or local laptop
+service is required. GitHub schedules and Filebin availability are best effort,
+so the ready-by time is a target rather than a guaranteed service deadline.
 
-```bash
-python3 daily.py plan --date 2026-11-04 \
-  --output outputs/daily-briefs/2026-11-04.json
-```
+Open [the repository Releases page](https://github.com/jacktiger91/ambience-video-pipeline/releases)
+while signed in as the owner. Each dated **private draft** holds its package,
+quality evidence and final Filebin download link. Keep these drafts unpublished.
+Filebin links are temporary; download before the expiry shown with each package.
+Public workflow summaries contain status and this signed-in review-page link.
 
-A brief is not a completed video. Actual audio permissions, downloaded source
-bytes, distinct backdrop and thumbnail, credits, and quality checks are required
-before production. The planner stops at the queue's end instead of recycling it.
-Image-generation tools are available interactively here; the cloud job renders
-prepared assets and does not silently call a paid image API.
+See [cloud operation and recovery](docs/CLOUD.md) and
+[actual deployment/test status](docs/DEPLOYMENT-STATUS.md). Activation is explicit
+in [production settings](config/production-settings.json) and
+[delivery settings](config/scheduled-delivery.json); a source-code push alone
+is not evidence of a successful production run.
 
-Each concept includes a full-video title and description plus separate titles
-and descriptions for both Shorts in
-[the publishing-copy catalogue](config/daily-publishing-copy.json).
-The dated brief carries this copy into the review bundle. Future copy is a draft:
-check it against the finished recording and scene, append the actual credits
-for each video, and select the Short moments before rendering. The readable
-[14-concept copy pack](docs/DAILY-TITLES-DESCRIPTIONS.md) keeps those pending
-credits separate from the text to paste into YouTube.
+Quality gates check explicit CC0/CC BY permission, actual stereo separation,
+continuous audio-event screening, nonoverlapping source passages, measured
+loudness, scene motion, stream specifications and full decoding of all three
+exports. These are automated checks, not a claim of human listening. A failed
+source or check blocks that dated package and produces a failed workflow run.
+Earlier packages stay available; retries reuse verified bytes and receipts.
 
-All new daily MP4s, including both Shorts, require **visible motion within the
-scene**: shoreline water washing in and receding, falling rain and splashes, or
-appropriate movement of water, reeds and foliage. The camera stays fixed.
-The daily job requires a reviewed `moving_visual` video and its motion report;
-it will not substitute the still backdrop image. See the
-[motion review requirements](docs/CLOUD.md) before preparing a new episode.
+The [original fourteen concept briefs](config/daily-concepts.json),
+[publishing-copy catalogue](config/daily-publishing-copy.json) and `daily.py`
+remain available for manually curated episodes. Automatic production selects
+fresh sources and a dated identity beyond those initial briefs. It excludes
+previously used source IDs and hashes using private production history.
 
-Matching verified media is reused on retry. New episodes cannot reuse another
-episode's scene, thumbnail or soundtrack hashes. Read the finished bundle's
-`upload-details.md`, upload the three MP4s through Studio as **Unlisted**, and
-review them before publishing the full video followed by the Shorts. Select
-the playlist and each Short's Related video/cover in Studio.
+The standalone renderer below still uses Python's standard library and FFmpeg.
+For the complete producer, create a Python 3.12 virtual environment and install
+`requirements-production.txt`; the workflow performs this setup automatically.
+Its local audio classifier is free and uses the pinned official YAMNet model.
+Bebas Neue is bundled under the [SIL Open Font License](assets/fonts/OFL.txt).
 
-The earlier synthesized test in `outputs/first-test/` and the photographic
-[Night Rain revision](docs/REVISED-NIGHT-RAIN.md) remain available for comparison.
-The synthetic generator is a legacy example, not the daily production route.
-Animation helpers require Python 3.11+ and the pinned Pillow dependency in
-`requirements-animation.txt`; the original renderer below remains standard-library-only.
+## Manual review
 
-For future cloud runs, see [cloud setup and the daily planner](docs/CLOUD.md).
-The requested daily Filebin delivery target is **18:00 Asia/Nicosia**, including
-each concept's titles, descriptions and recording credits with its finished
-media. Repository-scoped GitHub access works, and source code is now on `main`.
-The [daily workflow](.github/workflows/daily-filebin.yml) uses standard Ubuntu
-runners in this public repository, with no paid runners, Actions media artifacts
-or paid generation APIs. It selects the exact Cyprus date, begins attempts at
-16:00, and reports whether delivery completed by 18:00. GitHub scheduling is best
-effort, so the target is not a service guarantee.
-
-[Scheduled-delivery configuration](config/scheduled-delivery.json) is the
-activation and prepared-queue source of truth. While `enabled` is false, timed
-workflow invocations do not deliver media. Enablement follows the private-draft
-access check, connection test and prepared-media preflight; a successful text
-probe alone does not prove full media delivery. Future concepts still need
-production and QA. This queue does not create an indefinite supply of new
-recordings or artwork.
-
-Prepared packages, retry receipts and the daily review links belong in the
-dedicated **draft** release. Open [the repository's Releases page](https://github.com/jacktiger91/ambience-video-pipeline/releases)
-while signed into an account with repository write access. Keep that release a
-draft; publishing it would expose its assets and review links. Public workflow
-summaries show status and the review-page link, not the Filebin URLs.
-Optional [YouTube API connection instructions](docs/YOUTUBE.md) are
-available if you later choose free API registration; they are not required for
-manual Studio uploads.
-
-For each new, finished review bundle, Filebin delivery includes the three MP4s,
-thumbnail, both suggested covers and a concept-specific `upload-details.txt`.
-Include the backdrop image with `--backdrop` for a complete daily package. Keep the same state file on
-retries so accepted files and complete download checks are reused:
-
-```bash
-python3 filebin_delivery.py --bundle outputs/NEW_BUNDLE/bundle.json \
-  --state outputs/deliveries/NEW_BUNDLE.json \
-  --backdrop media/NEW_CONCEPT/scene.png --approved-filebin
-```
-
-Use `--check-local-only` instead of `--approved-filebin` to inspect the exact
-file list without network access. Existing Quiet Shore media is already
-delivered; its new publishing-copy download links back to that set. The daily
-workflow retains private Filebin receipts between runners; see
-[delivery behavior and temporary-link limits](docs/FILEBIN-DELIVERY.md).
-
-Run the extended offline checks as well as the renderer smoke test:
-
-```bash
-python3 -m unittest discover -s tests -p 'test_*.py' -v
-python3 -m unittest discover -s tests -p 'smoke_test.py' -v
-```
+Upload the three MP4s in YouTube Studio with the included `upload-details.txt`,
+thumbnail and credits. Save as Unlisted, choose the playlist and disclosures,
+set each Short's Related video, and select its suggested cover frame. Review and
+publish the full hour first, then the Shorts. This project does not connect to
+or publish to the channel automatically.
 
 ## Setup in Codex Cloud
 

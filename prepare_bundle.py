@@ -326,7 +326,7 @@ def cached_artifact(manifest: dict[str, Any], key: str, path: Path, recipe: str)
     return None
 
 
-def prepare(episode_path: Path, output_dir: Path, long_override: Path | None = None) -> Path:
+def prepare(episode_path: Path, output_dir: Path, long_override: Path | None = None, *, on_artifact=None) -> Path:
     require_tools()
     episode_path = episode_path.expanduser().resolve()
     config = validate_episode(json.loads(episode_path.read_text(encoding="utf-8")))
@@ -377,6 +377,8 @@ def prepare(episode_path: Path, output_dir: Path, long_override: Path | None = N
                   "recipe_sha256": recipe_hash, "verification": verification}
         manifest["artifacts"][key] = record
         atomic_json(manifest_path, manifest)
+        if on_artifact is not None:
+            on_artifact(key, destination, record, manifest)
         return record
 
     long_path = output_dir / "long.mp4"
@@ -455,7 +457,7 @@ def prepare(episode_path: Path, output_dir: Path, long_override: Path | None = N
               "4. Explicitly choose Unlisted and save. Do not select Public or Schedule. If YouTube restricts visibility, retain Private and record the restriction plus the Studio edit link.",
               "5. Upload short1.mp4 and short2.mp4 with their own titles and descriptions above. Keep both Unlisted. Add the full video's watch URL to each description after its upload ID is known.",
               "6. For each Short, set Related video to the full upload in Studio. This may require advanced-feature access. Use the suggested cover image/timestamp in the YouTube app or Studio if that control is available; it is a suggested frame, not an automatically applied thumbnail.",
-              "7. Review and play all three videos in Studio. Publish the full video first, then the Shorts. The daily schedule remains disabled until the full test is approved and an Asia/Nicosia start time is confirmed.",
+              "7. Review and play all three videos in Studio. Publish the full video first, then the Shorts. YouTube publication remains manual; the daily Filebin delivery has its own separate schedule.",
               "", "Studio link format after an upload succeeds: https://studio.youtube.com/video/VIDEO_ID/edit", "",
               "## Remaining channel-specific choices", "",
               "- Select the intended playlist; no playlist ID was provided.",

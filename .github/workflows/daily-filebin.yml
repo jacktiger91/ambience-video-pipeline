@@ -14,8 +14,8 @@ on:
         required: false
   schedule:
     # Both Cyprus offsets are covered; the runner applies Asia/Nicosia local
-    # dates and its16:00 start/18:00 deadline. Config stays disabled until tests.
-    - cron: '7,27,47 13-16 * * *'
+    # dates and its12:00 start/18:00 deadline, with retries before the deadline.
+    - cron: '7,27,47 9-16 * * *'
 
 permissions:
   contents: write

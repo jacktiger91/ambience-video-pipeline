@@ -313,6 +313,15 @@ def run(config_path: Path, work: Path, mode: str, selected_date: str | None = No
     if mode == "bootstrap-episode":
         return bootstrap_episode(store, work)
     entry = config["prepared_episodes"].get(slot["episode_date"])
+    if entry is None and config.get("automatic_production_start") and slot["episode_date"] >= config["automatic_production_start"]:
+        from production_store import daily_store, prepared_entry
+        current = daily_store(config, date.fromisoformat(slot["episode_date"]))
+        if current is None:
+            raise RunnerError("Today's production has not created its private package yet; no earlier episode was substituted.")
+        store = current
+        if mode in {"preflight", "delivery-test"}:
+            store.anonymous_probe()
+        entry = prepared_entry(store, slot["bundle_id"])
     if not isinstance(entry, dict) or entry.get("bundle_id") != slot.get("bundle_id"):
         raise RunnerError("Today's concept has no prepared private archive. No old concept was substituted.")
     bundle_id = entry["bundle_id"]
@@ -350,7 +359,10 @@ def run(config_path: Path, work: Path, mode: str, selected_date: str | None = No
     receipt_path = work / "delivery.json"
     if previous:
         filebin_delivery.save_state(receipt_path, previous)
-    hook = [sys.executable, str(Path(__file__).resolve()), "sync-state", "--config", str(config_path)]
+    runtime_config = work / "delivery-runtime-config.json"
+    runtime_config.write_text(json.dumps({**config, "private_release_id": store.release_id,
+                                          "private_release_tag": store.tag}, indent=2) + "\n")
+    hook = [sys.executable, str(Path(__file__).resolve()), "sync-state", "--config", str(runtime_config)]
     with contextlib.redirect_stdout(sys.stderr):
         receipt = filebin_delivery.deliver(restored["bundle_path"], receipt_path, restored["backdrop_path"],
                                           approved=True, state_sync_command=hook)

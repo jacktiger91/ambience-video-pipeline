@@ -2,9 +2,10 @@
   "schema_version": 1,
   "enabled": true,
   "timezone": "Asia/Nicosia",
-  "attempt_from": "16:00",
+  "attempt_from": "12:00",
   "ready_by": "18:00",
   "first_delivery_date": "2026-11-05",
+  "automatic_production_start": "2026-11-06",
   "concept_catalog": "daily-concepts.json",
   "repository": "jacktiger91/ambience-video-pipeline",
   "private_release_id": 434488698,
@@ -25,7 +26,7 @@
     }
   },
   "notes": [
-    "This selector does not deploy a cron job, prepare artwork, or find licensed recordings.",
+    "The daily-production workflow researches and prepares fresh packages a day ahead; daily-filebin delivers them before 18:00.",
     "Restore a prepared bundle, backdrop, final motion review and retained receipt into private local paths before checking readiness.",
     "Prepared archives and immutable receipt versions belong only in the dedicated private GitHub draft release; never publish that draft.",
     "Verify anonymous draft API access returns404 in the actual GitHub runner before enabling scheduled execution.",

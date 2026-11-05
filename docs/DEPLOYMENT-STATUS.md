@@ -1,25 +1,16 @@
-# Deployment status — 4 November 2026 UTC
+# Deployment status — 5 November 2026 UTC
 
-The private Filebin delivery workflow is deployed on `main` and enabled after
-its cloud tests passed. It uses standard GitHub-hosted Ubuntu runners in this
-public repository, without paid services or a running personal computer.
-Delivery attempts start at 16:00 Asia/Nicosia for a ready-by target of 18:00.
-The first timed window is 5 November; that timed invocation has not occurred
-yet. Manual tests exercised the same delivery logic in fresh cloud runners.
+Automatic daily production is implemented and undergoing its full cloud test.
+The schedule will be enabled after source discovery, all three renders, private
+recovery and Filebin delivery pass in the actual cloud runner.
 
-**Prepared coverage: 5 November 2026, Forest Dawn, only.** Its full-hour video,
-two distinct 25-second Shorts, thumbnail, backdrop, cover frames and finished
-titles/descriptions/credits are already delivered and download-verified.
-The assistant still needs to prepare the following daily concepts. The
-scheduler delivers prepared packages; it does not research recordings or
-generate an indefinite supply of new scenes and audio.
+Production prepares a day ahead. Delivery attempts now start at 12:00 Cyprus
+time, retaining the agreed 18:00 Asia/Nicosia ready-by target. The new dated
+private drafts preserve the earlier Forest Dawn package and delivery history.
 
-Open the [private review draft from Releases](https://github.com/jacktiger91/ambience-video-pipeline/releases)
-while signed into the repository owner's account. Keep this release as a draft.
-It retains the Filebin review link, complete prepared archive and immutable
-delivery receipts. YouTube uploads and publication remain manual.
+## Previously verified delivery
 
-Verified cloud runs:
+
 
 - [Private access and small source import](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/41921108084)
 - [Filebin upload and complete download](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/41921613212)

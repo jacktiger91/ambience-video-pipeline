@@ -1,0 +1,75 @@
+name: Daily ambience production
+
+on:
+  workflow_dispatch:
+    inputs:
+      episode_date:
+        description: YYYY-MM-DD for a full cloud production test or recovery
+        type: string
+        required: true
+  schedule:
+    # Prepare a day ahead; retries are well before 18:00 in either Cyprus offset.
+    - cron: '13 0,6,10 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: quiet-hours-private-production
+  cancel-in-progress: false
+
+jobs:
+  produce:
+    # Standard Linux public-repository minutes are free. Never run this in a
+    # private fork, on a larger runner, or with paid media/generation services.
+    if: github.repository == 'jacktiger91/ambience-video-pipeline' && github.event.repository.private == false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      PRODUCTION_MODE: ${{ github.event_name == 'schedule' && 'scheduled' || 'manual' }}
+      EPISODE_DATE: ${{ inputs.episode_date }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install free production tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core
+          python -m venv "$RUNNER_TEMP/quiet-hours-venv"
+          "$RUNNER_TEMP/quiet-hours-venv/bin/pip" install --disable-pip-version-check -r requirements-production.txt
+      - name: Research, render, verify and retain the dated package
+        run: |
+          set -euo pipefail
+          umask 077
+          mkdir -p "$RUNNER_TEMP/quiet-hours-production"
+          args=()
+          if [ -n "$EPISODE_DATE" ]; then args+=(--date "$EPISODE_DATE"); fi
+          "$RUNNER_TEMP/quiet-hours-venv/bin/python" production.py \
+            --mode "$PRODUCTION_MODE" --work-dir "$RUNNER_TEMP/quiet-hours-production" \
+            "${args[@]}" > "$RUNNER_TEMP/quiet-hours-production-result.json"
+      - name: Show status without exposing private download links
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          path=pathlib.Path(os.environ['RUNNER_TEMP'])/'quiet-hours-production-result.json'
+          try:
+              result=json.loads(path.read_text())
+          except (OSError,ValueError):
+              result={'status':'stopped; inspect the failed step'}
+          lines=['## Quiet Hours production','','Target: ready for download by 18:00 Asia/Nicosia. Budget: €0.','',
+                 'Status: '+str(result.get('status')),'']
+          for package in result.get('packages',[]):
+              lines += [package['episode_date']+': '+package['status'], '']
+          lines += ['[Private packages and daily download links](https://github.com/jacktiger91/ambience-video-pipeline/releases)',
+                    '', 'Sign into GitHub as the repository owner. YouTube upload and publication remain manual.']
+          with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as stream:stream.write('\n'.join(lines)+'\n')
+          PY
+      - name: Remove private temporary files
+        if: always()
+        run: rm -rf "$RUNNER_TEMP/quiet-hours-production" "$RUNNER_TEMP/quiet-hours-production-result.json" "$RUNNER_TEMP/quiet-hours-venv"

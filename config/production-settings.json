@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "start_date": "2026-11-06",
+  "timezone": "Asia/Nicosia",
+  "prepare_days_ahead": 1,
+  "budget_eur": 0,
+  "max_visual_candidates": 8,
+  "max_audio_candidates": 14,
+  "max_audio_passages": 8,
+  "legacy_source_history": {
+    "source_ids": [
+      "archive:aporee_37802_43261",
+      "archive:aporee_41944_47808",
+      "archive:aporee_59218_67955",
+      "archive:aporee_56785_64952",
+      "archive:aporee_48022_54624",
+      "archive:aporee_40553_46296",
+      "archive:view-from-our-back-veranda_202110"
+    ],
+    "media_sha256": []
+  },
+  "notes": [
+    "Source discovery, licensed field-recording selection, motion checks, thumbnails, copy and rendering all run in Cloud.",
+    "No paid API or personal computer is required. Only standard runners in this public repository may execute production.",
+    "Fresh source identities and hashes are retained in private annual history; earlier media is not silently recycled.",
+    "A failed source, quality check or transfer leaves the dated package blocked and visible as a failed workflow run.",
+    "YouTube upload and publication remain manual."
+  ]
+}

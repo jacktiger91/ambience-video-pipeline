@@ -120,6 +120,19 @@ def select_slot(config_path: Path, now: datetime | None = None, episode_date: da
             raise ScheduleError("first_delivery_date must use YYYY-MM-DD.") from None
         if day < first_delivery:
             blockers.append("The first requested daily delivery is on " + first_delivery.isoformat() + ".")
+    production_start = config.get("automatic_production_start")
+    if production_start is not None:
+        try:
+            starts = date.fromisoformat(production_start)
+        except (TypeError, ValueError):
+            raise ScheduleError("automatic_production_start must use YYYY-MM-DD.") from None
+        if day >= starts:
+            # A stable dated identity permits a fresh researched concept even
+            # after the original inspiration catalogue ends. Content must come
+            # from that date's verified private production entry, never an old
+            # episode or merely a recycled title.
+            result.update({"concept_id": "daily-ambience", "bundle_id": day.isoformat() + "-daily-ambience"})
+            return result
     offset = (day - first).days
     if not 0 <= offset < len(concepts):
         blockers.append("No concept exists for this local date. Extend the queue; do not recycle an earlier episode.")
