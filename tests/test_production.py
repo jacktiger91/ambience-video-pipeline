@@ -16,6 +16,7 @@ import daily_schedule
 import prepare_bundle
 import production
 import production_quality as quality
+import production_render as rendering
 import production_sources as sources
 import production_store as storage
 from scheduled_runner import RunnerError
@@ -165,6 +166,38 @@ class ProductionTests(unittest.TestCase):
             result=production.produce(datetime(2026,11,6).date(),config,{},self.root)
         self.assertEqual(result['status'],'already_prepared')
         render.assert_not_called();upload.assert_not_called()
+
+    def test_audio_finishing_preserves_video_and_caches_a_fully_checked_export(self):
+        source=self.root/'fixture.mp4'
+        prepare_bundle.run_ffmpeg(['-f','lavfi','-i','color=c=green:s=160x90:r=30:d=3',
+            '-f','lavfi','-i',r'aevalsrc=0.12*sin(2*PI*440*t)+0.9*between(t\,0.9\,0.92)|0.12*sin(2*PI*440*t)+0.9*between(t\,0.9\,0.92):s=48000:d=3',
+            '-c:v','libx264','-preset','ultrafast','-pix_fmt','yuv420p','-threads','2',
+            '-c:a','aac','-ac','2','-b:a','192k','-t','3',str(source)])
+        sha=prepare_bundle.digest(source)
+        video={'key':'long','path':str(source),'verification':{'duration':3,'resolution':[160,90]}}
+        levels,proof=rendering.finish_audio(video,self.root/'finished')
+        self.assertIsNotNone(proof,levels);self.assertLessEqual(float(levels['input_tp']),-2)
+        self.assertTrue(proof['verification']['full_decode'])
+        self.assertEqual(prepare_bundle.digest(source),sha)
+        def video_hash(path):
+            return prepare_bundle.run_ffmpeg(['-i',str(path),'-map','0:v:0','-c:v','copy','-f','hash','-hash','sha256','-']).stdout.strip()
+        self.assertEqual(video_hash(source),video_hash(Path(proof['path'])))
+        with mock.patch.object(rendering,'run_ffmpeg',side_effect=AssertionError('A verified finish must be reused')):
+            self.assertEqual(rendering.finish_audio(video,self.root/'finished')[1]['sha256'],proof['sha256'])
+
+    def test_stored_anonymous_privacy_proof_is_bound_to_the_exact_draft(self):
+        config={'repository':'owner/repo'};tag='quiet-hours-private-2026-11-06'
+        api=mock.Mock();api.request.return_value=(200,[{'id':77,'tag_name':tag,'draft':True}])
+        store=mock.Mock();store.release_id=77;store.tag=tag
+        proof={'schema_version':1,'repository':'owner/repo','release_id':77,'release_tag':tag,'anonymous_api_http':404}
+        with mock.patch.object(storage,'token',return_value='unit-fixture-token'), \
+                mock.patch.object(storage,'GitHubLedger',return_value=api),mock.patch.object(storage,'DraftStore',return_value=store), \
+                mock.patch.object(storage,'read_document',return_value=proof),mock.patch.object(storage,'write_document'):
+            storage.private_store(config,tag,'Fixture',create=True)
+            store.guard.assert_called_once();store.anonymous_probe.assert_not_called()
+            proof['release_id']=88
+            with self.assertRaisesRegex(RunnerError,'different storage'):
+                storage.private_store(config,tag,'Fixture',create=True)
 
     def test_published_draft_and_incomplete_search_block_creation(self):
         config={'repository':'owner/repo'};api=mock.Mock()

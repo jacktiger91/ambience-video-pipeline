@@ -64,16 +64,23 @@ class DraftStore:
 
     def anonymous_probe(self) -> None:
         self.guard()
-        request = urllib.request.Request(self.api.root + f"/releases/{self.release_id}", headers={
-            "Accept": "application/vnd.github+json", "User-Agent": "quiet-hours-privacy-preflight"})
-        try:
-            with urllib.request.urlopen(request, timeout=30):
-                raise RunnerError("Anonymous access unexpectedly succeeded; do not store review files in this release.")
-        except urllib.error.HTTPError as exc:
-            if exc.code != 404:
-                raise RunnerError("Anonymous draft access did not return the required HTTP 404; privacy is unverified.") from None
-        except OSError:
-            raise RunnerError("Anonymous access check could not complete; privacy is unverified.") from None
+        for attempt in range(4):
+            request = urllib.request.Request(self.api.root + f"/releases/{self.release_id}", headers={
+                "Accept": "application/vnd.github+json", "User-Agent": "quiet-hours-privacy-preflight"})
+            try:
+                with urllib.request.urlopen(request, timeout=30):
+                    raise RunnerError("Anonymous access unexpectedly succeeded; do not store review files in this release.")
+            except urllib.error.HTTPError as exc:
+                if exc.code==404:return
+                rate_limited=exc.code==429 or (exc.code==403 and exc.headers.get('X-RateLimit-Remaining')=='0')
+                transient=rate_limited or exc.code in {500,502,503,504}
+                if transient and attempt<3:
+                    time.sleep((5,15,30)[attempt]);continue
+                raise RunnerError(f"Anonymous draft access returned HTTP {exc.code}, not the required HTTP 404; privacy is unverified.") from None
+            except OSError:
+                if attempt<3:
+                    time.sleep((5,15,30)[attempt]);continue
+                raise RunnerError("Anonymous access check could not complete; privacy is unverified.") from None
 
     def assets(self) -> list[dict]:
         self.guard()

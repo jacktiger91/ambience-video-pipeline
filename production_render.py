@@ -12,7 +12,7 @@ import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 from mix_field_recordings import make_mix, measure_levels
-from prepare_bundle import prepare, digest, run_ffmpeg
+from prepare_bundle import prepare, digest, run_ffmpeg, verify_media
 from production_quality import QualityError, inspect_final_motion
 from production_sources import download
 from render import probe
@@ -132,6 +132,43 @@ def short_starts(loop_seconds: float, duration: float, edits: list[dict]) -> lis
     return starts
 
 
+def finish_audio(video: dict, directory: Path) -> tuple[dict, dict | None]:
+    """Correct AAC overshoot with constant gain, preserving encoded video.
+
+    The original verified export is retained. A corrected file receives another
+    full decode and a hash-bound reusable proof; no threshold is relaxed.
+    """
+    source=Path(video['path']);directory.mkdir(parents=True,exist_ok=True)
+    destination=directory/(video['key']+'.mp4');sidecar=directory/(video['key']+'.json')
+    if destination.exists():
+        proof=json.loads(sidecar.read_text())
+        if proof.get('source_sha256')!=digest(source) or proof.get('sha256')!=digest(destination):
+            raise QualityError('Retained audio finishing belongs to different media bytes.')
+        return proof['levels'],proof
+    measured=measure_levels(source)
+    integrated,peak=float(measured['input_i']),float(measured['input_tp'])
+    if -32<=integrated<=-16 and peak<=-2:return measured,None
+    gain=min(-24-integrated if not -32<=integrated<=-16 else 0,-4.5-peak)
+    if not -12<=gain<=12 or not -32<=integrated+gain<=-16:
+        raise QualityError(f"{video['key']} cannot meet audio limits with a bounded constant-gain correction: {json.dumps(measured)}")
+    pending=directory/('.'+video['key']+'-pending.mp4')
+    duration=video['verification']['duration'];width,height=video['verification']['resolution']
+    print(f"Finishing {video['key']} audio with {gain:.2f} dB constant gain; retaining encoded video.",flush=True)
+    run_ffmpeg(['-threads','2','-i',str(source),'-map','0:v:0','-map','0:a:0','-t',str(duration),
+                '-c:v','copy','-af',f'volume={gain:.6f}dB','-c:a','aac','-b:a','192k','-ac','2','-ar','48000',
+                '-map_metadata','-1','-map_chapters','-1','-movflags','+faststart','-y',str(pending)],timeout=1800)
+    levels=measure_levels(pending)
+    if not -32<=float(levels['input_i'])<=-16 or float(levels['input_tp'])>-2:
+        raise QualityError(f"{video['key']} still fails audio limits after finishing: {json.dumps(levels)}")
+    verification=verify_media(pending,width,height,duration)
+    pending.replace(destination)
+    proof={'schema_version':1,'source_sha256':digest(source),'sha256':digest(destination),
+           'path':str(destination.resolve()),'gain_db':gain,'before':measured,'levels':levels,'verification':verification,
+           'method':'Constant audio gain and AAC encoding; encoded video stream copied; complete corrected-file decode.'}
+    sidecar.write_text(json.dumps(proof,indent=2)+'\n')
+    return levels,proof
+
+
 def render_package(plan: dict, work: Path, *, on_artifact=None, restored_source: Path | None = None) -> dict:
     work.mkdir(parents=True,exist_ok=True)
     sources=[]
@@ -196,14 +233,23 @@ def render_package(plan: dict, work: Path, *, on_artifact=None, restored_source:
     bundle_path=prepare(episode_path,work/'review',on_artifact=on_artifact)
     if source_video==work/'long-source.mp4':source_video.unlink()
     bundle=json.loads(bundle_path.read_text())
-    motion_path=work/'motion-review.json';inspect_final_motion(bundle,motion_path)
-    levels={}
+    levels={};repairs={}
     for video in bundle['videos']:
-        measured=measure_levels(Path(video['path']))
-        if not -32<=float(measured['input_i'])<=-16 or float(measured['input_tp'])>-2:
-            raise QualityError('An exported soundtrack failed comfortable loudness/headroom limits.')
+        measured,finished=finish_audio(video,work/'audio-finish')
+        if finished:
+            key=video['key'];path=work/'audio-finish'/(key+'.mp4')
+            video.update({'path':str(path.resolve()),'sha256':finished['sha256'],'verification':finished['verification']})
+            bundle['artifacts'][key].update({'path':str(path.resolve()),'sha256':finished['sha256'],'verification':finished['verification']})
+            bundle['artifacts'][key]['recipe_sha256']=hashlib.sha256(json.dumps(['audio-finish-v1',bundle['artifacts'][key]['recipe_sha256'],finished['gain_db']]).encode()).hexdigest()
+            repairs[key]=finished
+            if on_artifact is not None:on_artifact.finish_audio(key,path,finished)
         levels[video['key']]=measured
+    if repairs:
+        bundle_path=work/'finalized-bundle.json'
+        bundle_path.write_text(json.dumps(bundle,indent=2)+'\n')
+    motion_path=work/'motion-review.json';inspect_final_motion(bundle,motion_path)
     qa={'bundle_id':plan['bundle_id'],'audio_levels':levels,'full_decode_all_three':True,'motion_report':json.loads(motion_path.read_text()),
+        'audio_finishing':repairs,
         'method':'Automated full-file decode, stream validation, measured audio levels, temporal motion checks and licensed-source records; no fabricated listening approval.'}
     (work/'final-qa.json').write_text(json.dumps(qa,indent=2)+'\n')
     return {'bundle_path':bundle_path,'backdrop_path':backdrop,'motion_report_path':motion_path,'qa':qa,'episode':episode}

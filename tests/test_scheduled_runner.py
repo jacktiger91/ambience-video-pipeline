@@ -74,6 +74,20 @@ class RunnerTests(unittest.TestCase):
         with self.assertRaisesRegex(runner.RunnerError, "HTTPS"):
             runner.SafeRedirect().redirect_request(request, None, 302, "Found", {}, "http://example.invalid/file")
 
+    def test_transient_anonymous_failure_retries_but_still_requires_actual_404(self):
+        import urllib.error
+        store=runner.DraftStore(self.config,'unit-fixture-token')
+        limited=urllib.error.HTTPError('https://example.invalid',403,'rate limit',{'X-RateLimit-Remaining':'0'},None)
+        hidden=urllib.error.HTTPError('https://example.invalid',404,'Not Found',{},None)
+        with mock.patch.object(store,'guard'),mock.patch.object(runner.urllib.request,'urlopen',side_effect=[limited,hidden]) as open_url, \
+                mock.patch.object(runner.time,'sleep') as pause:
+            store.anonymous_probe()
+            self.assertEqual(open_url.call_count,2);pause.assert_called_once_with(5)
+        forbidden=urllib.error.HTTPError('https://example.invalid',403,'Forbidden',{},None)
+        with mock.patch.object(store,'guard'),mock.patch.object(runner.urllib.request,'urlopen',side_effect=forbidden):
+            with self.assertRaisesRegex(runner.RunnerError,'HTTP 403'):
+                store.anonymous_probe()
+
     def test_completed_receipt_skips_media_download_and_has_no_public_filebin_url(self):
         self.config.update({"enabled": True, "draft_privacy_verified": True})
         self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}

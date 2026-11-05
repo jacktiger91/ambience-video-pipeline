@@ -79,7 +79,19 @@ def private_store(config: dict, tag: str, name: str, *, create: bool = False) ->
             raise RunnerError('Private production storage identity could not be confirmed.')
     store=DraftStore({**config,'private_release_id':release['id'],'private_release_tag':tag},token())
     store.guard()
-    if create: store.anonymous_probe()
+    if create:
+        proof=read_document(store,'private-access-verification.json')
+        if proof:
+            if (proof.get('schema_version')!=1 or proof.get('release_id')!=store.release_id
+                    or proof.get('release_tag')!=store.tag or proof.get('anonymous_api_http')!=404
+                    or proof.get('repository')!=config['repository']):
+                raise RunnerError('Retained private-access evidence belongs to different storage.')
+        else:
+            store.anonymous_probe()
+            write_document(store,'private-access-verification.json',{
+                'schema_version':1,'repository':config['repository'],'release_id':store.release_id,
+                'release_tag':store.tag,'anonymous_api_http':404,
+                'verified_at':datetime.now(timezone.utc).isoformat()})
     return store
 
 
@@ -183,13 +195,17 @@ class Checkpoints:
     def restore(self) -> Path | None:
         if not self.data['assets']: return None
         for key,record in self.data['assets'].items():
-            if key not in {'long','short1','short2','thumbnail','short1-cover','short2-cover','backdrop','thumbnail-source'}:
+            finished=key in {'audio-finish-long','audio-finish-short1','audio-finish-short2'}
+            if not finished and key not in {'long','short1','short2','thumbnail','short1-cover','short2-cover','backdrop','thumbnail-source'}:
                 raise RunnerError('Unexpected checkpoint media key.')
             filename=record['filename']
             if filename!=Path(filename).name or not re.fullmatch(r'[A-Za-z0-9_.-]+',filename):raise RunnerError('Invalid checkpoint filename.')
-            directory=self.work if key in {'backdrop','thumbnail-source'} else self.work/'review'
+            directory=self.work/'audio-finish' if finished else self.work if key in {'backdrop','thumbnail-source'} else self.work/'review'
             target=directory/filename
             self.store.download(self.store.find_asset(record['asset_id']),target,record['sha256'],record['size'])
+            if finished:
+                proof=record['audio_finishing'];proof['path']=str(target.resolve())
+                target.with_suffix('.json').write_text(json.dumps(proof,indent=2)+'\n')
         manifest=self.data['manifest']
         if manifest:
             for key,record in manifest['artifacts'].items():
@@ -208,5 +224,17 @@ class Checkpoints:
         self.data['assets'][key]={**value,'filename':path.name}
         self.data['manifest']=json.loads(json.dumps(manifest))
         for item in self.data['manifest']['artifacts'].values():item['path']=Path(item['path']).name
+        self.version+=1
+        write_document(self.store,f'checkpoint-{self.version:06d}.json',self.data)
+
+    def finish_audio(self,key: str,path: Path,proof: dict) -> None:
+        name='audio-finish-'+key
+        if name not in {'audio-finish-long','audio-finish-short1','audio-finish-short2'}:
+            raise RunnerError('Unexpected audio finishing key.')
+        if name in self.data['assets']:
+            if self.data['assets'][name]['sha256']!=proof['sha256']:raise RunnerError('Audio finishing differs from its checkpoint.')
+            return
+        value=put_file(self.store,'verified-'+name+'-'+proof['sha256'][:16]+path.suffix,path)
+        self.data['assets'][name]={**value,'filename':path.name,'audio_finishing':proof}
         self.version+=1
         write_document(self.store,f'checkpoint-{self.version:06d}.json',self.data)
