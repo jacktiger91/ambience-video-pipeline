@@ -97,6 +97,28 @@ class RunnerTests(unittest.TestCase):
         self.assertTrue(result["filebin_metadata_verified"])
         self.assertNotIn("filebin.net", json.dumps(result))
 
+    def test_new_dates_resolve_their_own_private_queue_and_reuse_delivery(self):
+        import production_store
+        self.config.update({'enabled':True,'draft_privacy_verified':True,'automatic_production_start':'2026-11-05'})
+        self.write()
+        legacy=mock.Mock();dated=mock.Mock();receipt,listing=self.completed()
+        dated.latest_receipt.return_value=(receipt,8)
+        dated.publish_private_review.return_value='https://github.com/owner/project/releases'
+        entry={'bundle_id':'2026-11-05-forest','delivery_identity':'a'*64}
+        with mock.patch.object(runner.daily_schedule,'select_slot',return_value=self.slot()), \
+                mock.patch.object(runner,'DraftStore',return_value=legacy), \
+                mock.patch.object(production_store,'daily_store',return_value=dated), \
+                mock.patch.object(production_store,'prepared_entry',return_value=entry), \
+                mock.patch.object(runner.filebin_delivery,'FilebinClient') as client, \
+                mock.patch.dict(os.environ,{'GITHUB_TOKEN':'unit-fixture-token'}):
+            client.return_value.listing.return_value=listing
+            result=runner.run(self.path,self.root/'work','scheduled')
+        self.assertEqual(result['status'],'already_delivered')
+        legacy.latest_receipt.assert_not_called()
+        dated.latest_receipt.assert_called_once_with('2026-11-05-forest')
+        dated.download.assert_not_called()
+        client.return_value.upload.assert_not_called()
+
     def test_expired_complete_receipt_is_not_reported_as_ready(self):
         self.config.update({"enabled": True, "draft_privacy_verified": True})
         self.config["prepared_episodes"]["2026-11-05"] = {"bundle_id": "2026-11-05-forest", "delivery_identity": "a"*64}

@@ -111,6 +111,10 @@ signed-in page without exposing Filebin URLs. Forest Dawn remains in the older
 Inspect [Actions](https://github.com/jacktiger91/ambience-video-pipeline/actions)
 for failed runs. Read [deployment status](DEPLOYMENT-STATUS.md) for actual cloud
 test evidence; deploying a workflow alone is not proof of successful production.
+Every 21 days the producer updates a tiny public activity timestamp through the
+repository API. This prevents GitHub's 60-day public-repository inactivity rule
+from silently disabling the approved schedule. The record contains no media or
+download links, and does not claim a package succeeded.
 
 In Studio select `@QuietHoursRelaxingSounds`, upload all three videos and paste
 the copy from `upload-details.txt`. Start with Unlisted, choose the playlist,

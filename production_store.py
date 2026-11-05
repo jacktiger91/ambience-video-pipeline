@@ -5,7 +5,8 @@ preserving earlier packages. No review release is ever published or deleted.
 """
 from __future__ import annotations
 
-from datetime import date
+from datetime import date, datetime, timezone
+import base64
 import hashlib
 import json
 from pathlib import Path
@@ -15,6 +16,38 @@ import tempfile
 from cloud_ledger import GitHubLedger
 from scheduled_runner import DraftStore, RunnerError, token
 from scheduled_bootstrap import upload_private_file
+
+
+def keep_schedule_active(config: dict, now: datetime | None = None) -> str:
+    """Record bounded public repo activity so GitHub's 60-day cron idle rule
+    cannot stop an otherwise working daily producer. This reveals no media,
+    source selection, receipt, credential or download link.
+    """
+    now=now or datetime.now(timezone.utc)
+    api=GitHubLedger(config['repository'],token())
+    path='/contents/config/production-heartbeat.json'
+    status,item=api.request('GET',path+'?ref=main')
+    sha=None
+    if status==200:
+        if not isinstance(item,dict) or not 0<item.get('size',0)<4096 or item.get('encoding')!='base64':
+            raise RunnerError('The public schedule activity record is invalid; it was not overwritten.')
+        data=json.loads(base64.b64decode(item['content']))
+        if data.get('schema_version')!=1 or data.get('purpose')!='keep-approved-daily-schedule-active':
+            raise RunnerError('The schedule activity file has another purpose; it was not overwritten.')
+        previous=datetime.fromisoformat(data['recorded_at'])
+        if previous.tzinfo is None:raise RunnerError('The schedule activity timestamp requires a timezone.')
+        if (now-previous).total_seconds()<21*86400:return 'recent_activity_retained'
+        sha=item['sha']
+    elif status!=404:
+        raise RunnerError('Could not verify the public schedule activity record.')
+    content={'schema_version':1,'purpose':'keep-approved-daily-schedule-active','recorded_at':now.isoformat()}
+    request={'message':'Record approved daily production workflow activity','branch':'main',
+             'content':base64.b64encode((json.dumps(content,indent=2)+'\n').encode()).decode()}
+    if sha:request['sha']=sha
+    status,saved=api.request('PUT',path,request)
+    if status not in {200,201} or not saved.get('commit',{}).get('sha'):
+        raise RunnerError('Could not record activity to protect the daily schedule from GitHub inactivity expiry.')
+    return 'activity_recorded'
 
 
 def private_store(config: dict, tag: str, name: str, *, create: bool = False) -> DraftStore | None:

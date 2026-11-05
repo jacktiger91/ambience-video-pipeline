@@ -11,6 +11,7 @@ import argparse
 import contextlib
 from datetime import date, datetime, timedelta, timezone
 import json
+import math
 import shutil
 import tempfile
 from pathlib import Path
@@ -23,7 +24,7 @@ from prepare_bundle import digest
 from production_quality import AudioAuditor, QualityError, inspect_visual
 from production_render import render_package
 from production_sources import FAMILIES, ROTATION, SourceError, audio_candidates, visual_candidates, download
-from production_store import Checkpoints, daily_store, prepared_entry, put_file, read_document, reserve_sources, source_history, write_document
+from production_store import Checkpoints, daily_store, prepared_entry, put_file, read_document, reserve_sources, source_history, write_document, keep_schedule_active
 from render import probe
 from scheduled_runner import RunnerError
 
@@ -37,7 +38,7 @@ def assemble_edits(candidates: list[dict], duration: float = 3600, crossfade: fl
     intervals={}
     for item in candidates:
         start,end=item['start'],item['start']+item['duration']
-        if start<0 or item['duration']<=0:
+        if not math.isfinite(start) or not math.isfinite(end) or start<0 or item['duration']<=0:
             raise ProductionError('Source intervals must be positive and finite.')
         for a,b in intervals.setdefault(item['sound_id'],[]):
             if start<b and end>a:raise ProductionError('Source intervals overlap; repeated audio is not allowed.')
@@ -224,6 +225,7 @@ def main()->int:
                 plan=choose_plan(days[0],settings,history,args.work_dir)
                 results=[{'status':'plan_verified','bundle_id':plan['bundle_id'],'theme':plan['theme']}]
             else:
+                keep_schedule_active(config)
                 results=[produce(day,config,settings,args.work_dir) for day in days]
         print(json.dumps({'status':'production_complete','packages':results},indent=2))
         return 0

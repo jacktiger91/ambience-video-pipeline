@@ -1,5 +1,6 @@
 """Quality boundaries, date selection and durable retry behavior; no uploads."""
 from datetime import datetime, timezone
+import base64
 import hashlib
 import json
 from pathlib import Path
@@ -129,6 +130,24 @@ class ProductionTests(unittest.TestCase):
             with self.assertRaisesRegex(RunnerError,'bound'):
                 storage.daily_store(config,datetime(2026,11,6).date(),create=True)
         self.assertTrue(all(call.args[0]=='GET' for call in api.request.call_args_list))
+
+    def test_schedule_activity_is_bounded_and_preserves_unrelated_files(self):
+        api=mock.Mock();now=datetime(2026,11,5,tzinfo=timezone.utc)
+        data={'schema_version':1,'purpose':'keep-approved-daily-schedule-active','recorded_at':now.isoformat()}
+        item={'size':200,'encoding':'base64','content':base64.b64encode(json.dumps(data).encode()).decode(),'sha':'commit-fixture'}
+        with mock.patch.object(storage,'token',return_value='unit-fixture-token'),mock.patch.object(storage,'GitHubLedger',return_value=api):
+            api.request.return_value=(200,item)
+            self.assertEqual(storage.keep_schedule_active({'repository':'owner/repo'},now),'recent_activity_retained')
+            self.assertEqual(api.request.call_count,1)
+            api.reset_mock();api.request.side_effect=[(404,{}),(201,{'commit':{'sha':'new-fixture'}})]
+            self.assertEqual(storage.keep_schedule_active({'repository':'owner/repo'},now),'activity_recorded')
+            request=api.request.call_args.args[2]
+            self.assertEqual(json.loads(base64.b64decode(request['content'])),data)
+            self.assertNotIn('sha',request)
+            api.request.side_effect=None;item['content']=base64.b64encode(b'{"purpose":"different"}').decode()
+            api.request.return_value=(200,item)
+            with self.assertRaisesRegex(RunnerError,'another purpose'):
+                storage.keep_schedule_active({'repository':'owner/repo'},now)
 
 
 if __name__=='__main__':unittest.main()
