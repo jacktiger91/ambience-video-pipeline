@@ -28,10 +28,29 @@ Verified cloud runs:
 - [Source discovery through all three finished renders and private storage](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42080947920)
 - [Complete package restoration on a fresh runner](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42084006185)
 - [Eight-file Filebin upload, full download/hash checks and read-only handoff](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42084303875)
+- [Live Filebin availability and exact delivery reuse](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42085903243)
+- [Production retry reusing the existing verified archive](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42089411328)
 
-The affected local checks passed 52 tests, including a simulated interrupted
+The affected local checks passed 55 tests, including a simulated interrupted
 render restored into a fresh workspace without recreating its verified hour.
 The real footage loop also passed a short FFmpeg render/decode check.
+
+**7 November — River Haven is produced and retained for scheduled delivery.**
+Its real stream footage and two field recordings differ from Quiet Bay. The
+full hour and two 15-second Shorts pass decode and motion checks. AAC encoding
+raised the initial long video's measured peak to −1.9 dBTP, just above the
+conservative −2 dBTP ceiling. Recovery retained its encoded video and both
+passing Shorts, applied constant gain only to the long video's audio, then
+fully decoded and checked the corrected MP4. Its final levels are −26.4 LUFS
+and −3.8 dBTP. The original render remains in its private recovery assets.
+[The recovery passed in Cloud](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42089416390),
+and [the corrected archive restored successfully on a fresh runner](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42092129389).
+
+The final tests also exposed a transient anonymous GitHub access-check failure.
+The fix retries transient errors and stores an actual anonymous API HTTP 404
+result against the exact draft ID, tag and repository. Every later access still
+checks that the authenticated release is that private draft. The production
+retry then passed without rebuilding or duplicating Quiet Bay.
 
 [Private daily downloads and retained packages](https://github.com/jacktiger91/ambience-video-pipeline/releases)
 are available while signed in as the repository owner. Open the dated Quiet

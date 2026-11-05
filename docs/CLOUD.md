@@ -33,6 +33,12 @@ recorded separately. The thumbnail uses that footage's frame with the channel's
 cream condensed lettering and gold duration badge. All three exports must fully
 decode and pass stream, duration, level and temporal-motion checks.
 
+AAC can introduce peaks above those measured in the source soundtrack. An
+export that exceeds the conservative limit receives a bounded constant-volume
+correction while its encoded video is copied unchanged. The corrected MP4 is
+fully decoded and measured again; the original export and passing Shorts remain
+retained. The corrected file and its proof are checkpointed for reuse as well.
+
 These checks are automated evidence, not human listening or a subjective
 creative-quality guarantee. The user remains the final reviewer. Failed source
 or quality checks block that date; yesterday's video is never substituted.
@@ -48,7 +54,10 @@ Each date uses a `quiet-hours-private-YYYY-MM-DD` **draft release** containing
 the frozen plan, permissions, verified render checkpoints, final QA, complete
 prepared archive and immutable delivery receipts. Annual private history drafts
 retain used source identities. The runner checks the exact draft ID/tag and
-requires anonymous HTTP 404 from the real runner. Never publish these drafts.
+requires anonymous API HTTP 404 from the real runner. That result is retained
+against the exact repository, draft ID and tag; every later access still checks
+the authenticated draft state. Transient access-check errors are retried, never
+treated as privacy approval. Never publish these drafts.
 Earlier packages remain available. Media and download links stay out of Git.
 
 Each verified render is retained before the next starts. A fresh runner restores
