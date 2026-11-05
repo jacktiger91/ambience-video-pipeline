@@ -150,6 +150,10 @@ def source_history(config: dict, day: date, seeds: dict) -> tuple[DraftStore,dic
     if (data.get('schema_version')!=1 or not isinstance(data.get('source_ids'),list)
             or not isinstance(data.get('media_sha256'),list) or not isinstance(data.get('days'),dict)):
         raise RunnerError('Source history cannot be verified; do not silently reuse media.')
+    # Later imports of older channel episodes must also constrain an already
+    # initialized history, without rewriting immutable historical snapshots.
+    data['source_ids']=sorted(set(data['source_ids'])|set(seeds.get('source_ids',[])))
+    data['media_sha256']=sorted(set(data['media_sha256'])|set(seeds.get('media_sha256',[])))
     return store,data
 
 
@@ -160,6 +164,8 @@ def reserve_sources(store: DraftStore, history: dict, plan: dict) -> None:
     if day in value['days']:
         if value['days'][day]!=detail: raise RunnerError('This date already reserved different production sources.')
         return
+    if value['days'] and day<max(value['days']):
+        raise RunnerError('Cannot insert an unreserved older date behind newer source history; preserve its plan for explicit recovery.')
     value['days'][day]=detail
     value['source_ids']=sorted(set(value['source_ids'])|{x['id'] for x in records})
     value['media_sha256']=sorted(set(value['media_sha256'])|{x['sha256'] for x in records})

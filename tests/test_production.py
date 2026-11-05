@@ -13,6 +13,7 @@ import cv2
 import numpy as np
 
 import daily_schedule
+import prepare_bundle
 import production
 import production_quality as quality
 import production_sources as sources
@@ -107,6 +108,51 @@ class ProductionTests(unittest.TestCase):
         self.assertEqual(path.read_bytes(),body)
         manifest=json.loads((self.root/'review/bundle.json').read_text())
         self.assertEqual(manifest['artifacts']['long']['path'],str(path.resolve()))
+
+    def test_interrupted_bundle_resumes_on_a_fresh_runner_without_recreating_long(self):
+        store=mock.Mock();assets={};by_name={}
+        def put_file(unused,name,path):
+            body=path.read_bytes();sha=hashlib.sha256(body).hexdigest()
+            if name in by_name:
+                item=by_name[name];self.assertEqual(assets[item['asset_id']],body);return item
+            item={'asset_id':len(assets)+1,'size':len(body),'sha256':sha,'name':name}
+            assets[item['asset_id']]=body;by_name[name]=item;return item
+        store.assets.side_effect=lambda:[{'id':v['asset_id'],'name':k,'size':v['size'],'state':'uploaded','digest':'sha256:'+v['sha256']} for k,v in by_name.items()]
+        store.find_asset.side_effect=lambda identity:{'id':identity}
+        def download(item,path,expected,size):
+            body=assets[item['id']]
+            self.assertEqual((hashlib.sha256(body).hexdigest(),len(body)),(expected,size))
+            path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(body)
+        store.download.side_effect=download
+        first=self.root/'first';second=self.root/'second';first.mkdir();second.mkdir()
+        for key in ('backdrop','thumbnail-source'):(first/(key+'.jpg')).write_bytes(key.encode())
+        source=first/'source.mp4';source.write_bytes(b'unit fixture, no actual production-media claim')
+        config={'bundle_id':'2026-11-06-daily-ambience','intended_channel_handle':'@QuietHoursRelaxingSounds',
+                'theme':'Fixture','title':'Fixture hour','description':'Unit test only.','recording_credits':'Unit fixture.',
+                'made_for_kids':False,'contains_synthetic_media':True,'long_video':str(source),
+                'shorts':[{'title':'First fixture','description':'Unit test.','start':20,'duration':15,'framing':'left'},
+                          {'title':'Second fixture','description':'Unit test.','start':80,'duration':15,'framing':'right'}]}
+        episode=first/'episode.json';episode.write_text(json.dumps(config))
+        def frame(source,path,offset,width,height):
+            path.write_bytes(('frame-'+path.name).encode());return {'resolution':[width,height]}
+        def short(source,path,config):
+            path.write_bytes(('short-'+str(config['start'])).encode());return {'duration':config['duration'],'full_decode':True}
+        with mock.patch.object(storage,'put_file',side_effect=put_file),mock.patch.object(prepare_bundle,'require_tools'), \
+                mock.patch.object(prepare_bundle,'make_frame',side_effect=frame):
+            checkpoint=storage.Checkpoints(store,first,config['bundle_id'])
+            with mock.patch.object(prepare_bundle,'verify_media',return_value={'duration':3600,'full_decode':True}), \
+                    mock.patch.object(prepare_bundle,'make_short',side_effect=RuntimeError('simulated interruption')):
+                with self.assertRaisesRegex(RuntimeError,'interruption'):
+                    prepare_bundle.prepare(episode,first/'review',on_artifact=checkpoint)
+            recovered=storage.Checkpoints(store,second,config['bundle_id'])
+            restored=recovered.restore();self.assertIsNotNone(restored)
+            config['long_video']=str(restored);episode=second/'episode.json';episode.write_text(json.dumps(config))
+            with mock.patch.object(prepare_bundle,'verify_media',side_effect=AssertionError('Long must be reused')), \
+                    mock.patch.object(prepare_bundle,'make_short',side_effect=short) as shorts:
+                result=prepare_bundle.prepare(episode,second/'review',on_artifact=recovered)
+            bundle=json.loads(result.read_text());self.assertTrue(bundle['ready'])
+            self.assertEqual(shorts.call_count,2)
+            self.assertEqual(bundle['artifacts']['long']['sha256'],hashlib.sha256(source.read_bytes()).hexdigest())
 
     def test_ready_retry_does_not_render_or_upload_again(self):
         config={'repository':'owner/repo'};store=mock.Mock()

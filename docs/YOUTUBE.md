@@ -164,9 +164,10 @@ The cloud needs HTTPS access to `oauth2.googleapis.com` and
 Maintain TLS verification and existing proxy settings. Add missing destinations
 through environment settings; do not bypass a denied network policy.
 
-The daily schedule stays disabled until all three test videos are approved and
-you confirm a start time in **Asia/Nicosia**. A single successful token refresh
-does not by itself enable any schedule or publish any video.
+The YouTube upload schedule stays disabled; publication remains manual. The
+separate approved Filebin production/delivery schedule targets **18:00
+Asia/Nicosia**. A token refresh does not enable YouTube scheduling or publish
+any video.
 
 ## Staging and manual Studio settings
 

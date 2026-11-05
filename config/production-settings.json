@@ -11,14 +11,30 @@
   "legacy_source_history": {
     "source_ids": [
       "archive:aporee_37802_43261",
-      "archive:aporee_41944_47808",
-      "archive:aporee_59218_67955",
-      "archive:aporee_56785_64952",
-      "archive:aporee_48022_54624",
       "archive:aporee_40553_46296",
-      "archive:view-from-our-back-veranda_202110"
+      "archive:aporee_41944_47808",
+      "archive:aporee_48022_54624",
+      "archive:aporee_56785_64952",
+      "archive:aporee_59218_67955",
+      "archive:view-from-our-back-veranda_202110",
+      "freesound:430765",
+      "freesound:543481",
+      "freesound:616991",
+      "freesound:733979"
     ],
-    "media_sha256": []
+    "media_sha256": [
+      "2cab023ba99025d4e4424adec299d5663bba4c682d2d438c9a61e12bdd3a860b",
+      "2e67c1f95c4788c14b6548d96071e4cd9a5f668ec17838de55a75b4ba6db89a5",
+      "2f0f3d7dc7d227e47fb945754818da5d27405ddfe60a1707d61ed06bac92faec",
+      "47b4f226ec60138d68bf3770aa0a95737be560e08a92a9b6d3f3d689152b3f41",
+      "4f825a5e78cebd51606d20ce8347e67775f7e063fa2e6ce6c2f6beaccb50a775",
+      "837f9a1dfa4573d04c1b008e3f474c2415cbfcfc541b9f358c38edae099c2051",
+      "9d1a66be25527975c470c544ece2aaf5c169e21db7b3a23e59e5df60a017914d",
+      "a0728de24948b0dfd2c5443c945b42329ecd7d6a69ba5f50cb23ccf545a2e9ea",
+      "c125639dd7bc482f0d582731c4ed6192972b07ddfa103d3440965b0658405dda",
+      "c4e484d746b1443ea97e385e80bb4a9f392b0cd36231a9df4596c35a6f366a47",
+      "fb00798902e505c49c775edb70367194028fffe838f51f06f11f5b718320e1b8"
+    ]
   },
   "notes": [
     "Source discovery, licensed field-recording selection, motion checks, thumbnails, copy and rendering all run in Cloud.",
