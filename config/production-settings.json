@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "enabled": false,
+  "enabled": true,
   "start_date": "2026-11-06",
   "timezone": "Asia/Nicosia",
   "prepare_days_ahead": 1,

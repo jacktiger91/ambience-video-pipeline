@@ -38,6 +38,9 @@
     "filebin_connection": 41921613212,
     "full_package_import": 41924004263,
     "fresh_archive_restore": 41925006465,
-    "live_delivery_reuse": 41925331138
+    "live_delivery_reuse": 41925331138,
+    "first_automatic_production": 42080947920,
+    "automatic_package_fresh_restore": 42084006185,
+    "automatic_package_filebin_delivery": 42084303875
   }
 }

@@ -1,12 +1,46 @@
 # Deployment status — 5 November 2026 UTC
 
-Automatic daily production is implemented and undergoing its full cloud test.
-The schedule will be enabled after source discovery, all three renders, private
-recovery and Filebin delivery pass in the actual cloud runner.
+Automatic daily production and Filebin delivery are enabled on `main` after
+successful end-to-end cloud tests. Standard free GitHub Ubuntu runners do the
+work with no laptop, paid API or Google Cloud account. YouTube upload and
+publication remain manual.
 
-Production prepares a day ahead. Delivery attempts now start at 12:00 Cyprus
-time, retaining the agreed 18:00 Asia/Nicosia ready-by target. The new dated
-private drafts preserve the earlier Forest Dawn package and delivery history.
+The target is **18:00 Asia/Nicosia**. Production prepares a day ahead, with
+three daily attempts; Filebin delivery starts at noon and retries before the
+deadline. Timezone-aware selection handles daylight-saving changes. The target
+is best effort because GitHub scheduling and Filebin have no timing SLA.
+
+**6 November — Quiet Bay is complete and delivered.** It contains a one-hour
+1920 × 1080 H.264/stereo AAC video, two distinct 25-second 1080 × 1920 Shorts,
+matching thumbnail and backdrop, suggested cover frames, and finished titles,
+descriptions and actual recording credits. The natural soundtrack uses eight
+nonoverlapping passages from five CC BY field recordings. The moving fixed
+camera scene is separately licensed real footage, explicitly credited.
+
+All three exports fully decoded. The full-hour loudness measured −22.1 LUFS
+with −4.1 dBTP; the Shorts measured −21.6/−23.5 LUFS with safe peak headroom.
+Fixed-camera and subject-motion checks passed. These are automated checks,
+not a fabricated listening review. The actual thumbnail and both cover frames
+were also visually inspected.
+
+Verified cloud runs:
+
+- [Source discovery through all three finished renders and private storage](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42080947920)
+- [Complete package restoration on a fresh runner](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42084006185)
+- [Eight-file Filebin upload, full download/hash checks and read-only handoff](https://github.com/jacktiger91/ambience-video-pipeline/actions/runs/42084303875)
+
+The affected local checks passed 52 tests, including a simulated interrupted
+render restored into a fresh workspace without recreating its verified hour.
+The real footage loop also passed a short FFmpeg render/decode check.
+
+[Private daily downloads and retained packages](https://github.com/jacktiger91/ambience-video-pipeline/releases)
+are available while signed in as the repository owner. Open the dated Quiet
+Hours draft. Never publish these drafts. Filebin links expire; their exact
+expiry appears with each completed handoff. Earlier drafts remain available.
+
+The cloud activity timestamp update also succeeded. It repeats at most once
+per 21 days to prevent GitHub's 60-day inactivity rule from disabling the
+approved schedule. No download links or media enter the public repository.
 
 ## Previously verified delivery
 

@@ -6,7 +6,7 @@
   "target_local_time": "18:00",
   "timezone": "Asia/Nicosia",
   "schedule_enabled": true,
-  "schedule_status": "enabled_for_prepared_queue",
+  "schedule_status": "enabled_for_automatic_production_and_delivery",
   "budget_eur": 0,
   "youtube_publication": "manual_by_user",
   "daily_contents": [
@@ -18,9 +18,6 @@
     "concept_specific_titles_descriptions_and_recording_credits"
   ],
   "deployment_blockers": [],
-  "prepared_through_date": "2026-11-05",
-  "remaining_production_work": [
-    "The assistant must source, prepare and verify the following daily concepts before they can enter the delivery queue.",
-    "Only Forest Dawn for 2026-11-05 currently has a completed package; concept briefs are not completed production."
-  ]
+  "first_automatic_package_date": "2026-11-06",
+  "live_package_status": "Private dated drafts at https://github.com/jacktiger91/ambience-video-pipeline/releases"
 }
